@@ -39,3 +39,5 @@ if (session_status() == PHP_SESSION_NONE) {
         $_SESSION["ARTICLE_INFO_MISC"] = fetch_info($wp_url_misc);
     }
 }
+
+?>
