@@ -67,4 +67,26 @@ function del_kicker($title)
     return $title;
 }
 
+/**
+ * get_authors() appends listed authors into a single string.
+ * 
+ * @param assoc_array $arr_authors The list of authors.
+ * @return string Returns the comma-separated list of authors in a single string.
+ */
+function get_authors($arr_authors)
+{
+    $str_authors = "";
+
+    $i = 0;
+    do {
+        $str_authors .= $arr_authors[$i]["display_name"];
+        $i++;
+        if (!empty($arr_authors[$i]["display_name"])) {
+            $str_authors .= ", ";
+        }
+    } while (!empty($arr_authors[$i]["display_name"]));
+
+    return $str_authors;
+}
+
 ?>
