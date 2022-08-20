@@ -27,5 +27,41 @@ function fetch_info($url, $httpReq = 'GET')
     return json_decode($response, true);
 }
 
+/**
+ * get_rating() finds and returns the rating within an article.
+ * 
+ * @param string $content The article's content or body. 
+ * @return string Returns the n.n/n.n rating without surrounding HTML tags.
+ */
+function get_rating($content)
+{
+    // Find the H4 heading and assign it to $rating
+    $rating = strstr($content, "<h4>");
+    $rating = strstr($rating, "</h4>", true);
+
+    // Remove the surrounding <h4> and <strong> tags
+    $rating = str_replace("<h4><strong>", "", $rating);
+    $rating = str_replace("</h4></strong>", "", $rating);
+
+    // Remove the 'RATING: ' prefix
+    $rating = str_replace("RATING: ", "", $rating);
+    
+    return $rating;
+}
+
+/**
+ * del_kicker() deletes the Rant and Rave (RNR) kicker from an article title.
+ * 
+ * @param string $title The article's title.
+ * @return string Returns the title without the RNR kicker.
+ */
+function del_kicker($title)
+{
+    // Remove 'Rant and Rave: ' or 'Rant and Rave—' before the title
+    $title = str_replace("Rant and Rave: ", "", $title);
+    $title = str_replace("Rant and Rave—", "", $title);
+    
+    return $title;
+}
 
 ?>
