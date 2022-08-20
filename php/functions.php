@@ -1,6 +1,9 @@
 <?php
 
 /**
+ * fetch_info() gets the requested articles and their
+ * information from The LaSallian's WordPress site.
+ * 
  * @param string URL of the request 
  * @param string Request required. Defaults to GET.
  * @return assoc_array Returns a JSON santiized associative array of the API.
