@@ -38,16 +38,18 @@ function fetch_info($url, $httpReq = 'GET')
  */
 function get_rating($content)
 {
-    // Find the H4 heading and assign it to $rating
-    $rating = strstr($content, "<h4>");
-    $rating = strstr($rating, "</h4>", true);
+    // // Find the H5 heading and assign it to $rating
+    $rating = strstr($content, "<h5>");
+    $rating = strstr($rating, "</h5>", true);
 
-    // Remove the surrounding <h4> and <strong> tags
-    $rating = str_replace("<h4><strong>", "", $rating);
-    $rating = str_replace("</h4></strong>", "", $rating);
+    // Remove the surrounding <h5> and <strong> tags
+    $rating = str_replace("<h5>", "", $rating);
+    $rating = str_replace("</h5>", "", $rating);
+    $rating = str_replace("<strong>", "", $rating);
+    $rating = str_replace("</strong>", "", $rating);
 
-    // Remove the 'RATING: ' prefix
-    $rating = str_replace("RATING: ", "", $rating);
+    // Remove the 'Rating: ' prefix
+    $rating = str_replace("Rating: ", "", $rating);
     
     return $rating;
 }
