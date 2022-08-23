@@ -67,29 +67,31 @@ function render_section($section)
 {
     $tag_name = ucwords($section["tag_name"]);
     
-    echo '<section>'; // Start of section
+    echo '<section><div class="container">'; // Start of section
     echo '<h1>'.$tag_name.'</h1>'; // Display heading
     render_row($section["articles"]); // Display row of articles
-    echo '</section>'; // End of section
+    echo '</div></section>'; // End of section
 }
 
 function render_row($articles)
 {
-    echo '<ol>'; // Start of row
+    echo '<div class="row row-cols-2 row-cols-lg-4">'; // Start of row
     // Display each article
     foreach ($articles as $article) {
         initialize_article_info($article, $visual_url, $title, $date, $authors, $rating, $article_url);
         
-        echo '<li>';
-        echo $title.'<br/>';
-        echo $date.'<br/>';
-        echo $authors.'<br/>';
-        echo $rating.'<br/>';
-        echo $article_url.'<br/>';
-        echo $visual_url;
-        echo '</li>';
+        echo <<<ARTICLE
+            <div>
+                <div class="ratio ratio-1x1"><img style="object-fit: cover;" src="{$visual_url}"></div>
+                <p>{$rating}</p>
+                <h2 class="fs-5">{$title}</h2>
+                <p>{$date}</p>
+                <p>{$authors}</p>
+                
+            </div>
+        ARTICLE;
     }
-    echo '</ol>'; // End of row
+    echo '</div>'; // End of row
 }
 
 function initialize_article_info($article, &$visual_url, &$title,
