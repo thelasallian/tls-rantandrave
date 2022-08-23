@@ -22,28 +22,85 @@
         <h1>2nd-5th Most Recent Articles</h1>
     </section>
 
-    <!-- Movie -->
-    <section>
-        <h1>Movie</h1>
-    </section>
+    <?php
+    // Initialize list of RNR tags and their respective articles
+    initialize_sections($sections);
+    
+    // Create a section for each RNR tag
+    foreach ($sections as $section) {
+        render_section($section);
+    }
+    ?>
 
-    <!-- Television -->
-    <section>
-        <h1>Television</h1>
-    </section>
-
-    <!-- Music -->
-    <section>
-        <h1>Music</h1>
-    </section>
-
-    <!-- Miscellaneous -->
-    <section>
-        <h1>Miscellaneous</h1>
-    </section>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+<?php
+
+function initialize_sections(&$sections)
+{
+    $sections = array(
+        array(
+            "tag_name" => "movie",
+            "articles" => $_SESSION["ARTICLE_INFO_MOVIE"],
+        ),
+        array(
+            "tag_name" => "television",
+            "articles" => $_SESSION["ARTICLE_INFO_TV"],
+        ),
+        array(
+            "tag_name" => "music",
+            "articles" => $_SESSION["ARTICLE_INFO_MUSIC"],
+        ),
+        array(
+            "tag_name" => "miscellaneous",
+            "articles" => $_SESSION["ARTICLE_INFO_MISC"],
+        )
+    );
+}
+
+function render_section($section)
+{
+    $tag_name = ucwords($section["tag_name"]);
+    
+    echo '<section>'; // Start of section
+    echo '<h1>'.$tag_name.'</h1>'; // Display heading
+    render_row($section["articles"]); // Display row of articles
+    echo '</section>'; // End of section
+}
+
+function render_row($articles)
+{
+    echo '<ol>'; // Start of row
+    // Display each article
+    foreach ($articles as $article) {
+        initialize_article_info($article, $visual_url, $title, $date, $authors, $rating, $article_url);
+        
+        echo '<li>';
+        echo $title.'<br/>';
+        echo $date.'<br/>';
+        echo $authors.'<br/>';
+        echo $rating.'<br/>';
+        echo $article_url.'<br/>';
+        echo $visual_url;
+        echo '</li>';
+    }
+    echo '</ol>'; // End of row
+}
+
+function initialize_article_info($article, &$visual_url, &$title,
+                                 &$date, &$authors, &$rating, &$article_url)
+{
+    $visual_url = $article["jetpack_featured_media_url"];
+    $title = $article["title"]["rendered"];
+    $date = date('F j, Y', strtotime($article["date"]));
+    $authors = get_authors($article["authors"]);
+    $rating = get_rating($article["content"]["rendered"]);
+    $article_url = $article["link"];
+}
+
+?>
