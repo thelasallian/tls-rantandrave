@@ -98,7 +98,7 @@ function initialize_article_info($article, &$visual_url, &$title,
                                  &$date, &$authors, &$rating, &$article_url)
 {
     $visual_url = $article["jetpack_featured_media_url"];
-    $title = $article["title"]["rendered"];
+    $title = del_kicker($article["title"]["rendered"]);
     $date = date('F j, Y', strtotime($article["date"]));
     $authors = get_authors($article["authors"]);
     $rating = get_rating($article["content"]["rendered"]);
