@@ -6,6 +6,7 @@
 
 <head>
     <?php require_once 'php/components/head.php' ?>
+    <link rel="stylesheet" href="css/homepage.css">
 
     <!-- Title -->
     <title>The LaSallian: Rant and Rave</title>
