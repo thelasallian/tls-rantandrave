@@ -82,13 +82,13 @@ function render_row($articles)
         initialize_article_info($article, $visual_url, $title, $date, $authors, $rating, $article_url);
         
         echo <<<ARTICLE
-            <div>
+            <div class="position-relative">
                 <div class="ratio ratio-1x1"><img style="object-fit: cover;" src="{$visual_url}"></div>
                 <p>{$rating}</p>
                 <h2 class="fs-5">{$title}</h2>
                 <p>{$date}</p>
                 <p>{$authors}</p>
-                
+                <a class="stretched-link" href="{$article_url}" target="_blank"></a>
             </div>
         ARTICLE;
     }
