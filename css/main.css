@@ -1,0 +1,36 @@
+:root {
+    /* 85% Opacity */
+    --movie-bg-85: rgba(15, 151, 191, 0.85);
+    --tv-bg-85: rgba(201, 89, 163, 0.85);
+    --music-bg-85: rgba(145, 176, 47, 0.85);
+    --misc-bg-85: rgba(254, 175, 48, 0.85);
+    
+    /* 85% Opacity, Darker for Quick Ratings */
+    --movie-bg-85-darker: rgba(25, 107, 131, 0.85);
+    --tv-bg-85-darker: rgba(150, 57, 118, 0.85);
+    --music-bg-85-darker: rgba(97, 121, 21, 0.85);
+    --misc-bg-85-darker: rgba(173, 112, 14, 0.85);
+
+    /* 15% Opacity */
+    --movie-bg-15: rgba(15, 151, 191, 0.15);
+    --tv-bg-15: rgba(201, 89, 163, 0.15);
+    --music-bg-15: rgba(145, 176, 47, 0.15);
+    --misc-bg-15: rgba(254, 175, 48, 0.15);
+
+    /* Other */
+    --white-bg-10: rgba(255, 255, 255, 0.1);
+    --black-bg-85: rgba(0, 0, 0, 0.8);
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+}
