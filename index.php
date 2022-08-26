@@ -68,8 +68,7 @@ function render_section($section)
 {
     
     echo '<section id="'.$section["tag_name"].'"><div class="container">'; // Start of section
-    $tag_name = ucwords($section["tag_name"]);
-    echo '<h1>'.$tag_name.'</h1>'; // Display heading
+    echo '<h1>'.ucwords($section["tag_name"]).'</h1>'; // Display heading
     render_row($section["articles"]); // Display row of articles
     echo '</div></section>'; // End of section
 }
