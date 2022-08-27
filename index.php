@@ -33,7 +33,7 @@
             <div class="container">
                 <h1><?php echo ucwords($section["tag_name"]); ?></h1>
                 <div class="row row-cols-2 row-cols-lg-4">
-                    <?php render_row($section["articles"]); ?>
+                    <?php render_article_cards($section["articles"]); ?>
                 </div>
             </div>
         </section>
@@ -72,7 +72,7 @@ function initialize_sections(&$sections)
     );
 }
 
-function render_row($articles)
+function render_article_cards($articles)
 {
     foreach ($articles as $article) {
         initialize_article_info($article, $visual_url, $title, $date, $authors, $rating, $article_url);
