@@ -26,15 +26,18 @@
         <h1>Quick Ratings (2nd-5th Most Recent Articles)</h1>
     </section>
 
-    <?php
-    // Initialize list of RNR tags and their respective articles
-    initialize_sections($sections);
-    
-    // Create a section for each RNR tag
-    foreach ($sections as $section) {
-        render_section($section);
-    }
-    ?>
+    <!-- Tags (Movie, Television, Music, Miscellaneous) -->
+    <?php initialize_sections($sections); // Initialize list of RNR tags and their respective articles ?>
+    <?php foreach ($sections as $section): // Create a section for each RNR tag ?>
+        <section id="<?php echo $section["tag_name"]; ?>">
+            <div class="container">
+                <h1><?php echo ucwords($section["tag_name"]); ?></h1>
+                <div class="row row-cols-2 row-cols-lg-4">
+                    <?php render_row($section["articles"]); ?>
+                </div>
+            </div>
+        </section>
+    <?php endforeach; ?>
 
     <!-- Footer -->
     <?php require_once 'php/components/footer.php' ?>
@@ -69,19 +72,8 @@ function initialize_sections(&$sections)
     );
 }
 
-function render_section($section)
-{
-    
-    echo '<section id="'.$section["tag_name"].'"><div class="container">'; // Start of section
-    echo '<h1>'.ucwords($section["tag_name"]).'</h1>'; // Display heading
-    render_row($section["articles"]); // Display row of articles
-    echo '</div></section>'; // End of section
-}
-
 function render_row($articles)
 {
-    echo '<div class="row row-cols-2 row-cols-lg-4">'; // Start of row
-    // Display each article
     foreach ($articles as $article) {
         initialize_article_info($article, $visual_url, $title, $date, $authors, $rating, $article_url);
         
@@ -96,7 +88,6 @@ function render_row($articles)
             </div>
         ARTICLE;
     }
-    echo '</div>'; // End of row
 }
 
 function initialize_article_info($article, &$visual_url, &$title,
