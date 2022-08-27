@@ -21,9 +21,9 @@
         <h1>Header</h1>
     </header>
 
-    <!-- 2nd-5th Most Recent Articles -->
+    <!-- Quick Ratings (2nd-5th Most Recent Articles) -->
     <section>
-        <h1>2nd-5th Most Recent Articles</h1>
+        <h1>Quick Ratings (2nd-5th Most Recent Articles)</h1>
     </section>
 
     <?php
