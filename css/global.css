@@ -20,6 +20,7 @@
     /* Other */
     --white-bg-10: rgba(255, 255, 255, 0.1);
     --black-bg-85: rgba(0, 0, 0, 0.8);
+    --body-bg: #161617;
 }
 
 body {
