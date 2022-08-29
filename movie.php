@@ -25,7 +25,11 @@
     require_once 'php/components/pagination.php';
 
     foreach ($all_articles as $article) {
-        echo $article["title"]["rendered"];
+        initialize_article_info(
+            $article, $visual_url, $title,
+            $date, $authors, $article_url
+        );
+        echo $title;
         echo '<br/>';
     }
 
@@ -40,3 +44,17 @@
 </body>
 
 </html>
+
+<?php 
+
+function initialize_article_info($article, &$visual_url, &$title,
+                                 &$date, &$authors, &$article_url)
+{
+    $visual_url = $article["jetpack_featured_media_url"];
+    $title = del_kicker($article["title"]["rendered"]);
+    $date = date('F j, Y', strtotime($article["date"]));
+    $authors = get_authors($article["authors"]);
+    $article_url = $article["link"];
+}
+
+?>
