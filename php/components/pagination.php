@@ -12,8 +12,8 @@ if ($page == 0) {
     $page = 1;
 }
 
-// Append page number to WordPress url
-$wp_url .= "&page=".$page;
+$wp_url .= "&per_page=24"; // Specify number of items
+$wp_url .= "&page=".$page; // Append page number to WordPress url
 
 // Function to render page links
 function render_page_links($page_count, $current_url)
