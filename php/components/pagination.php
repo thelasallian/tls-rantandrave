@@ -15,9 +15,6 @@ if ($page == 0) {
 // Append page number to WordPress url
 $wp_url .= "&page=".$page;
 
-// Get articles from page
-$articles = fetch_info($wp_url);
-
 // Function to render page links
 function render_page_links($page_count, $current_url)
 {
