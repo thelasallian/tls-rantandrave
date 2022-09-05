@@ -11,14 +11,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-
             <!-- Links -->
             <div class="offcanvas offcanvas-end flex-grow-0 text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <!-- Offcanvas Header  -->
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Rant and Rave</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
+                <!-- Offcanvas Body -->
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
@@ -40,6 +41,7 @@
                 </div>
 
             </div>
+            
         </div>
 
         <!-- Search Icons -->
