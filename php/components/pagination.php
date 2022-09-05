@@ -1,5 +1,8 @@
 <?php
 
+// Specify the number of items per page. Important to specify before getting $page_count
+$wp_url .= "&per_page=24"; 
+
 // Get number of pages
 $headers = get_headers($wp_url, true);
 $page_count = $headers["X-WP-TotalPages"];
@@ -12,11 +15,7 @@ if ($page == 0) {
     $page = 1;
 }
 
-// Append page number to WordPress url
-$wp_url .= "&page=".$page;
-
-// Get articles from page
-$articles = fetch_info($wp_url);
+$wp_url .= "&page=".$page; // Append page number to WordPress url
 
 // Function to render page links
 function render_page_links($page_count, $current_url)
