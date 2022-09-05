@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container d-flex justify-content-between">
         <!-- Logo -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="https://thelasallian.com/" target="_blank">
             <img src="assets/tls-logo-star-white.png" style="width: 4rem; " alt="">
         </a>
 
@@ -22,19 +22,19 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active text-reset" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active text-reset" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-reset" href="#">Movie</a>
+                            <a class="nav-link text-reset" href="movie.php">Movie</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-reset" href="#">Television</a>
+                            <a class="nav-link text-reset" href="television.php">Television</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-reset" href="#">Music</a>
+                            <a class="nav-link text-reset" href="music.php">Music</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-reset" href="#">Miscellaneous</a>
+                            <a class="nav-link text-reset" href="miscellaneous.php">Miscellaneous</a>
                         </li>
                     </ul>
                 </div>
