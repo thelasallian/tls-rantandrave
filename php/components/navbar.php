@@ -60,7 +60,10 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ...
+                            <form action="search-results.php" method="post">
+                                <input type="text" name="search-query"><br>
+                                <input type="submit">
+                            </form>
                         </div>
                     </div>
                 </div>
