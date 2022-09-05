@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php $wp_url = "https://thelasallian.com/wp-json/wp/v2/posts?_fields=title,link,jetpack_featured_media_url,date,authors,content&tags=497&per_page=100"; ?>
 <?php require_once 'php/functions.php'; ?>
 
@@ -16,12 +17,15 @@
     <!-- Navbar -->
     <?php require_once 'php/components/navbar.php'; ?>
 
+    <!-- TODO: Proper Documentation -->
     <!-- TEMP: Display articles -->
     <?php
-    $search_query = $_POST["search-query"];
-    echo $search_query . "<br>";
-    $wp_url .= "&search=" . $search_query;
-    // require_once 'php/components/pagination.php';
+    if (intval($_GET['page']) == 0) {
+        $_SESSION["search_query"] = $_POST["search-query"];
+    }
+    echo $_SESSION["search_query"] . "<br>";
+    $wp_url .= "&search=" . $_SESSION["search_query"];
+    require_once 'php/components/pagination.php';
     $all_articles = fetch_info($wp_url);
     ?>
 
@@ -38,8 +42,8 @@
                 $article_url,
                 $content
             );
-            if (stripos($title, $search_query) !== FALSE
-               || stripos($content, $search_query) !== FALSE ) {
+            if (stripos($title, $_SESSION["search_query"]) !== FALSE
+               || stripos($content, $_SESSION["search_query"]) !== FALSE ) {
                 echo $title;
                 echo '<br/>';
              }
@@ -47,7 +51,7 @@
         ?>
     </ol>
 
-    <!-- <?php render_page_links($page_count, basename(__FILE__)); ?> -->
+    <?php render_page_links($page_count, basename(__FILE__)); ?>
     <!-- Footer -->
     <?php require_once 'php/components/footer.php'; ?>
 
