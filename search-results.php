@@ -18,47 +18,31 @@
     <?php require_once 'php/components/navbar.php'; ?>
 
     <!-- Search Query Processing -->
-    <?php
-    // If the url is at ?page=0, assign the search query to a session variable:
-    if (intval($_GET['page']) == 0) {
-        $_SESSION["search_query"] = $_POST["search-query"];
-    }
-    
-    $wp_url .= "&search=" . $_SESSION["search_query"]; // Append search query to WordPress url
-    require_once 'php/components/pagination.php';      // Apply pagination
-    $all_articles = fetch_info($wp_url);               // Fetch articles for WordPress url (specific page)
-    ?>
+    <?php require_once 'php/search-processing.php'; ?>
 
     <!-- Display Results -->
     <h1>Search Results</h1>
     <ol>
         <?php
-        foreach ($all_articles as $article)
-        {
+        foreach ($subset_articles as $article) {
             // Initialize article information:
             initialize_article_info(
                 $article, $visual_url, $title, $date,
                 $authors, $article_url, $content
             );
 
-            // Add leading and trailing space before search query 
-
-            // If the search query is found in the title or content, display the article:
-            // if (stripos($title, $_SESSION["search_query"])   !== FALSE ||
-            //     stripos($content, $_SESSION["search_query"]) !== FALSE   )
-            if (preg_match("/\b".preg_quote($_SESSION["search_query"])."\b/i", $title) ||
-                preg_match("/\b".preg_quote($_SESSION["search_query"])."\b/i", $content)   )
-            {
-                echo <<<ARTICLE
-                    <li><a href="{$article_url}">{$title}</a></li>
-                ARTICLE;
-            }
+            echo <<<ARTICLE
+                <li><a href="{$article_url}">{$title}</a></li>
+            ARTICLE;
         }
         ?>
     </ol>
 
     <!-- Pagination Links -->
-    <?php render_page_links($page_count, basename(__FILE__)); ?>
+    <a href="search-results.php?page=<?php echo $page_first; ?>">« First</a>
+    <a href="search-results.php?page=<?php echo $page_prev; ?>">Prev</a>
+    <a href="search-results.php?page=<?php echo $page_next; ?>">Next</a>
+    <a href="search-results.php?page=<?php echo $page_last; ?>">Last »</a>
 
     <!-- Footer -->
     <?php require_once 'php/components/footer.php'; ?>
