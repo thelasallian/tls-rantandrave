@@ -39,10 +39,7 @@
     </ol>
 
     <!-- Pagination Links -->
-    <a href="search-results.php?page=<?php echo $page_first; ?>">« First</a>
-    <a href="search-results.php?page=<?php echo $page_prev; ?>">Prev</a>
-    <a href="search-results.php?page=<?php echo $page_next; ?>">Next</a>
-    <a href="search-results.php?page=<?php echo $page_last; ?>">Last »</a>
+    <?php render_page_links($total_pages, basename(__FILE__)); ?>
 
     <!-- Footer -->
     <?php require_once 'php/components/footer.php'; ?>
