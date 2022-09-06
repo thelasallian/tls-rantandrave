@@ -17,41 +17,44 @@
     <!-- Navbar -->
     <?php require_once 'php/components/navbar.php'; ?>
 
-    <!-- TODO: Proper Documentation -->
-    <!-- TEMP: Display articles -->
+    <!-- Search Query Processing -->
     <?php
+    // If the url is at ?page=0, assign the search query to a session variable:
     if (intval($_GET['page']) == 0) {
         $_SESSION["search_query"] = $_POST["search-query"];
     }
-    echo $_SESSION["search_query"] . "<br>";
-    $wp_url .= "&search=" . $_SESSION["search_query"];
-    require_once 'php/components/pagination.php';
-    $all_articles = fetch_info($wp_url);
+    
+    $wp_url .= "&search=" . $_SESSION["search_query"]; // Append search query to WordPress url
+    require_once 'php/components/pagination.php';      // Apply pagination
+    $all_articles = fetch_info($wp_url);               // Fetch articles for WordPress url (specific page)
     ?>
 
+    <!-- Display Results -->
     <h1>Search Results</h1>
     <ol>
         <?php
-        foreach ($all_articles as $article) {
+        foreach ($all_articles as $article)
+        {
+            // Initialize article information:
             initialize_article_info(
-                $article,
-                $visual_url,
-                $title,
-                $date,
-                $authors,
-                $article_url,
-                $content
+                $article, $visual_url, $title, $date,
+                $authors, $article_url, $content
             );
-            if (stripos($title, $_SESSION["search_query"]) !== FALSE
-               || stripos($content, $_SESSION["search_query"]) !== FALSE ) {
+
+            // If the search query is found in the title or content, display the article:
+            if (stripos($title, $_SESSION["search_query"])   !== FALSE ||
+                stripos($content, $_SESSION["search_query"]) !== FALSE   )
+            {
                 echo $title." ".$article_url;
                 echo '<br/>';
-             }
+            }
         }
         ?>
     </ol>
 
+    <!-- Pagination Links -->
     <?php render_page_links($page_count, basename(__FILE__)); ?>
+
     <!-- Footer -->
     <?php require_once 'php/components/footer.php'; ?>
 
@@ -63,15 +66,9 @@
 
 <?php
 
-function initialize_article_info(
-    $article,
-    &$visual_url,
-    &$title,
-    &$date,
-    &$authors,
-    &$article_url,
-    &$content
-) {
+function initialize_article_info($article, &$visual_url, &$title, &$date,
+                                 &$authors, &$article_url, &$content)
+{
     $visual_url = $article["jetpack_featured_media_url"];
     $title = del_kicker($article["title"]["rendered"]);
     $date = date('F j, Y', strtotime($article["date"]));
