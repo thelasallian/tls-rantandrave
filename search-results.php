@@ -41,9 +41,13 @@
                 $authors, $article_url, $content
             );
 
+            // Add leading and trailing space before search query 
+
             // If the search query is found in the title or content, display the article:
-            if (stripos($title, $_SESSION["search_query"])   !== FALSE ||
-                stripos($content, $_SESSION["search_query"]) !== FALSE   )
+            // if (stripos($title, $_SESSION["search_query"])   !== FALSE ||
+            //     stripos($content, $_SESSION["search_query"]) !== FALSE   )
+            if (preg_match("/\b".preg_quote($_SESSION["search_query"])."\b/i", $title) ||
+                preg_match("/\b".preg_quote($_SESSION["search_query"])."\b/i", $content)   )
             {
                 echo <<<ARTICLE
                     <li><a href="{$article_url}">{$title}</a></li>
