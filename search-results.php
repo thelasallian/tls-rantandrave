@@ -45,8 +45,9 @@
             if (stripos($title, $_SESSION["search_query"])   !== FALSE ||
                 stripos($content, $_SESSION["search_query"]) !== FALSE   )
             {
-                echo $title." ".$article_url;
-                echo '<br/>';
+                echo <<<ARTICLE
+                    <li><a href="{$article_url}">{$title}</a></li>
+                ARTICLE;
             }
         }
         ?>
