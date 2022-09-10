@@ -95,7 +95,7 @@ function render_article_cards($articles)
         echo <<<ARTICLE
             <div class="position-relative">
                 <div class="ratio ratio-1x1"><img style="object-fit: cover;" src="{$visual_url}"></div>
-                <p>{$rating}</p>
+                <p class="d-inline-block fw-bold rounded-5 px-2 bg-primary">{$rating}</p>
                 <h2 class="fs-5">{$title}</h2>
                 <p>{$date}</p>
                 <p>{$authors}</p>
