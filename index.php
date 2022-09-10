@@ -38,7 +38,7 @@
                 </div>
                 <!-- Articles -->
                 <div class="row row-cols-2 row-cols-lg-4">
-                    <?php render_article_cards($section["articles"]); ?>
+                    <?php render_article_cards($section["articles"], $section["article_rating_class"], $section["article_title_class"]); ?>
                 </div>
             </div>
         </section>
@@ -62,22 +62,30 @@ function initialize_sections(&$sections)
         array(
             "tag_name" => "movie",
             "articles" => $_SESSION["ARTICLE_INFO_MOVIE"],
-            "icon_url" => "assets/movie.png"
+            "icon_url" => "assets/movie.png",
+            "article_rating_class" => "movie-bg-85",
+            "article_title_class" => "movie-bg-15"
         ),
         array(
             "tag_name" => "television",
             "articles" => $_SESSION["ARTICLE_INFO_TV"],
-            "icon_url" => "assets/tv.png"
+            "icon_url" => "assets/tv.png",
+            "article_rating_class" => "tv-bg-85",
+            "article_title_class" => "tv-bg-15"
         ),
         array(
             "tag_name" => "music",
             "articles" => $_SESSION["ARTICLE_INFO_MUSIC"],
-            "icon_url" => "assets/music.png"
+            "icon_url" => "assets/music.png",
+            "article_rating_class" => "music-bg-85",
+            "article_title_class" => "music-bg-15"
         ),
         array(
             "tag_name" => "miscellaneous",
             "articles" => $_SESSION["ARTICLE_INFO_MISC"],
-            "icon_url" => "assets/misc.png"
+            "icon_url" => "assets/misc.png",
+            "article_rating_class" => "misc-bg-85",
+            "article_title_class" => "misc-bg-15"
         )
     );
 }
@@ -93,7 +101,7 @@ function initialize_article_info($article, &$visual_url, &$title,
     $article_url = $article["link"];
 }
 
-function render_article_cards($articles)
+function render_article_cards($articles, $article_rating_class, $article_title_class)
 {
     foreach ($articles as $article) {
         initialize_article_info(
@@ -106,9 +114,9 @@ function render_article_cards($articles)
                 <div class="ratio ratio-1x1 mb-4">
                     <img class="rounded-3" style="object-fit: cover;" src="{$visual_url}">
                 </div>
-                <p class="d-inline-block fw-bold rounded-5 px-2 bg-primary">{$rating}</p>
+                <p class="d-inline-block fw-bold rounded-5 px-2 {$article_rating_class}">{$rating}</p>
                 <!-- Article Title -->
-                <h2 class="d-block rounded-3 bg-primary fs-5 p-3 mb-3">{$title}</h2>
+                <h2 class="d-block rounded-3 fs-5 p-3 mb-3 {$article_title_class}">{$title}</h2>
                 <!-- Byline -->
                 <p class="fs-7">
                     <span class="fw-bold">{$date}</span><br/>

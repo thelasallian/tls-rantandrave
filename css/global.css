@@ -1,9 +1,10 @@
 :root {
     /* 85% Opacity */
-    --movie-bg-85: rgba(15, 151, 191, 0.85);
-    --tv-bg-85: rgba(201, 89, 163, 0.85);
-    --music-bg-85: rgba(145, 176, 47, 0.85);
-    --misc-bg-85: rgba(254, 175, 48, 0.85);
+    /* Note some of these aren't actually 85% Basta */
+    --movie-bg-85: rgba(15, 151, 191, 0.75);
+    --tv-bg-85: rgba(201, 89, 163, 0.75);
+    --music-bg-85: rgba(145, 176, 47, 0.75);
+    --misc-bg-85: rgba(254, 175, 48, 0.65);
     
     /* 85% Opacity, Darker for Quick Ratings */
     --movie-bg-85-darker: rgba(25, 107, 131, 0.85);
@@ -40,6 +41,16 @@ h6 {
 
 /* Custom Utility Classes */
 .fs-7 { font-size: 0.875em; }
+
+.movie-bg-15 { background-color: var(--movie-bg-15); }
+.tv-bg-15 { background-color: var(--tv-bg-15); }
+.music-bg-15 { background-color: var(--music-bg-15);  }
+.misc-bg-15 { background-color: var(--misc-bg-15);  }
+
+.movie-bg-85 { background-color: var(--movie-bg-85); }
+.tv-bg-85 { background-color: var(--tv-bg-85); }
+.music-bg-85 { background-color: var(--music-bg-85); }
+.misc-bg-85 { background-color: var(--misc-bg-85); }
 
 /* Tags (Movie, Television, Music, Miscellaneous) */
 .tag-section-icon {
