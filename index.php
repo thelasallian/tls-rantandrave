@@ -99,8 +99,11 @@ function render_article_cards($articles)
                 </div>
                 <p class="d-inline-block fw-bold rounded-5 px-2 bg-primary">{$rating}</p>
                 <h2 class="fs-5">{$title}</h2>
-                <p>{$date}</p>
-                <p>{$authors}</p>
+                <!-- Byline -->
+                <p class="fs-7">
+                    <span class="fw-bold">{$date}</span><br/>
+                    <span>{$authors}</span>
+                </p>
                 <a class="stretched-link" href="{$article_url}" target="_blank"></a>
             </div>
         ARTICLE;
