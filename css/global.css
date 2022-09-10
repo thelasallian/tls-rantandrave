@@ -25,6 +25,7 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
+    background-color: var(--body-bg);
 }
 
 h1,
