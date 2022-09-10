@@ -40,3 +40,9 @@ h6 {
 
 /* Custom Utility Classes */
 .fs-7 { font-size: 0.875em; }
+
+/* Tags (Movie, Television, Music, Miscellaneous) */
+.tag-section-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+}

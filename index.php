@@ -31,7 +31,12 @@
     <?php foreach ($sections as $section): // Create a section for each RNR tag ?>
         <section id="<?php echo $section["tag_name"]; ?>" class="mb-5">
             <div class="container">
-                <h1 class="mb-4"><?php echo ucwords($section["tag_name"]); ?></h1>
+                <!-- Heading -->
+                <div class="tag-section-heading d-flex align-items-center mb-5">
+                    <img class="tag-section-icon me-4" src="<?php echo $section["icon_url"] ?>" alt="" />
+                    <h1 class="mb-0"><?php echo ucwords($section["tag_name"]); ?></h1>
+                </div>
+                <!-- Articles -->
                 <div class="row row-cols-2 row-cols-lg-4">
                     <?php render_article_cards($section["articles"]); ?>
                 </div>
@@ -57,18 +62,22 @@ function initialize_sections(&$sections)
         array(
             "tag_name" => "movie",
             "articles" => $_SESSION["ARTICLE_INFO_MOVIE"],
+            "icon_url" => "assets/movie.png"
         ),
         array(
             "tag_name" => "television",
             "articles" => $_SESSION["ARTICLE_INFO_TV"],
+            "icon_url" => "assets/tv.png"
         ),
         array(
             "tag_name" => "music",
             "articles" => $_SESSION["ARTICLE_INFO_MUSIC"],
+            "icon_url" => "assets/music.png"
         ),
         array(
             "tag_name" => "miscellaneous",
             "articles" => $_SESSION["ARTICLE_INFO_MISC"],
+            "icon_url" => "assets/misc.png"
         )
     );
 }
