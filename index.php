@@ -98,7 +98,8 @@ function render_article_cards($articles)
                     <img class="rounded-3" style="object-fit: cover;" src="{$visual_url}">
                 </div>
                 <p class="d-inline-block fw-bold rounded-5 px-2 bg-primary">{$rating}</p>
-                <h2 class="fs-5">{$title}</h2>
+                <!-- Article Title -->
+                <h2 class="d-block rounded-3 bg-primary fs-5 p-3 mb-3">{$title}</h2>
                 <!-- Byline -->
                 <p class="fs-7">
                     <span class="fw-bold">{$date}</span><br/>
