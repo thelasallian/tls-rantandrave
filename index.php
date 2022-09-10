@@ -29,7 +29,7 @@
     <!-- Tags (Movie, Television, Music, Miscellaneous) -->
     <?php initialize_sections($sections); // Initialize list of RNR tags and their respective articles ?>
     <?php foreach ($sections as $section): // Create a section for each RNR tag ?>
-        <section id="<?php echo $section["tag_name"]; ?>">
+        <section id="<?php echo $section["tag_name"]; ?>" class="mb-5">
             <div class="container">
                 <h1><?php echo ucwords($section["tag_name"]); ?></h1>
                 <div class="row row-cols-2 row-cols-lg-4">
