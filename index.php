@@ -12,7 +12,7 @@
     <title>The LaSallian: Rant and Rave</title>
 </head>
 
-<body>
+<body class="text-white">
     <!-- Navbar -->
     <?php require_once 'php/components/navbar.php' ?>
 
