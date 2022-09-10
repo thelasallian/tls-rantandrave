@@ -37,3 +37,6 @@ h5,
 h6 {
     font-family: 'Raleway', sans-serif;
 }
+
+/* Custom Utility Classes */
+.fs-7 { font-size: 0.875em; }
