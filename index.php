@@ -32,9 +32,17 @@
         <section id="<?php echo $section["tag_name"]; ?>" class="mb-5">
             <div class="container">
                 <!-- Heading -->
-                <div class="tag-section-heading d-flex align-items-center mb-5">
-                    <img class="tag-section-icon me-4" src="<?php echo $section["icon_url"] ?>" alt="" />
-                    <h1 class="mb-0"><?php echo ucwords($section["tag_name"]); ?></h1>
+                <div class="d-flex justify-content-between mb-5">
+                    <!-- Tag Name and Icon -->
+                    <div class="tag-section-heading d-flex align-items-center">
+                        <img class="tag-section-icon me-4" src="<?php echo $section["icon_url"] ?>" alt="" />
+                        <h1 class="mb-0"><?php echo ucwords($section["tag_name"]); ?></h1>
+                    </div>
+                    <!-- View All Link -->
+                    <div class="d-flex align-items-center position-relative">
+                        <a class="text-reset text-decoration-none stretched-link me-2" href="<?php echo $section["view_all_url"]; ?>">View All</a>
+                        <span class="material-icons">chevron_right</span>
+                    </div>
                 </div>
                 <!-- Articles -->
                 <div class="row row-cols-2 row-cols-lg-4">
@@ -64,28 +72,32 @@ function initialize_sections(&$sections)
             "articles" => $_SESSION["ARTICLE_INFO_MOVIE"],
             "icon_url" => "assets/movie.png",
             "article_rating_class" => "movie-bg-85",
-            "article_title_class" => "movie-bg-15"
+            "article_title_class" => "movie-bg-15",
+            "view_all_url" => "movie.php"
         ),
         array(
             "tag_name" => "television",
             "articles" => $_SESSION["ARTICLE_INFO_TV"],
             "icon_url" => "assets/tv.png",
             "article_rating_class" => "tv-bg-85",
-            "article_title_class" => "tv-bg-15"
+            "article_title_class" => "tv-bg-15",
+            "view_all_url" => "television.php"
         ),
         array(
             "tag_name" => "music",
             "articles" => $_SESSION["ARTICLE_INFO_MUSIC"],
             "icon_url" => "assets/music.png",
             "article_rating_class" => "music-bg-85",
-            "article_title_class" => "music-bg-15"
+            "article_title_class" => "music-bg-15",
+            "view_all_url" => "music.php"
         ),
         array(
             "tag_name" => "miscellaneous",
             "articles" => $_SESSION["ARTICLE_INFO_MISC"],
             "icon_url" => "assets/misc.png",
             "article_rating_class" => "misc-bg-85",
-            "article_title_class" => "misc-bg-15"
+            "article_title_class" => "misc-bg-15",
+            "view_all_url" => "miscellaneous.php"
         )
     );
 }
