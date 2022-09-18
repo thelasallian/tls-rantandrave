@@ -26,7 +26,8 @@
                     <p class="footer-link-main-site fs-6"6><a href="https://thelasallian.com"><strong>Go to Main Website →</strong></a></p>
                     <!-- Website Developers -->
                     <p class="footer-developers mt-3 fs-6">Copyright 2022 © <strong>The LaSallian</strong><br>
-                    Website developed by <a href="https://github.com/angelocguerra" target="_blank">Angelo Guerra</a> and <a href="https://github.com/ronnparcia" target="_blank">Ronn Parcia</a></p>
+                    Website developed by <a href="https://github.com/angelocguerra" target="_blank">Angelo Guerra</a> and <a href="https://github.com/ronnparcia" target="_blank">Ronn Parcia</a>
+                    <br> and designed with Alyssa Wee and Addie Holgado</p>
                 </div>
             </div>
         </div>
