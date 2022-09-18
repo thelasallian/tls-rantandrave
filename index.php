@@ -18,7 +18,28 @@
 
     <!-- Header -->
     <header>
-        <h1>Header</h1>
+        <div class="container py-5">
+            <div class="row my-0">
+                <!-- Header Article Text -->
+                <div class="header-article pb-6 pe-lg-0 col-sm-12 col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-lg-start text-center">
+                    <!-- Rating -->
+
+                    <!-- Title -->
+                    <h4 class="article-title"><?php echo $title; ?></h4>
+                    <!-- Article Date & Author/s -->
+                    <p class="article-date"><?php echo date('F j, Y', strtotime($date)); ?></p> 
+                    <p class="article-author">by<?php echo $authors; ?></p>
+
+                    <!-- Article Excerpt -->
+                    <p class="article-excerpt"><?php echo $excerpt; ?></p>
+                </div>
+
+                <div class="col-sm-12 col-lg-6">
+                    <img class="card-img w-100 h-100 rounded" style="object-fit:cover" src="<?php echo $visual; ?>" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Quick Ratings (2nd-5th Most Recent Articles) -->
