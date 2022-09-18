@@ -3,8 +3,9 @@
 /* Footer */
 footer
 {
-    background-color: #141414;
-    opacity: 87%;
+    background: linear-gradient(rgba(20, 20,20,0.87), rgba(20,20,20,0.87)), url(/assets/temp_placeholder.png);
+    background-size: cover;
+    background-position: center;
     color: white;
     padding-top: 5rem;
     padding-bottom: 5rem;
