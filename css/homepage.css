@@ -1,1 +1,11 @@
-@import "global.css"
+@import "global.css";
+
+header
+{
+    background: linear-gradient(rgba(15,151,191,0.20), rgba(28,30,35,0.9)), url(/assets/temp_placeholder.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
