@@ -1,1 +1,28 @@
-@import "global.css"
+@import "global.css";
+
+/* Footer */
+footer
+{
+    background-color: #141414;
+    opacity: 87%;
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer-link-main-site
+{
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+}
+
+footer a
+{
+    color: white !important;
+    text-decoration: none !important;
+}
+
+footer a:hover
+{
+    text-decoration: underline !important;
+}
