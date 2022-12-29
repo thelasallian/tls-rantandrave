@@ -36,7 +36,7 @@
                     <!-- Tag Name and Icon -->
                     <div class="tag-section-heading d-flex align-items-center">
                         <img class="tag-section-icon me-4" src="<?php echo $section["icon_url"] ?>" alt="" />
-                        <h1 class="mb-0"><?php echo ucwords($section["tag_name"]); ?></h1>
+                        <h1 class="fs-2 mb-0"><?php echo ucwords($section["tag_name"]); ?></h1>
                     </div>
                     <!-- View All Link -->
                     <div class="d-flex align-items-center position-relative">
