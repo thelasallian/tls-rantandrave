@@ -126,7 +126,8 @@ function render_article_cards($articles, $article_rating_class, $article_title_c
                 <div class="ratio ratio-1x1 mb-4">
                     <img class="rounded-3" style="object-fit: cover;" src="{$visual_url}">
                 </div>
-                <p class="d-inline-block fw-bold rounded-5 px-2 {$article_rating_class}">{$rating}</p>
+                <!-- Rating -->
+                <p class="article-card-rating d-inline-block rounded-5 {$article_rating_class}">{$rating}</p>
                 <!-- Article Title -->
                 <h2 class="d-block rounded-3 fs-5 p-3 mb-3 {$article_title_class}">{$title}</h2>
                 <!-- Byline -->
