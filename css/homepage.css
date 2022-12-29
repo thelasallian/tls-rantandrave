@@ -7,6 +7,10 @@
 
 /* Article Cards */
 
+.article-card {
+    margin-bottom: 1.75rem;
+}
+
 .ac-rating { /* Article Card Rating */
     padding: 0.25rem 1rem;
     font-weight: 500;
@@ -38,12 +42,8 @@
 
 @media only screen and (max-width: 560px) {
     /* On small screens, smaller text sizes */
-    .article-card {
-        margin-bottom: 2rem;
-    }
-    
     .ac-title {
-        font-size: 1em;
+        font-size: 1.15em;
     }
 
     .ac-rating {
@@ -51,7 +51,7 @@
     }
 
     .ac-date {
-        font-size: 0.75em;
+        font-size: 0.85em;
     }
 
     .ac-title-date {
