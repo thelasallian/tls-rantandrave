@@ -124,9 +124,7 @@ function render_article_cards($articles, $article_rating_class, $article_title_c
         echo <<<ARTICLE
             <div class="position-relative">
                 <!-- Article Visual -->
-                <div class="ratio ratio-1x1 mb-4">
-                    <img class="rounded-3" style="object-fit: cover;" src="{$visual_url}">
-                </div>
+                <img class="ac-visual rounded-3 mb-3" style="object-fit: cover;" src="{$visual_url}">
 
                 <!-- Rating -->
                 <span class="ac-rating d-inline-block rounded-5 mb-3 {$article_rating_class}">{$rating}</span>
