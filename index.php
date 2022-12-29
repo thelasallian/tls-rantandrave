@@ -131,7 +131,7 @@ function render_article_cards($articles, $article_rating_class, $article_title_c
                 
                 <!-- Article Title and Date -->
                 <div class="d-block rounded-3 p-3 mb-3 {$article_title_class}">
-                    <h2 class="mb-2 fs-5">{$title}</h2>
+                    <h2 class="ac-title mb-2">{$title}</h2>
                     <span class="ac-date fs-7">{$date}</span>
                 </div>
 
