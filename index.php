@@ -122,7 +122,7 @@ function render_article_cards($articles, $article_rating_class, $article_title_c
         );
         
         echo <<<ARTICLE
-            <div class="position-relative">
+            <div class="article-card position-relative">
                 <!-- Article Visual -->
                 <img class="ac-visual rounded-3 mb-3" style="object-fit: cover;" src="{$visual_url}">
 
