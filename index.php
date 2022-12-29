@@ -29,11 +29,24 @@
     <!-- Tags (Movie, Television, Music, Miscellaneous) -->
     <?php initialize_sections($sections); // Initialize list of RNR tags and their respective articles ?>
     <?php foreach ($sections as $section): // Create a section for each RNR tag ?>
-        <section id="<?php echo $section["tag_name"]; ?>">
+        <section id="<?php echo $section["tag_name"]; ?>" class="category-section mb-5">
             <div class="container">
-                <h1><?php echo ucwords($section["tag_name"]); ?></h1>
+                <!-- Heading -->
+                <div class="d-flex justify-content-between mb-5">
+                    <!-- Tag Name and Icon -->
+                    <div class="tag-section-heading d-flex align-items-center">
+                        <img class="tag-section-icon me-4" src="<?php echo $section["icon_url"] ?>" alt="" />
+                        <h1 class="fs-2 mb-0"><?php echo ucwords($section["tag_name"]); ?></h1>
+                    </div>
+                    <!-- View All Link -->
+                    <div class="d-flex align-items-center position-relative">
+                        <a class="cs-view-all text-reset text-decoration-none stretched-link" href="<?php echo $section["view_all_url"]; ?>">View All</a>
+                        <span class="material-icons">chevron_right</span>
+                    </div>
+                </div>
+                <!-- Articles -->
                 <div class="row row-cols-2 row-cols-lg-4">
-                    <?php render_article_cards($section["articles"]); ?>
+                    <?php render_article_cards($section["articles"], $section["article_rating_class"], $section["article_title_class"]); ?>
                 </div>
             </div>
         </section>
@@ -57,18 +70,34 @@ function initialize_sections(&$sections)
         array(
             "tag_name" => "movie",
             "articles" => $_SESSION["ARTICLE_INFO_MOVIE"],
+            "icon_url" => "assets/movie.png",
+            "article_rating_class" => "movie-bg-85",
+            "article_title_class" => "movie-bg-15",
+            "view_all_url" => "movie.php"
         ),
         array(
             "tag_name" => "television",
             "articles" => $_SESSION["ARTICLE_INFO_TV"],
+            "icon_url" => "assets/tv.png",
+            "article_rating_class" => "tv-bg-85",
+            "article_title_class" => "tv-bg-15",
+            "view_all_url" => "television.php"
         ),
         array(
             "tag_name" => "music",
             "articles" => $_SESSION["ARTICLE_INFO_MUSIC"],
+            "icon_url" => "assets/music.png",
+            "article_rating_class" => "music-bg-85",
+            "article_title_class" => "music-bg-15",
+            "view_all_url" => "music.php"
         ),
         array(
             "tag_name" => "miscellaneous",
             "articles" => $_SESSION["ARTICLE_INFO_MISC"],
+            "icon_url" => "assets/misc.png",
+            "article_rating_class" => "misc-bg-85",
+            "article_title_class" => "misc-bg-15",
+            "view_all_url" => "miscellaneous.php"
         )
     );
 }
@@ -84,7 +113,7 @@ function initialize_article_info($article, &$visual_url, &$title,
     $article_url = $article["link"];
 }
 
-function render_article_cards($articles)
+function render_article_cards($articles, $article_rating_class, $article_title_class)
 {
     foreach ($articles as $article) {
         initialize_article_info(
@@ -93,12 +122,20 @@ function render_article_cards($articles)
         );
         
         echo <<<ARTICLE
-            <div class="position-relative">
-                <div class="ratio ratio-1x1"><img style="object-fit: cover;" src="{$visual_url}"></div>
-                <p>{$rating}</p>
-                <h2 class="fs-5">{$title}</h2>
-                <p>{$date}</p>
-                <p>{$authors}</p>
+            <div class="article-card position-relative">
+                <!-- Article Visual -->
+                <img class="ac-visual rounded-3 mb-3" style="object-fit: cover;" src="{$visual_url}">
+
+                <!-- Rating -->
+                <span class="ac-rating d-inline-block rounded-5 mb-3 {$article_rating_class}">{$rating}</span>
+                
+                <!-- Article Title and Date -->
+                <div class="ac-title-date d-block rounded-3 mb-3 {$article_title_class}">
+                    <h2 class="ac-title mb-2">{$title}</h2>
+                    <span class="ac-date fs-7">{$date}</span>
+                </div>
+
+                <!-- Stretched Link -->
                 <a class="stretched-link" href="{$article_url}" target="_blank"></a>
             </div>
         ARTICLE;
@@ -106,3 +143,4 @@ function render_article_cards($articles)
 }
 
 ?>
+
