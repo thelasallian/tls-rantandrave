@@ -1,5 +1,10 @@
 @import "global.css";
 
+.container {
+    padding-left: calc(var(--bs-gutter-x) * .9);
+    padding-right: calc(var(--bs-gutter-x) * .9);
+}
+
 /* Article Cards */
 
 .ac-rating { /* Article Card Rating */
