@@ -123,18 +123,21 @@ function render_article_cards($articles, $article_rating_class, $article_title_c
         
         echo <<<ARTICLE
             <div class="position-relative">
+                <!-- Article Visual -->
                 <div class="ratio ratio-1x1 mb-4">
                     <img class="rounded-3" style="object-fit: cover;" src="{$visual_url}">
                 </div>
+
                 <!-- Rating -->
-                <p class="article-card-rating d-inline-block rounded-5 {$article_rating_class}">{$rating}</p>
-                <!-- Article Title -->
-                <h2 class="d-block rounded-3 fs-5 p-3 mb-3 {$article_title_class}">{$title}</h2>
-                <!-- Byline -->
-                <p class="fs-7">
-                    <span class="fw-bold">{$date}</span><br/>
-                    <span>{$authors}</span>
-                </p>
+                <span class="ac-rating d-inline-block rounded-5 mb-3 {$article_rating_class}">{$rating}</span>
+                
+                <!-- Article Title and Date -->
+                <div class="d-block rounded-3 p-3 mb-3 {$article_title_class}">
+                    <h2 class="mb-2 fs-5">{$title}</h2>
+                    <span class="ac-date fs-7">{$date}</span>
+                </div>
+
+                <!-- Stretched Link -->
                 <a class="stretched-link" href="{$article_url}" target="_blank"></a>
             </div>
         ARTICLE;
@@ -142,3 +145,4 @@ function render_article_cards($articles, $article_rating_class, $article_title_c
 }
 
 ?>
+
