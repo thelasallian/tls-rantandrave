@@ -76,3 +76,15 @@
         background: none !important;
     }
 }
+
+.cs-view-all {
+    margin-right: .5rem;
+}
+
+.cs-view-all:hover {
+    opacity: .75;
+}
+
+.cs-view-all:hover + .material-icons {
+    transform: translateX(.5rem);
+}

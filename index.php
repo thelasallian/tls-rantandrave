@@ -40,7 +40,7 @@
                     </div>
                     <!-- View All Link -->
                     <div class="d-flex align-items-center position-relative">
-                        <a class="text-reset text-decoration-none stretched-link me-2" href="<?php echo $section["view_all_url"]; ?>">View All</a>
+                        <a class="cs-view-all text-reset text-decoration-none stretched-link" href="<?php echo $section["view_all_url"]; ?>">View All</a>
                         <span class="material-icons">chevron_right</span>
                     </div>
                 </div>
