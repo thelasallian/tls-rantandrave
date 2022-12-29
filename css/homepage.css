@@ -7,8 +7,25 @@
 
 /* Article Cards */
 
+.category-section  * {
+    transition: .3s;
+}
+
+.category-section .row:hover .article-card {
+    opacity: 0.45;
+}
+
+.article-card:hover {
+    opacity: 1 !important;
+}
+
 .article-card {
     margin-bottom: 1.75rem;
+}
+
+.article-card:hover .ac-visual {
+    transform: translateY(-.75rem);
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
 }
 
 .ac-rating { /* Article Card Rating */

@@ -29,7 +29,7 @@
     <!-- Tags (Movie, Television, Music, Miscellaneous) -->
     <?php initialize_sections($sections); // Initialize list of RNR tags and their respective articles ?>
     <?php foreach ($sections as $section): // Create a section for each RNR tag ?>
-        <section id="<?php echo $section["tag_name"]; ?>" class="mb-5">
+        <section id="<?php echo $section["tag_name"]; ?>" class="category-section mb-5">
             <div class="container">
                 <!-- Heading -->
                 <div class="d-flex justify-content-between mb-5">
