@@ -10,3 +10,14 @@
 .ac-date { /* Article Card Date */
     color: rgba(255, 255, 255, 0.5);
 }
+
+.ac-visual {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+}
+
+@media only screen and (max-width: 450px), (min-width: 991px) {
+    .ac-visual {
+        aspect-ratio: 1 / 1;
+    }
+}
