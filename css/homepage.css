@@ -25,6 +25,10 @@
     font-size: 1.35em;
 }
 
+.ac-title-date {
+    padding: 1rem;
+}
+
 @media only screen and (max-width: 450px), (min-width: 991px) {
     /* On some screens, use square visuals */
     .ac-visual {
@@ -48,5 +52,10 @@
 
     .ac-date {
         font-size: 0.75em;
+    }
+
+    .ac-title-date {
+        padding: 0;
+        background: none !important;
     }
 }
