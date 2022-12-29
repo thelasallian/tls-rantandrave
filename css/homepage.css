@@ -1,6 +1,12 @@
 @import "global.css";
 
-.article-card-rating {
+/* Article Cards */
+
+.ac-rating { /* Article Card Rating */
     padding: 0.25rem 1rem;
     font-weight: 500;
+}
+
+.ac-date { /* Article Card Date */
+    color: rgba(255, 255, 255, 0.5);
 }
