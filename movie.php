@@ -25,7 +25,7 @@
     $all_articles = $_SESSION["ARTICLE_INFO"];
 
     foreach ($all_articles as $article) {
-        initialize_article_info(
+        init_article_info_catsubpage(
             $article, $visual_url, $title,
             $date, $authors, $article_url
         );

@@ -5,7 +5,6 @@
 
 <?php 
 
-// TODO: Rename this function name (and across other files where it is called) to reflect that it's for category subpages only
 /**
  * This function assigns the article information to individual variables
  * 
@@ -16,7 +15,7 @@
  * @param &$authors     the reference to the variable which will be assigned the article authors
  * @param &$article_url the reference to the variable which will be assigned the article url
  */
-function initialize_article_info(
+function init_article_info_catsubpage(
     $article,
     &$visual_url,
     &$title,
