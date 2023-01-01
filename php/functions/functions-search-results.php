@@ -2,7 +2,6 @@
 <!-- Functions Specific to Search Results -->
 <?php
 
-// TODO: Rename this function name (and across other files where it is called) to reflect that it's for search results only
 /**
  * This function assigns the article information to individual variables
  * 
@@ -14,7 +13,7 @@
  * @param &$article_url the reference to the variable which will be assigned the article url
  * @param &$content     the reference to the variable which will be assigned the article body. used for searching keywords
  */
-function initialize_article_info(
+function init_article_info_searchsubpage(
     $article, 
     &$visual_url, 
     &$title, 
