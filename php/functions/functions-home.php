@@ -1,6 +1,8 @@
+<!-- TODO: Add description for this file -->
 <!-- Homepage-specific Functions -->
 <?php
 
+// TODO: Add documentation
 function initialize_sections(&$sections)
 {
     $sections = array(
@@ -39,6 +41,8 @@ function initialize_sections(&$sections)
     );
 }
 
+// TODO: Add documentation
+// TODO: Rename this function name (and across other files where it is called) to reflect that it's for homepage only
 function initialize_article_info($article, &$visual_url, &$title,
                                  &$date, &$authors, &$rating, &$article_url)
 {
@@ -50,6 +54,7 @@ function initialize_article_info($article, &$visual_url, &$title,
     $article_url = $article["link"];
 }
 
+// TODO: Rename this function name (and across other files where it is called) to reflect that it's for homepage only
 function render_article_cards($articles, $article_rating_class, $article_title_class)
 {
     foreach ($articles as $article) {

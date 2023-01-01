@@ -1,7 +1,10 @@
+<!-- TODO: Add description for this file -->
 <!-- Functions specific to category subpages (Movie, TV, Music, Miscellaneous) -->
 
 <?php 
 
+// TODO: Add documentation
+// TODO: Rename this function name (and across other files where it is called) to reflect that it's for category subpages only
 function initialize_article_info($article, &$visual_url, &$title,
                                  &$date, &$authors, &$article_url)
 {
