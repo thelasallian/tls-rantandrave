@@ -1,1 +1,6 @@
+/**
+ * This stylesheet contains CSS specific that are used across the subpages,
+ * such as the category pages (Movie, Music, etc.) and the search results page.
+*/
+
 @import "global.css"
