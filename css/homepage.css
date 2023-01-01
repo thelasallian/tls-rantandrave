@@ -1,52 +1,75 @@
 @import "global.css";
 
+/**
+ * This stylesheet contains CSS specific to the homepage, such as the styles
+ * for the article cards per category (Movie, TV, etc.)
+*/
+
+/* Increase the horizontal padding for the container */
 .container {
     padding-left: calc(var(--bs-gutter-x) * .9);
     padding-right: calc(var(--bs-gutter-x) * .9);
 }
 
-/* Article Cards */
 
-.category-section  * {
-    transition: .3s;
-}
-
+/**
+ * CATEGORY SECTIONS
+*/
 .category-section .row:hover .article-card {
-    opacity: 0.45;
+    /*  Make the entire category section
+        transparent except the hovered article */
+    opacity: 0.45; 
 }
 
 .article-card:hover {
     opacity: 1 !important;
 }
 
+.category-section  * { 
+    /*  Add a transition to all elements
+        in a category section */
+    transition: .3s; 
+}
+
+
+/**
+ * ARTICLE CARDS
+*/
 .article-card {
     margin-bottom: 1.75rem;
 }
 
 .article-card:hover .ac-visual {
+    /* On hover, move the visual up and reveal the shadow */
     transform: translateY(-.75rem);
     box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
 }
 
-.ac-rating { /* Article Card Rating */
+.ac-rating {
+    /* Article card rating */
     padding: 0.25rem 1rem;
     font-weight: 500;
 }
 
-.ac-date { /* Article Card Date */
+.ac-date {
+    /* Article card date */
     color: rgba(255, 255, 255, 0.5);
 }
 
-.ac-visual {
+.ac-visual { 
+    /* Article card visual */
     width: 100%;
     aspect-ratio: 3 / 2;
 }
 
-.ac-title {
+.ac-title { 
+    /* Article card title */
     font-size: 1.35em;
 }
 
-.ac-title-date {
+.ac-title-date { 
+    /*  Wrapper of the article card
+        title and date */
     padding: 1rem;
 }
 
@@ -77,6 +100,9 @@
     }
 }
 
+/**
+ * VIEW ALL LINK
+*/
 .cs-view-all {
     margin-right: .5rem;
 }
