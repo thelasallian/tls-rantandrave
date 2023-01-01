@@ -1,5 +1,7 @@
 <?php
 
+// TODO: Add more detailed documentation to this file
+
 /* SEARCH PROCESSING */
 if (intval($_GET['page']) == 0) { // FIXME: Fix the Undefined array key "page" warning for this
     $_SESSION["search_query"] = $_POST["search-query"];
@@ -20,6 +22,7 @@ if (intval($_GET['page']) == 0) { // FIXME: Fix the Undefined array key "page" w
         $wp_url = $orig_wp_url;
     }
 
+    // TODO: Move this function to functions-search-results.php
     // Filter out articles that don't match search query
     function filter_articles($value) {
         return (
@@ -31,6 +34,7 @@ if (intval($_GET['page']) == 0) { // FIXME: Fix the Undefined array key "page" w
     $_SESSION["all_articles"] = array_filter($_SESSION["all_articles"], 'filter_articles');
 }
 
+// TODO: Consider moving this to a new file called pagination-searchresults.php
 /* MANUAL PAGINATION */
 
 // The page to display (Usually is received in a url parameter)

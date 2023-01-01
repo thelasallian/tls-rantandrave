@@ -1,3 +1,6 @@
+// TODO: Add documentation describing what this file does
+// TODO: Consider remaining this to pagination-catsubpages.php
+
 <?php
 
 // Specify the number of items per page. Important to specify before getting $page_count
