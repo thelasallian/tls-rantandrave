@@ -43,9 +43,15 @@ function initialize_sections(&$sections)
 }
 
 // TODO: Add documentation
-function initialize_article_info($article, &$visual_url, &$title,
-                                 &$date, &$authors, &$rating, &$article_url)
-{
+function initialize_article_info(
+    $article,
+    &$visual_url,
+    &$title,
+    &$date,
+    &$authors,
+    &$rating,
+    &$article_url
+) {
     $visual_url = $article["jetpack_featured_media_url"];
     $title = del_kicker($article["title"]["rendered"]);
     $date = date('F j, Y', strtotime($article["date"]));
@@ -55,12 +61,20 @@ function initialize_article_info($article, &$visual_url, &$title,
 }
 
 // TODO: Add documentation
-function render_article_cards($articles, $article_rating_class, $article_title_class)
-{
+function render_article_cards(
+    $articles,
+    $article_rating_class,
+    $article_title_class
+) {
     foreach ($articles as $article) {
         initialize_article_info(
-            $article, $visual_url, $title, $date,
-            $authors, $rating, $article_url
+            $article, 
+            $visual_url, 
+            $title, 
+            $date,
+            $authors, 
+            $rating, 
+            $article_url
         );
         
         echo <<<ARTICLE
