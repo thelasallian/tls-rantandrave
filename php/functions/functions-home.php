@@ -3,7 +3,14 @@
  -->
 <?php
 
-// TODO: Add documentation
+/**
+ * This function initializes the information for each category section
+ * (Movie, Television, Music, and Miscellaneous). These include the name
+ * of the section, the list of articles, the URL of the icon, the CSS
+ * class for styling the rating and title wrapper, and the "View All" link.
+ * 
+ * @param &$sections  the reference to the array variable containing all section info
+ */
 function initialize_sections(&$sections)
 {
     $sections = array(
@@ -42,7 +49,17 @@ function initialize_sections(&$sections)
     );
 }
 
-// TODO: Add documentation
+/**
+ * This function assigns the article information to individual variables
+ * 
+ * @param $article      an array containing the article's information
+ * @param &$visual_url  the reference to the variable which will be assigned the article visual url
+ * @param &$title       the reference to the variable which will be assigned the article title
+ * @param &$date        the reference to the variable which will be assigned the article date
+ * @param &$authors     the reference to the variable which will be assigned the article authors
+ * @param &$rating      the reference to the variable which will be assigned the article RNR rating
+ * @param &$article_url the reference to the variable which will be assigned the article url
+ */
 function initialize_article_info(
     $article,
     &$visual_url,
@@ -60,7 +77,14 @@ function initialize_article_info(
     $article_url = $article["link"];
 }
 
-// TODO: Add documentation
+/**
+ * This function renders the HTML for each article card
+ * under a specific category (Movie, Music, etc.)
+ * 
+ * @param $articles             the array containing the list of articles   
+ * @param $article_rating_class the CSS class name for styling the article rating
+ * @param $article_title_class  the CSS class name for styling the article's wrapper for the title and date
+ */
 function render_article_cards(
     $articles,
     $article_rating_class,
