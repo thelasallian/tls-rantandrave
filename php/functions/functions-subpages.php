@@ -5,7 +5,12 @@
 
  <?php
  
- // Function to render page links
+ /**
+  * Renders the HTML for the pagination links.
+  * 
+  * @param $page_count  the total number of pages
+  * @param $current_url the url that will be appended with "?page=". value passed is usually "basename(__FILE__)"
+  */
 function render_page_links($page_count, $current_url) {
     for ($i = 1; $i <= $page_count; $i++) {
         $page_url = $current_url."?page=".$i;
