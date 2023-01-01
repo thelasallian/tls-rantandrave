@@ -1,9 +1,9 @@
-@import "global.css";
-
 /**
  * This stylesheet contains CSS specific to the homepage, such as the styles
  * for the article cards per category (Movie, TV, etc.)
 */
+
+@import "global.css";
 
 /* Increase the horizontal padding for the container */
 .container {
