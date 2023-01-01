@@ -1,5 +1,7 @@
-<!-- TODO: Add description for this file -->
-<!-- Functions Specific to Search Results -->
+<!-- 
+    This files contains functions that are used only in the search results subpage (search-results.php).
+ -->
+
 <?php
 
 /**
