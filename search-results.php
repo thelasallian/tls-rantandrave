@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php $wp_url = "https://thelasallian.com/wp-json/wp/v2/posts?_fields=title,link,jetpack_featured_media_url,date,authors,content&tags=497&per_page=100"; ?>
-<?php require_once 'php/functions.php'; ?>
+<?php require_once 'php/functions/functions-global.php' ?>
 
 <!doctype html>
 <html lang="en">
