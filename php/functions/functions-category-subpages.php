@@ -16,9 +16,14 @@
  * @param &$authors     the reference to the variable which will be assigned the article authors
  * @param &$article_url the reference to the variable which will be assigned the article url
  */
-function initialize_article_info($article, &$visual_url, &$title,
-                                 &$date, &$authors, &$article_url)
-{
+function initialize_article_info(
+    $article,
+    &$visual_url,
+    &$title,
+    &$date,
+    &$authors,
+    &$article_url
+) {
     $visual_url = $article["jetpack_featured_media_url"];
     $title = del_kicker($article["title"]["rendered"]);
     $date = date('F j, Y', strtotime($article["date"]));
