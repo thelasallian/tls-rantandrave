@@ -29,8 +29,13 @@
         foreach ($subset_articles as $article) {
             // Initialize article information:
             init_article_info_searchsubpage(
-                $article, $visual_url, $title, $date,
-                $authors, $article_url, $content
+                $article,
+                $visual_url,
+                $title,
+                $date,
+                $authors,
+                $article_url,
+                $content
             );
 
             echo <<<ARTICLE
