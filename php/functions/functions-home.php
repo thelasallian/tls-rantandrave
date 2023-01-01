@@ -1,5 +1,6 @@
-<!-- TODO: Add description for this file -->
-<!-- Homepage-specific Functions -->
+<!-- 
+    This files contains functions that are used only in the homepage or index.php
+ -->
 <?php
 
 // TODO: Add documentation
