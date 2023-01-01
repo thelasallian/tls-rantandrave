@@ -8,7 +8,7 @@ $headers = get_headers($wp_url, true);
 $page_count = $headers["X-WP-TotalPages"];
 
 // Get current page
-$page = intval($_GET['page']);
+$page = intval($_GET['page']); // FIXME: Fix the Undefined array key "page" warning for this
 
 // Default page
 if ($page == 0) {

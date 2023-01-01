@@ -1,7 +1,7 @@
 <?php
 
 /* SEARCH PROCESSING */
-if (intval($_GET['page']) == 0) {
+if (intval($_GET['page']) == 0) { // FIXME: Fix the Undefined array key "page" warning for this
     $_SESSION["search_query"] = $_POST["search-query"];
     $wp_url .= "&search=" . $_SESSION["search_query"]; // Append search query to WordPress url
     
@@ -34,7 +34,7 @@ if (intval($_GET['page']) == 0) {
 /* MANUAL PAGINATION */
 
 // The page to display (Usually is received in a url parameter)
-$page = intval($_GET['page']);
+$page = intval($_GET['page']); // FIXME: Fix the Undefined array key "page" warning for this
 
 // The number of records to display per page
 $page_size = 24;
