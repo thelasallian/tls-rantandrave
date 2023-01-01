@@ -1,5 +1,6 @@
 <?php $wp_url = "https://thelasallian.com/wp-json/wp/v2/posts?_fields=title,link,jetpack_featured_media_url,date,authors&tags=2147"; ?>
 <?php require_once 'php/functions/functions-global.php' ?>
+<?php require_once 'php/functions/functions-category-subpages.php' ?>
 <?php require_once 'php/components/pagination.php'; ?>
 <?php require_once 'php/session/session-subpages.php'; ?>
 
@@ -43,17 +44,3 @@
 </body>
 
 </html>
-
-<?php 
-
-function initialize_article_info($article, &$visual_url, &$title,
-                                 &$date, &$authors, &$article_url)
-{
-    $visual_url = $article["jetpack_featured_media_url"];
-    $title = del_kicker($article["title"]["rendered"]);
-    $date = date('F j, Y', strtotime($article["date"]));
-    $authors = get_authors($article["authors"]);
-    $article_url = $article["link"];
-}
-
-?>
