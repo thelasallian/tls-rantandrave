@@ -26,8 +26,12 @@
 
     foreach ($all_articles as $article) {
         init_article_info_catsubpage(
-            $article, $visual_url, $title,
-            $date, $authors, $article_url
+            $article,
+            $visual_url,
+            $title,
+            $date,
+            $authors,
+            $article_url
         );
         echo $title;
         echo '<br/>';
