@@ -1,4 +1,5 @@
 <?php require_once 'php/functions/functions-global.php' ?>
+<?php require_once 'php/functions/functions-home.php' ?>
 <?php require_once 'php/session/session-home.php' ?>
 
 <!doctype html>
