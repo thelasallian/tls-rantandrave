@@ -17,15 +17,4 @@ if ($page == 0) {
 
 $wp_url .= "&page=".$page; // Append page number to WordPress url
 
-// Function to render page links
-function render_page_links($page_count, $current_url)
-{
-    for ($i = 1; $i <= $page_count; $i++) {
-        $page_url = $current_url."?page=".$i;
-        echo <<<PAGE_LINK
-            <a href="{$page_url}">{$i}</a>
-        PAGE_LINK;
-    }
-}
-
 ?>

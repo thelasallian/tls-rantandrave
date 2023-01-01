@@ -59,15 +59,4 @@ $offset = ($page - 1) * $page_size;
 // Get the subset of records to be displayed from the array
 $subset_articles = array_slice($_SESSION["all_articles"], $offset, $page_size);
 
-// Function to render page links
-function render_page_links($total_pages, $current_url)
-{
-    for ($i = 1; $i <= $total_pages; $i++) {
-        $page_url = $current_url."?page=".$i;
-        echo <<<PAGE_LINK
-            <a href="{$page_url}">{$i}</a>
-        PAGE_LINK;
-    }
-}
-
 ?>

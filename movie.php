@@ -1,5 +1,6 @@
 <?php $wp_url = "https://thelasallian.com/wp-json/wp/v2/posts?_fields=title,link,jetpack_featured_media_url,date,authors&tags=2147"; ?>
 <?php require_once 'php/functions/functions-global.php' ?>
+<?php require_once 'php/functions/functions-subpages.php' ?>
 <?php require_once 'php/functions/functions-category-subpages.php' ?>
 <?php require_once 'php/components/pagination.php'; ?>
 <?php require_once 'php/session/session-subpages.php'; ?>
