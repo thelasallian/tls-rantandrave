@@ -26,8 +26,7 @@ div.article-card:hover {
 }
 
 section.category-section  * { 
-    /*  Add a transition to all elements
-        in a category section */
+    /*  Add a transition to all elements in a category section */
     transition: .3s; 
 }
 
@@ -68,8 +67,7 @@ h2.ac-title {
 }
 
 div.ac-title-date { 
-    /*  Wrapper of the article card
-        title and date */
+    /*  Wrapper of the article card title and date */
     padding: 1rem;
 }
 
@@ -87,14 +85,17 @@ div.ac-title-date {
     }
 
     span.ac-rating {
+        /* Article card rating */
         font-size: 0.9em;
     }
 
     span.ac-date {
+        /* Article card date */
         font-size: 0.85em;
     }
 
     div.ac-title-date {
+        /*  Wrapper of the article card title and date */
         padding: 0;
         background: none !important;
     }
@@ -108,9 +109,11 @@ a.cs-view-all {
 }
 
 a.cs-view-all:hover {
+    /* On hover, reduce opacity */
     opacity: .75;
 }
 
 a.cs-view-all:hover + span.material-icons {
+    /* On hover, move the arrow to the right */
     transform: translateX(.5rem);
 }
