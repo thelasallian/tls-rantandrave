@@ -15,17 +15,17 @@
 /**
  * CATEGORY SECTIONS
 */
-.category-section .row:hover .article-card {
+section.category-section .row:hover div.article-card {
     /*  Make the entire category section
         transparent except the hovered article */
     opacity: 0.45; 
 }
 
-.article-card:hover {
+div.article-card:hover {
     opacity: 1 !important;
 }
 
-.category-section  * { 
+section.category-section  * { 
     /*  Add a transition to all elements
         in a category section */
     transition: .3s; 
@@ -35,39 +35,39 @@
 /**
  * ARTICLE CARDS
 */
-.article-card {
+div.article-card {
     margin-bottom: 1.75rem;
 }
 
-.article-card:hover .ac-visual {
+div.article-card:hover img.ac-visual {
     /* On hover, move the visual up and reveal the shadow */
     transform: translateY(-.75rem);
     box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
 }
 
-.ac-rating {
+span.ac-rating {
     /* Article card rating */
     padding: 0.25rem 1rem;
     font-weight: 500;
 }
 
-.ac-date {
+span.ac-date {
     /* Article card date */
     color: rgba(255, 255, 255, 0.5);
 }
 
-.ac-visual { 
+img.ac-visual { 
     /* Article card visual */
     width: 100%;
     aspect-ratio: 3 / 2;
 }
 
-.ac-title { 
+h2.ac-title { 
     /* Article card title */
     font-size: 1.35em;
 }
 
-.ac-title-date { 
+div.ac-title-date { 
     /*  Wrapper of the article card
         title and date */
     padding: 1rem;
@@ -75,26 +75,26 @@
 
 @media only screen and (max-width: 450px), (min-width: 991px) {
     /* On some screens, use square visuals */
-    .ac-visual {
+    img.ac-visual {
         aspect-ratio: 1 / 1;
     }
 }
 
 @media only screen and (max-width: 560px) {
     /* On small screens, smaller text sizes */
-    .ac-title {
+    h2.ac-title {
         font-size: 1.15em;
     }
 
-    .ac-rating {
+    span.ac-rating {
         font-size: 0.9em;
     }
 
-    .ac-date {
+    span.ac-date {
         font-size: 0.85em;
     }
 
-    .ac-title-date {
+    div.ac-title-date {
         padding: 0;
         background: none !important;
     }
@@ -103,14 +103,14 @@
 /**
  * VIEW ALL LINK
 */
-.cs-view-all {
+a.cs-view-all {
     margin-right: .5rem;
 }
 
-.cs-view-all:hover {
+a.cs-view-all:hover {
     opacity: .75;
 }
 
-.cs-view-all:hover + .material-icons {
+a.cs-view-all:hover + span.material-icons {
     transform: translateX(.5rem);
 }
