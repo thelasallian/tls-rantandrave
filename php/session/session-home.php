@@ -21,11 +21,11 @@ if (session_status() == PHP_SESSION_NONE) {
     $_SESSION["TIME_ACCESSED"] = time();
 
     // Fetch all RNR articles and RNR articles by Movie, TV, Music, and Misc.
-    $_SESSION["ARTICLE_INFO_ALL"] = fetch_info($wp_url_all);
+    $_SESSION["ARTICLE_INFO_ALL"]   = fetch_info($wp_url_all);
     $_SESSION["ARTICLE_INFO_MOVIE"] = fetch_info($wp_url_movie);
-    $_SESSION["ARTICLE_INFO_TV"] = fetch_info($wp_url_tv);
+    $_SESSION["ARTICLE_INFO_TV"]    = fetch_info($wp_url_tv);
     $_SESSION["ARTICLE_INFO_MUSIC"] = fetch_info($wp_url_music);
-    $_SESSION["ARTICLE_INFO_MISC"] = fetch_info($wp_url_misc);
+    $_SESSION["ARTICLE_INFO_MISC"]  = fetch_info($wp_url_misc);
 } else if (session_status() == PHP_SESSION_ACTIVE) {
     $dateInitiallyAccessed = new DateTime($_SESSION["TIME_ACCESSED"]);
     $dateNow = new DateTime(time());
@@ -38,11 +38,11 @@ if (session_status() == PHP_SESSION_NONE) {
         $_SESSION["TIME_ACCESSED"] = time();
         
         // Fetch all RNR articles and RNR articles by Movie, TV, Music, and Misc.
-        $_SESSION["ARTICLE_INFO_ALL"] = fetch_info($wp_url_all);
+        $_SESSION["ARTICLE_INFO_ALL"]   = fetch_info($wp_url_all);
         $_SESSION["ARTICLE_INFO_MOVIE"] = fetch_info($wp_url_movie);
-        $_SESSION["ARTICLE_INFO_TV"] = fetch_info($wp_url_tv);
+        $_SESSION["ARTICLE_INFO_TV"]    = fetch_info($wp_url_tv);
         $_SESSION["ARTICLE_INFO_MUSIC"] = fetch_info($wp_url_music);
-        $_SESSION["ARTICLE_INFO_MISC"] = fetch_info($wp_url_misc);
+        $_SESSION["ARTICLE_INFO_MISC"]  = fetch_info($wp_url_misc);
     }
 }
 
