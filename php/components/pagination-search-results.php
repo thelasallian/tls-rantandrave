@@ -1,8 +1,22 @@
-<!-- TODO: Add description to this file -->
+<!-- 
+    This file contains the pagination code for the search results page.
+    Unlike the pagination for category subpages (Movie, Music, etc.), all
+    search results are fetched all-at-once, rather than per page. The array
+    containing the search results are then filtered, then sliced into 24 per
+    page.
+
+    The reason for this is because the WordPress endpoint URL for search queries
+    also returns articles that matches only substring. For example, if I searched
+    "marvel", WordPress also returns articles that contain "marvelous."
+
+    If we filter those per page, there would be an inconsistent number of articles
+    displayed per page.
+
+    But if you have another solution please do tell me because nakakaloka this is the
+    first time I've done this.
+ -->
 
 <?php
-
-/* MANUAL PAGINATION */
 
 // The page to display (Usually is received in a url parameter)
 $page = intval($_GET['page']); // FIXME: Fix the Undefined array key "page" warning for this
