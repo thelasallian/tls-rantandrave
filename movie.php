@@ -2,7 +2,7 @@
 <?php require_once 'php/functions/functions-global.php' ?>
 <?php require_once 'php/functions/functions-subpages.php' ?>
 <?php require_once 'php/functions/functions-category-subpages.php' ?>
-<?php require_once 'php/components/pagination.php'; ?>
+<?php require_once 'php/components/pagination-category-subpages.php'; ?>
 <?php require_once 'php/session/session-subpages.php'; ?>
 
 <!doctype html>
