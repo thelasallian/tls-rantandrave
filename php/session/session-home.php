@@ -1,3 +1,9 @@
+<!-- 
+    This file fetches the 5 most recent RNR articles and the 4 most recent RNR articles
+    per category (Movie, Music, etc) and stores them in the user's session. This is
+    for the homepage.
+ -->
+ 
 <?php
 
 /*  Wordpress Endpoints for 4 most recent articles per tag,

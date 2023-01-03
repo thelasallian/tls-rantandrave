@@ -1,3 +1,8 @@
+<!-- 
+    This file fetches the RNR articles for specific categories (Movie, Music, etc.).
+    This is used in movie.php, music.php, etc.
+ -->
+
 <?php
 
 /* Code by Rafael Gabriel Arceo */
