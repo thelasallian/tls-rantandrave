@@ -46,6 +46,6 @@ if (intval($_GET['page']) == 0) { // FIXME: Fix the Undefined array key "page" w
 /**
  * PAGINATE THE RESULTS
  */
-require_once('php/components/pagination-searchresults.php');
+require_once('php/components/pagination-search-results.php');
 
 ?>
