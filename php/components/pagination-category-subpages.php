@@ -1,9 +1,14 @@
-// TODO: Add documentation describing what this file does
-// TODO: Consider remaining this to pagination-catsubpages.php
+<!-- 
+    This file contains the pagination code for category subpages (Movie, Music, etc.).
+    Note that this file is required_once'd first, before session-subpages.php. It does not
+    manually slice the returned array of articles (unlike the pagination for search results),
+    but appends the page number to the WordPress endpoint URL before the REST API function in session-subpages.
+ -->
 
 <?php
 
 // Specify the number of items per page. Important to specify before getting $page_count
+// Note: $wp_url is defined in search-results.php at the beginning of the file.
 $wp_url .= "&per_page=24"; 
 
 // Get number of pages
