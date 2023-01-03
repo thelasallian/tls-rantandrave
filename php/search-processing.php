@@ -29,15 +29,6 @@ if (intval($_GET['page']) == 0) { // FIXME: Fix the Undefined array key "page" w
         $wp_url = $orig_wp_url;
     }
 
-    // TODO: Move this function to functions-search-results.php
-    // Filter out articles that don't match search query
-    function filter_articles($value) {
-        return (
-            preg_match("/\b" . preg_quote($_SESSION["search_query"]) . "\b/i", $value["title"]["rendered"]) ||
-            preg_match("/\b" . preg_quote($_SESSION["search_query"]) . "\b/i", $value["content"]["rendered"])
-        );
-    }
-
     $_SESSION["all_articles"] = array_filter($_SESSION["all_articles"], 'filter_articles');
 }
 

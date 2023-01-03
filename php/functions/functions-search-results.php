@@ -32,4 +32,12 @@ function init_article_info_searchsubpage(
     $content = $article["content"]["rendered"];
 }
 
+// Filter out articles that don't match search query
+function filter_articles($value) {
+    return (
+        preg_match("/\b" . preg_quote($_SESSION["search_query"]) . "\b/i", $value["title"]["rendered"]) ||
+        preg_match("/\b" . preg_quote($_SESSION["search_query"]) . "\b/i", $value["content"]["rendered"])
+    );
+}
+
 ?>
