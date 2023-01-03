@@ -1,3 +1,10 @@
+<!-- 
+    This file contains the PHP code for search processing. The page get the search query
+    typed in the previous page's search text field, and appends it to a WordPress endpoint URL.
+    This URL is then passed to the REST API function, and the returned array is filtered to 
+    remove articles that matched only the search query as a substring.
+ -->
+
 <?php
 
 // TODO: Add more detailed documentation to this file
