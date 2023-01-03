@@ -9,23 +9,36 @@
 
 // TODO: Add more detailed documentation to this file
 
-/* SEARCH PROCESSING */
+/**
+ * SEARCH PROCESSING
+ */
 if (intval($_GET['page']) == 0) { // FIXME: Fix the Undefined array key "page" warning for this
+    // Get the search query entered by the user in the previous page
     $_SESSION["search_query"] = $_POST["search-query"];
-    $wp_url .= "&search=" . $_SESSION["search_query"]; // Append search query to WordPress url
+
+    // Append the search query to the WordPress Endpoint URL.
+    // Note: $wp_url is defined in search-results.php at the beginning of the file.
+    $wp_url .= "&search=" . $_SESSION["search_query"];
     
     // Get the total number of pages of the list of articles
     $headers = get_headers($wp_url, true);
     $page_count = $headers["X-WP-TotalPages"]; 
     
-    // Fetch all articles per page
+    // Create array that will store all search results
     $_SESSION["all_articles"] = array();
+
+    // Fetch all articles per result page
     for ($i = 1; $i <= $page_count; $i++) {
         $orig_wp_url = $wp_url;
+
+        // Append page number to WordPress Endpoint URL
         $wp_url .= "&page=" . $i;
+
+        // Fetch articles on that result page and append it to array
         $temp = fetch_info($wp_url);
         $_SESSION["all_articles"] = array_merge($_SESSION["all_articles"], $temp);
 
+        // Un-append the page number from the endpoint URL
         $wp_url = $orig_wp_url;
     }
 
