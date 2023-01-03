@@ -7,8 +7,6 @@
 
 <?php
 
-// TODO: Add more detailed documentation to this file
-
 /**
  * SEARCH PROCESSING
  */
