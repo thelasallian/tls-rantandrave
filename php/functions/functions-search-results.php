@@ -32,7 +32,16 @@ function init_article_info_searchsubpage(
     $content = $article["content"]["rendered"];
 }
 
-// Filter out articles that don't match search query
+/**
+ * Checks if the search query is found as a string in
+ * the article's body or title.
+ * 
+ * This solution was lifted from StackOverflow.
+ * 
+ * @param $value  an array containing a single article's information
+ * @return false  if the article merely contains a substring of the search query (e.g. search query
+ *                is "beta" but article contains only "betadine" and not the exact word)
+ */
 function filter_articles($value) {
     return (
         preg_match("/\b" . preg_quote($_SESSION["search_query"]) . "\b/i", $value["title"]["rendered"]) ||
