@@ -95,7 +95,7 @@ h6 {
     background: none;
     height: 2em;
     transition: .2s;
-    opacity: .75;
+    opacity: .5;
 }
 
 .sm-submitbtn > span.material-icons {
@@ -104,6 +104,6 @@ h6 {
 }
 
 .sm-submitbtn:hover {
-    transform: rotate(-20deg);
+    transform: rotate(15deg);
     opacity: 1;
 }
