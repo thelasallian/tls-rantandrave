@@ -94,9 +94,16 @@ h6 {
     border: none;
     background: none;
     height: 2em;
+    transition: .2s;
+    opacity: .75;
 }
 
 .sm-submitbtn > span.material-icons {
     /* Search icon INSIDE submit button */
     font-size: 2em;
+}
+
+.sm-submitbtn:hover {
+    transform: rotate(-20deg);
+    opacity: 1;
 }
