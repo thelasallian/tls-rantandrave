@@ -66,7 +66,7 @@
                             <form action="search-results.php" method="post">
                                 <div class="sm-wrapper">
                                     <!-- Search Box -->
-                                    <input class="sm-textinput" type="text" name="search-query"><br>
+                                    <input class="sm-textinput" type="text" name="search-query">
                                     <!-- Submit Button -->
                                     <button class="sm-submitbtn" type="submit">
                                         <span class="material-icons text-white me-2">search</span>
