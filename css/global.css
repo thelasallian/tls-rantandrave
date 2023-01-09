@@ -64,3 +64,53 @@ h6 {
     width: 2.25rem;
     height: 2.25rem;
 }
+
+/**
+ * SEARCH MODAL
+*/
+.search-modal-dialog {
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.05);
+}
+
+.sm-wrapper {
+    /* Wrapper of the search box and icon */
+    display: flex;
+    align-items: center;
+}
+
+.sm-textinput {
+    /* Search box */
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 5rem;
+    border: none;
+    font-size: 1.25em;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.2s;
+}
+
+.sm-textinput:focus {
+    outline: none;
+    /* box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175); */
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sm-submitbtn {
+    /* Search icon submit button */
+    border: none;
+    background: none;
+    height: 2em;
+    transition: .2s;
+    opacity: .5;
+}
+
+.sm-submitbtn > span.material-icons {
+    /* Search icon INSIDE submit button */
+    font-size: 2em;
+}
+
+.sm-submitbtn:hover {
+    transform: rotate(15deg);
+    opacity: 1;
+}
