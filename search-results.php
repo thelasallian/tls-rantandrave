@@ -1,6 +1,8 @@
 <?php session_start(); ?>
 <?php $wp_url = "https://thelasallian.com/wp-json/wp/v2/posts?_fields=title,link,jetpack_featured_media_url,date,authors,content&tags=497&per_page=100"; ?>
-<?php require_once 'php/functions.php'; ?>
+<?php require_once 'php/functions/functions-global.php' ?>
+<?php require_once 'php/functions/functions-subpages.php' ?>
+<?php require_once 'php/functions/functions-search-results.php' ?>
 
 <!doctype html>
 <html lang="en">
@@ -26,9 +28,14 @@
         <?php
         foreach ($subset_articles as $article) {
             // Initialize article information:
-            initialize_article_info(
-                $article, $visual_url, $title, $date,
-                $authors, $article_url, $content
+            init_article_info_searchsubpage(
+                $article,
+                $visual_url,
+                $title,
+                $date,
+                $authors,
+                $article_url,
+                $content
             );
 
             echo <<<ARTICLE
@@ -49,18 +56,3 @@
 </body>
 
 </html>
-
-<?php
-
-function initialize_article_info($article, &$visual_url, &$title, &$date,
-                                 &$authors, &$article_url, &$content)
-{
-    $visual_url = $article["jetpack_featured_media_url"];
-    $title = del_kicker($article["title"]["rendered"]);
-    $date = date('F j, Y', strtotime($article["date"]));
-    $authors = get_authors($article["authors"]);
-    $article_url = $article["link"];
-    $content = $article["content"]["rendered"];
-}
-
-?>

@@ -1,3 +1,7 @@
+<!-- 
+    This files contains functions that are used globally across several pages, regardless of kind.
+ -->
+
 <?php
 
 /**
