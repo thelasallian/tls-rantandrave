@@ -64,3 +64,35 @@ h6 {
     width: 2.25rem;
     height: 2.25rem;
 }
+
+/**
+ * SEARCH MODAL
+*/
+.sm-wrapper {
+    /* Wrapper of the search box and icon */
+    display: flex;
+    align-items: center;
+}
+
+.sm-textinput {
+    /* Search box */
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 5rem;
+    border: none;
+    font-size: 1.25em;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.sm-submitbtn {
+    /* Search icon submit button */
+    border: none;
+    background: none;
+    height: 2em;
+}
+
+.sm-submitbtn > span.material-icons {
+    /* Search icon INSIDE submit button */
+    font-size: 2em;
+}
