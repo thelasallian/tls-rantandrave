@@ -19,7 +19,11 @@
 <?php
 
 // The page to display (Usually is received in a url parameter)
-$page = intval($_GET['page']); // FIXME: Fix the Undefined array key "page" warning for this
+if (isset($_GET['page'])) { // If there is a page parameter in the URL
+    $page = intval($_GET['page']); 
+} else { // Otherwise, assume that it's the first page
+    $page = 1;
+}
 
 // The number of records to display per page
 $page_size = 24;
