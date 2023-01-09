@@ -69,7 +69,7 @@
                                     <input class="sm-textinput" type="text" name="search-query">
                                     <!-- Submit Button -->
                                     <button class="sm-submitbtn" type="submit">
-                                        <span class="material-icons text-white me-2">search</span>
+                                        <span class="material-icons text-white">search</span>
                                     </button>
                                 </div>
                             </form>
