@@ -68,6 +68,10 @@ h6 {
 /**
  * SEARCH MODAL
 */
+.search-modal-dialog {
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.05);
+}
+
 .sm-wrapper {
     /* Wrapper of the search box and icon */
     display: flex;
