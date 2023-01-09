@@ -10,7 +10,7 @@
 /**
  * SEARCH PROCESSING
  */
-if (intval($_GET['page']) == 0) { // FIXME: Fix the Undefined array key "page" warning for this
+if (!isset($_GET['page'])) { // If first time loading the search results
     // Get the search query entered by the user in the previous page
     $_SESSION["search_query"] = $_POST["search-query"];
 

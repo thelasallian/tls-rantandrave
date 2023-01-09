@@ -15,11 +15,10 @@ $wp_url .= "&per_page=24";
 $headers = get_headers($wp_url, true);
 $page_count = $headers["X-WP-TotalPages"];
 
-// Get current page
-$page = intval($_GET['page']); // FIXME: Fix the Undefined array key "page" warning for this
-
-// Default page
-if ($page == 0) {
+// Get current page number of current URL
+if (isset($_GET['page'])) { // If there is a page parameter in the URL
+    $page = intval($_GET['page']); 
+} else { // Otherwise, assume that it's the first page
     $page = 1;
 }
 
