@@ -52,17 +52,26 @@
             </button>
 
             <!-- Search Modal -->
-            <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal fade search-modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true" data-bs-theme="dark">
                 <div class="modal-dialog">
                     <div class="modal-content">
+                        <!-- Modal Header -->
                         <div class="modal-header">
-                            <h5 class="modal-title" id="searchModalLabel">Search Article</h5>
+                            <h5 class="modal-title" id="searchModalLabel">What article are you looking for?</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
+                        <!-- Modal Body -->
                         <div class="modal-body">
+                            <!-- Search Form -->
                             <form action="search-results.php" method="post">
-                                <input type="text" name="search-query"><br>
-                                <input type="submit">
+                                <div class="sm-wrapper">
+                                    <!-- Search Box -->
+                                    <input class="sm-textinput" type="text" name="search-query"><br>
+                                    <!-- Submit Button -->
+                                    <button class="sm-submitbtn" type="submit">
+                                        <span class="material-icons text-white me-2">search</span>
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>
