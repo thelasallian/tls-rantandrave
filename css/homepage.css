@@ -35,3 +35,8 @@ footer a:hover
 .footer-developers {
     font-size: 0.8em !important;
 }
+
+.footer-title {
+    border-radius: 0.75rem;
+    background: rgba(62,82,88,0.4);
+}
