@@ -39,8 +39,7 @@
         ); 
     ?>
 
-    <!-- TEMP: Display articles -->
-    <h1>Movie</h1>
+    <!-- Display Articles -->
     <?php
     $all_articles = $_SESSION["ARTICLE_INFO"];
 
