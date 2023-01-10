@@ -20,6 +20,12 @@
     <!-- Navbar -->
     <?php require_once 'php/components/navbar.php'; ?>
 
+    <!-- Subpage Header -->
+    <header class="subpage-header">
+        <img class="sh-icon" src="assets/movie.png" alt="Movie Icon">
+        <h1 class="sh-heading">Movie</h1>
+    </header>
+
     <!-- TEMP: Display articles -->
     <h1>Movie</h1>
     <?php
