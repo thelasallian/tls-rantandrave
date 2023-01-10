@@ -24,13 +24,19 @@
     <?php
         $sh_bgimg = $_SESSION["ARTICLE_INFO"][0]["jetpack_featured_media_url"];
         $sh_gradientclass = 'sh-movie';
+        $sh_heading = 'Movie';
+        $sh_iconpath = 'assets/movie.png';
     ?>
 
     <!-- Subpage Header -->
-    <header class="subpage-header <?php echo $sh_gradientclass; ?>" style="background-image: url(<?php echo $sh_bgimg; ?>);">
-        <img class="sh-icon" src="assets/movie.png" alt="Movie Icon">
-        <h1 class="sh-heading">Movie</h1>
-    </header>
+    <?php
+        render_subpage_header(
+            $sh_bgimg,
+            $sh_gradientclass,
+            $sh_heading,
+            $sh_iconpath
+        ); 
+    ?>
 
     <!-- TEMP: Display articles -->
     <h1>Movie</h1>
