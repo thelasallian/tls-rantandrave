@@ -43,20 +43,52 @@
     <?php
     $all_articles = $_SESSION["ARTICLE_INFO"];
 
-    foreach ($all_articles as $article) {
-        init_article_info_catsubpage(
-            $article,
-            $visual_url,
-            $title,
-            $date,
-            $authors,
-            $article_url
-        );
-        echo $title;
-        echo '<br/>';
-    }
+    // foreach ($all_articles as $article) {
+    //     init_article_info_catsubpage(
+    //         $article,
+    //         $visual_url,
+    //         $title,
+    //         $date,
+    //         $authors,
+    //         $article_url
+    //     );
+    //     echo $title;
+    //     echo '<br/>';
+    // }
 
     ?>
+    <section class="subpage-articles">
+        <div class="container">
+            <div class="row row-cols-2">
+                <!-- Fetch articles -->
+                <?php $all_articles = $_SESSION["ARTICLE_INFO"]; ?>
+                <!-- Render cards for each article -->
+                <?php foreach ($all_articles as $article): ?>
+                    <?php
+                    init_article_info_subpage(
+                        $article,
+                        $visual_url,
+                        $title,
+                        $date,
+                        $authors,
+                        $article_url
+                    );
+                    ?>
+                    <div class="col">
+                        <div class="sp-article-card">
+                            <img class="sp-ac-visual" src="<?php echo $visual_url; ?>" alt="">
+                            <div class="sp-ac-wrapper">
+                                <h2 class="sp-ac-title"><?php echo $title; ?></h2>
+                                <p class="sp-ac-date"><?php echo $date; ?></p>
+                                <p class="sp-ac-authors"><?php echo $authors; ?></p>
+                            </div>
+                            <a class="stretched-link" href="<?php echo $article_url; ?>" target="_blank"></a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
     
     <?php render_page_links($page_count, basename(__FILE__)); ?>
     <!-- Footer -->
