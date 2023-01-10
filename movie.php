@@ -20,8 +20,14 @@
     <!-- Navbar -->
     <?php require_once 'php/components/navbar.php'; ?>
 
+    <!-- Subpage Header Styles -->
+    <?php
+        $sh_bgimg = $_SESSION["ARTICLE_INFO"][0]["jetpack_featured_media_url"];
+        $sh_gradientclass = 'sh-movie';
+    ?>
+
     <!-- Subpage Header -->
-    <header class="subpage-header">
+    <header class="subpage-header <?php echo $sh_gradientclass; ?>" style="background-image: url(<?php echo $sh_bgimg; ?>);">
         <img class="sh-icon" src="assets/movie.png" alt="Movie Icon">
         <h1 class="sh-heading">Movie</h1>
     </header>
