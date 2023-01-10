@@ -8,15 +8,15 @@
         <div class="row">
             <!-- Left Side: TLS and Site Name -->
             <div class="col-sm-12 col-lg-6 mx-auto d-flex justify-content-center align-self-center align-items-lg-start text-center">
-                <figure class="my-auto">
+                <div class="my-auto">
                     <!-- Logo -->
                     <a href="index.php">
-                        <img src="assets/tls-logo-star-white.png" alt="TLS Logo" class="footer-logo mb-4 img-fluid" style="width:18%">
+                        <img src="assets/tls-logo-star-white.png" alt="TLS Logo" class="footer-logo mb-4 img-fluid" style="width:18%"></img>
                     </a>
                     <!-- Logo Heading -->
-                    <figcaption class="footer-heading fs-4">Menagerie</figcaption>
-                    <figcaption class="footer-title fs-1">Rant & Rave</figcaption>
-                </figure>
+                    <p class="footer-heading fs-4">Menagerie</p>
+                    <p class="footer-title rounded fs-1">Rant & Rave</p>
+                </div>
             </div>
             <!-- Description -->
             <div class="col-sm-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
