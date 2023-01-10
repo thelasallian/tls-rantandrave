@@ -1,13 +1,19 @@
 @import "global.css";
 
-header
-{
+header {
+    overflow: hidden;
+}
+
+header div.header-bg {
     background-size: cover;
     background-position: center;
+    display: block;
+    transition: all 0.5s ease;
 }
 
 header p.article-rating {
     font-size: 1em;
+    color: white;
 }
 
 header h4.article-title {
@@ -16,14 +22,15 @@ header h4.article-title {
 
 header p.article-date {
     font-size: 0.9em;
+    color: white;
 }
 
 header p.article-author {
     font-size: 0.9em;
+    color: white;
 }
 
 header p.article-excerpt {
     font-size: 0.85em;
+    color: white;
 }
-
-header 
