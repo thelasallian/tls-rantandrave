@@ -83,3 +83,45 @@ p.sp-ac-authors {
     margin-bottom: 0;
     font-size: 0.75em;
 }
+
+@media only screen and (max-width: 992px) {
+    h2.sp-ac-title {
+        /* Article title */
+        font-size: 1em;
+    }
+
+    p.sp-ac-authors {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h2.sp-ac-title {
+        /* Article title */
+        font-size: 1.25em;
+    }
+
+    p.sp-ac-authors {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    div.sp-article-card {
+        margin: .2rem 0;
+    }
+
+    h2.sp-ac-title {
+        /* Article title */
+        font-size: 1em;
+    }
+
+    img.sp-ac-visual {
+        /* Article visual */
+        width: 5rem;
+    }
+
+    p.sp-ac-authors {
+        display: none;
+    }
+}
