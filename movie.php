@@ -59,7 +59,7 @@
     ?>
     <section class="subpage-articles">
         <div class="container">
-            <div class="row row-cols-2">
+            <div class="row row-cols-1 row-cols-md-2">
                 <!-- Fetch articles -->
                 <?php $all_articles = $_SESSION["ARTICLE_INFO"]; ?>
                 <!-- Render cards for each article -->
