@@ -68,10 +68,12 @@
                 <!-- Render cards for each article -->
                 <?php render_subpage_article_cards($articles, $ac_class); ?>
             </div>
+            <!-- Pagination Links -->
+            <?php render_page_links($page_count, basename(__FILE__)); ?>
         </div>
     </section>
     
-    <?php render_page_links($page_count, basename(__FILE__)); ?>
+    
     <!-- Footer -->
     <?php require_once 'php/components/footer.php'; ?>
 
