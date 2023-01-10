@@ -3,7 +3,6 @@
 /* Footer */
 footer
 {
-    background: linear-gradient(rgba(20, 20,20,0.87), rgba(20,20,20,0.87)), url(/assets/temp_placeholder.png);
     background-size: cover;
     background-position: center;
     color: white;
@@ -15,6 +14,7 @@ footer
 {
     padding-top: 1.25em;
     padding-bottom: 1.25em;
+    font-size: 1em;
 }
 
 footer a
@@ -26,4 +26,12 @@ footer a
 footer a:hover
 {
     text-decoration: underline !important;
+}
+
+.footer-description {
+    font-size: 1em !important;
+}
+
+.footer-developers {
+    font-size: 0.8em !important;
 }
