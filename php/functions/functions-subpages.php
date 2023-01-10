@@ -64,7 +64,11 @@ function init_article_info_subpage(
     &$authors,
     &$article_url
 ) {
-    $visual_url = $article["jetpack_featured_media_url"];
+    if ($article["jetpack_featured_media_url"] == "") { // If there's no article, use default visual
+        $visual_url = 'assets/default-visual.jpg';
+    } else {
+        $visual_url = $article["jetpack_featured_media_url"];
+    }
     $title = del_kicker($article["title"]["rendered"]);
     $date = date('F j, Y', strtotime($article["date"]));
     $authors = get_authors($article["authors"]);
