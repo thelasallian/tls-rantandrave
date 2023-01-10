@@ -39,7 +39,7 @@ function render_page_links($page_count, $current_url) {
     for ($i = 1; $i <= $page_count; $i++) {
         $page_url = $current_url."?page=".$i;
         echo <<<PAGE_LINK
-            <li class="page-item"><a class="page-link" href="{$page_url}">{$i}</a></li>
+            <li class="page-item"><a class="page-link border-0" href="{$page_url}">{$i}</a></li>
         PAGE_LINK;
     }
     echo '</ul>';
