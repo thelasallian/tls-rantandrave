@@ -34,6 +34,21 @@ header.sh-movie::before {
     background: linear-gradient(180deg, rgba(0, 185, 239, 0.4) 0%, rgba(0, 0, 0, 0) 74.48%), linear-gradient(0deg, rgba(28, 30, 35, 0.9), rgba(28, 30, 35, 0.9));
 }
 
+header.sh-tv::before {
+    /* Linear gradient style specific to Television */
+    background: linear-gradient(180deg, rgba(233, 87, 183, 0.4) 0%, rgba(0, 0, 0, 0) 74.48%), linear-gradient(0deg, rgba(28, 30, 35, 0.9), rgba(28, 30, 35, 0.9));
+}
+
+header.sh-music::before {
+    /* Linear gradient style specific to Music */
+    background: linear-gradient(180deg, rgba(166, 206, 40, 0.4) 0%, rgba(0, 0, 0, 0) 74.48%), linear-gradient(0deg, rgba(28, 30, 35, 0.9), rgba(28, 30, 35, 0.9));
+}
+
+header.sh-misc::before {
+    /* Linear gradient style specific to Misellaneous */
+    background: linear-gradient(180deg, rgba(255, 168, 29, 0.4) 0%, rgba(0, 0, 0, 0) 74.48%), linear-gradient(0deg, rgba(28, 30, 35, 0.9), rgba(28, 30, 35, 0.9));
+}
+
 img.sh-icon {
     /* Icon for the subcategory */
     margin-bottom: 1rem;
