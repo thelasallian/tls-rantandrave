@@ -12,6 +12,8 @@ header.subpage-header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-size: cover;
+    background-position: center center;
 }
 
 img.sh-icon {
