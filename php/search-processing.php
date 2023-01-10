@@ -14,6 +14,9 @@ if (!isset($_GET['page'])) { // If first time loading the search results
     // Get the search query entered by the user in the previous page
     $_SESSION["search_query"] = $_POST["search-query"];
 
+    // Replace spaces, if any, with a plus sign to prevent errors
+    $_SESSION["search_query"] = str_replace(' ', '+', $_SESSION["search_query"]);
+
     // Append the search query to the WordPress Endpoint URL.
     // Note: $wp_url is defined in search-results.php at the beginning of the file.
     $wp_url .= "&search=" . $_SESSION["search_query"];
@@ -40,6 +43,10 @@ if (!isset($_GET['page'])) { // If first time loading the search results
         $wp_url = $orig_wp_url;
     }
 
+    // Revert the replacement of spaces to plus signs
+    $_SESSION["search_query"] = str_replace('+', ' ', $_SESSION["search_query"]);
+    
+    // Filter non-exact matches (Check array_filter documentation)
     $_SESSION["all_articles"] = array_filter($_SESSION["all_articles"], 'filter_articles');
 }
 
