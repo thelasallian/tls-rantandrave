@@ -44,3 +44,42 @@ img.sh-icon, h1.sh-heading {
     /* Places subcategory icon and heading on top of the linear-gradient */
     z-index: 1;
 }
+
+/**
+ * ARTICLE CARDS
+*/
+
+section.subpage-articles {
+    padding: 3rem 0;
+}
+
+div.sp-article-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: .8rem 0;
+    padding: .75rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: .5rem;
+}
+
+img.sp-ac-visual {
+    /* Article visual */
+    width: 8rem;
+    margin-right: 1.2rem;
+    border-radius: .25rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+h2.sp-ac-title {
+    /* Article title */
+    font-size: 1.25em;
+}
+
+p.sp-ac-date,
+p.sp-ac-authors {
+    /* Article date and authors */
+    margin-bottom: 0;
+    font-size: 0.75em;
+}
