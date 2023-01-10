@@ -34,7 +34,7 @@ function render_subpage_header(
   * @param $current_url the url that will be appended with "?page=". value passed is usually "basename(__FILE__)"
   */
 function render_page_links($page_count, $current_url) {
-    echo '<nav aria-label="Page navigation example" data-bs-theme="dark">';
+    echo '<nav aria-label="Page navigation" data-bs-theme="dark">';
     echo '<ul class="pagination">';
     for ($i = 1; $i <= $page_count; $i++) {
         $page_url = $current_url."?page=".$i;
