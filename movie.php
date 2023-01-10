@@ -40,23 +40,6 @@
     ?>
 
     <!-- Display Articles -->
-    <?php
-    $all_articles = $_SESSION["ARTICLE_INFO"];
-
-    // foreach ($all_articles as $article) {
-    //     init_article_info_catsubpage(
-    //         $article,
-    //         $visual_url,
-    //         $title,
-    //         $date,
-    //         $authors,
-    //         $article_url
-    //     );
-    //     echo $title;
-    //     echo '<br/>';
-    // }
-
-    ?>
     <section class="subpage-articles">
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2">
