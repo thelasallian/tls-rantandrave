@@ -15,7 +15,7 @@ header.subpage-header {
     align-items: center;
     padding: 4rem 0 4rem;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
 }
 
 header.subpage-header::before {
