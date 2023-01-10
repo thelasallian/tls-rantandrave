@@ -61,6 +61,7 @@ div.sp-article-card {
     padding: .75rem;
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: .5rem;
+    transition: 0.2s;
 }
 
 div.sp-ac-movie { background-color: rgba(42, 153, 187, 0.15); }
@@ -72,6 +73,10 @@ div.sp-ac-movie:hover { background-color: rgba(42, 153, 187, 0.25); }
 div.sp-ac-music:hover { background-color: rgba(160, 104, 142, 0.25); }
 div.sp-ac-tv:hover { background-color: rgba(150, 177, 61, 0.25); }
 div.sp-ac-misc:hover { background-color: rgba(180, 146, 91, 0.25); }
+
+div.sp-article-card:hover {
+    transform: translateY(-.5rem);
+}
 
 img.sp-ac-visual {
     /* Article visual */
