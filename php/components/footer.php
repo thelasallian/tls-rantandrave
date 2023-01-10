@@ -15,7 +15,7 @@
                     </a>
                     <!-- Logo Heading -->
                     <p class="footer-heading fs-4">Menagerie</p>
-                    <p class="footer-title rounded fs-1">Rant & Rave</p>
+                    <p class="footer-title rounded d-inline-block px-3 fs-1">Rant & Rave</p>
                 </div>
             </div>
             <!-- Description -->
