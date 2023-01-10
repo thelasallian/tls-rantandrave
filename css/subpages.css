@@ -39,3 +39,8 @@ img.sh-icon {
     margin-bottom: 1rem;
     height: 3rem;
 }
+
+img.sh-icon, h1.sh-heading {
+    /* Places subcategory icon and heading on top of the linear-gradient */
+    z-index: 1;
+}
