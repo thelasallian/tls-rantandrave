@@ -28,6 +28,12 @@ header.subpage-header::before {
     height: 100%;
     content: '';
 }
+
+header.sh-movie::before {
+    /* Linear gradient style specific to Movie */
+    background: linear-gradient(180deg, rgba(0, 185, 239, 0.4) 0%, rgba(0, 0, 0, 0) 74.48%), linear-gradient(0deg, rgba(28, 30, 35, 0.9), rgba(28, 30, 35, 0.9));
+}
+
 img.sh-icon {
     /* Icon for the subcategory */
     margin-bottom: 1rem;
