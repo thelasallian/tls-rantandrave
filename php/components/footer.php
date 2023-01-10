@@ -3,7 +3,7 @@
     $visual_url = $first_article["jetpack_featured_media_url"];
 ?>
 
-<footer style="background: linear-gradient(rgba(20, 20,20,0.87), rgba(20,20,20,0.87)), url(<?php $visual_url; ?>);">
+<footer style="background: linear-gradient(rgba(20, 20,20,0.87), rgba(20,20,20,0.87)), url(<?php echo $visual_url; ?>);">
     <div class="container">
         <div class="row">
             <!-- Left Side: TLS and Site Name -->
