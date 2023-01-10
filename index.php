@@ -76,7 +76,9 @@
         }
     ?>
 
-    <header style="background: <?=$header_style?>, url(<?php echo $visual_url; ?>);">
+    <header>
+        <div class="header-bg" style="background: <?=$header_style?>, url(<?php echo $visual_url; ?>);">
+        <a href="<?php echo $article_url; ?>" target="_blank" style="text-decoration:none">
         <div class="container py-5 px-2">
             <div class="row">    
                 <!-- Header Article Text -->
@@ -101,7 +103,7 @@
                     <img class="card-img w-100 h-100 rounded overflow-hidden" style="object-fit:cover; border-radius: 1.1em; <?=$visual_style?>" src="<?php echo $visual_url; ?>" alt="">
                 </div>
             </div>
-        </div>
+        </div></a></div>
     </header>
 
     <!-- Quick Ratings (2nd-5th Most Recent Articles) -->
