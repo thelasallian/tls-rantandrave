@@ -63,6 +63,16 @@ div.sp-article-card {
     border-radius: .5rem;
 }
 
+div.sp-ac-movie { background-color: rgba(42, 153, 187, 0.15); }
+div.sp-ac-music { background-color: rgba(160, 104, 142, 0.15); }
+div.sp-ac-tv { background-color: rgba(150, 177, 61, 0.15); }
+div.sp-ac-misc { background-color: rgba(180, 146, 91, 0.15); }
+
+div.sp-ac-movie:hover { background-color: rgba(42, 153, 187, 0.25); }
+div.sp-ac-music:hover { background-color: rgba(160, 104, 142, 0.25); }
+div.sp-ac-tv:hover { background-color: rgba(150, 177, 61, 0.25); }
+div.sp-ac-misc:hover { background-color: rgba(180, 146, 91, 0.25); }
+
 img.sp-ac-visual {
     /* Article visual */
     width: 8rem;
