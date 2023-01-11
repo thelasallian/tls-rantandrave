@@ -28,7 +28,10 @@
                     and issue-oriented critical thinking.
                 </p>
                 <!-- Link to Main Website -->
-                <p class="footer-link-main-site my-auto"><a href="https://thelasallian.com"><strong>Go to Main Website →</strong></a></p>
+                <div class="d-flex align-items-center position-relative">
+                    <a class="footer-link-main-site my-auto align-middle" href="https://thelasallian.com"><strong>Go to Main Website</strong></a>
+                    <span class="material-icons my-auto">chevron_right</span>
+                </div>
                 <!-- Website Developers -->
                 <p class="footer-developers my-auto">Copyright 2023 © <strong>The LaSallian</strong><br>
                 Website developed by <a href="https://github.com/angelocguerra" target="_blank">Angelo Guerra</a> and <a href="https://github.com/ronnparcia" target="_blank">Ronn Parcia,</a>
