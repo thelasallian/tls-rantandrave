@@ -27,8 +27,7 @@
             $date,
             $authors,
             $rating,
-            $article_url,
-            $excerpt
+            $article_url
         );
         $excerpt = $first_article["excerpt"]["rendered"];
         $excerpt = str_replace("<p>", "", $excerpt);
