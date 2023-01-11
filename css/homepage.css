@@ -43,6 +43,7 @@ footer a:hover
 {
     .footer-description {
         font-size: 0.8em !important;
+        padding-top: 0.5rem;
     }
     
     .footer-link-main-site {
@@ -51,6 +52,7 @@ footer a:hover
 
     .footer-developers {
         font-size: 0.7em !important;
+        padding-top: 0.5rem;
     }
 }
 
