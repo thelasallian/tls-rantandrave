@@ -28,15 +28,33 @@ footer a:hover
     text-decoration: underline !important;
 }
 
-.footer-description {
-    font-size: 1em !important;
+@media screen and (min-width: 1200px) /* md going to lg */
+{
+    .footer-description {
+        font-size: 1em !important;
+    }
+    
+    .footer-developers {
+        font-size: 0.8em !important;
+    }
 }
 
-.footer-developers {
-    font-size: 0.8em !important;
+@media screen and (max-width: 1200px) /* md going below until xs */
+{
+    .footer-description {
+        font-size: 0.8em !important;
+    }
+    
+    .footer-link-main-site {
+        font-size: 0.8em !important;
+    }
+
+    .footer-developers {
+        font-size: 0.7em !important;
+    }
 }
 
 .footer-title {
     border-radius: 0.75rem;
-    background: rgba(62,82,88,0.4);
+    background: rgba(98,98,98,0.5);
 }
