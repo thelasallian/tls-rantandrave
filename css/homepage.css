@@ -1,1 +1,119 @@
+/**
+ * This stylesheet contains CSS specific to the homepage, such as the styles
+ * for the article cards per category (Movie, TV, etc.)
+*/
+
 @import "global.css";
+
+/* Increase the horizontal padding for the container */
+.container {
+    padding-left: calc(var(--bs-gutter-x) * .9);
+    padding-right: calc(var(--bs-gutter-x) * .9);
+}
+
+
+/**
+ * CATEGORY SECTIONS
+*/
+section.category-section .row:hover div.article-card {
+    /*  Make the entire category section
+        transparent except the hovered article */
+    opacity: 0.45; 
+}
+
+div.article-card:hover {
+    opacity: 1 !important;
+}
+
+section.category-section  * { 
+    /*  Add a transition to all elements in a category section */
+    transition: .3s; 
+}
+
+
+/**
+ * ARTICLE CARDS
+*/
+div.article-card {
+    margin-bottom: 1.75rem;
+}
+
+div.article-card:hover img.ac-visual {
+    /* On hover, move the visual up and reveal the shadow */
+    transform: translateY(-.75rem);
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
+}
+
+span.ac-rating {
+    /* Article card rating */
+    padding: 0.25rem 1rem;
+    font-weight: 500;
+}
+
+span.ac-date {
+    /* Article card date */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+img.ac-visual { 
+    /* Article card visual */
+    width: 100%;
+    aspect-ratio: 3 / 2;
+}
+
+h2.ac-title { 
+    /* Article card title */
+    font-size: 1.35em;
+}
+
+div.ac-title-date { 
+    /*  Wrapper of the article card title and date */
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 450px), (min-width: 991px) {
+    /* On some screens, use square visuals */
+    img.ac-visual {
+        aspect-ratio: 1 / 1;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    /* On small screens, smaller text sizes */
+    h2.ac-title {
+        font-size: 1.15em;
+    }
+
+    span.ac-rating {
+        /* Article card rating */
+        font-size: 0.9em;
+    }
+
+    span.ac-date {
+        /* Article card date */
+        font-size: 0.85em;
+    }
+
+    div.ac-title-date {
+        /*  Wrapper of the article card title and date */
+        padding: 0;
+        background: none !important;
+    }
+}
+
+/**
+ * VIEW ALL LINK
+*/
+a.cs-view-all {
+    margin-right: .5rem;
+}
+
+a.cs-view-all:hover {
+    /* On hover, reduce opacity */
+    opacity: .75;
+}
+
+a.cs-view-all:hover + span.material-icons {
+    /* On hover, move the arrow to the right */
+    transform: translateX(.5rem);
+}

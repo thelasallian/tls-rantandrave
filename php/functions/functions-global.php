@@ -1,3 +1,7 @@
+<!-- 
+    This files contains functions that are used globally across several pages, regardless of kind.
+ -->
+
 <?php
 
 /**
@@ -50,6 +54,7 @@ function get_rating($content)
 
     // Remove the 'Rating: ' prefix
     $rating = str_replace("Rating: ", "", $rating);
+    $rating = str_replace("RATING: ", "", $rating); // Fallback if author used all caps
     
     return $rating;
 }

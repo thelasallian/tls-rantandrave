@@ -1,4 +1,4 @@
-<?php $wp_url = "https://thelasallian.com/wp-json/wp/v2/posts?_fields=title,link,jetpack_featured_media_url,date,authors&tags=2147"; ?>
+<?php $wp_url = "https://thelasallian.com/wp-json/wp/v2/posts?_fields=title,link,jetpack_featured_media_url,date,authors&tags=2225"; ?>
 <?php require_once 'php/functions/functions-global.php' ?>
 <?php require_once 'php/functions/functions-subpages.php' ?>
 <?php require_once 'php/functions/functions-category-subpages.php' ?>
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/subpages.css">
 
     <!-- Title -->
-    <title>The LaSallian: Rant and Rave - Movie</title>
+    <title>The LaSallian: Rant and Rave - Music</title>
 </head>
 
 <body>
@@ -22,11 +22,11 @@
 
     <!-- Subpage Header Styles -->
     <?php
-        $most_recent_article = fetch_info('https://thelasallian.com/wp-json/wp/v2/posts?_fields=jetpack_featured_media_url&tags=2147&per_page=1&page=1');
+        $most_recent_article = fetch_info('https://thelasallian.com/wp-json/wp/v2/posts?_fields=jetpack_featured_media_url&tags=2225&per_page=1&page=1');
         $sh_bgimg = $most_recent_article[0]["jetpack_featured_media_url"];
-        $sh_gradientclass = 'sh-movie';
-        $sh_heading = 'Movie';
-        $sh_iconpath = 'assets/movie.png';
+        $sh_gradientclass = 'sh-tv';
+        $sh_heading = 'Television';
+        $sh_iconpath = 'assets/tv.png';
     ?>
 
     <!-- Subpage Header -->
@@ -46,7 +46,7 @@
                 <!-- Fetch articles -->
                 <?php
                     $articles = $_SESSION["ARTICLE_INFO"];
-                    $ac_class = 'sp-ac-movie';
+                    $ac_class = 'sp-ac-tv';
                 ?>
                 <!-- Render cards for each article -->
                 <?php render_subpage_article_cards($articles, $ac_class); ?>
