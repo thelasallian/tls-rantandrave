@@ -22,6 +22,24 @@
     <!-- Search Query Processing -->
     <?php require_once 'php/search-processing.php'; ?>
 
+    <!-- Subpage Header Styles -->
+    <?php
+        $sh_bgimg = "'assets/search-bg.jpg'";
+        $sh_gradientclass = 'sh-search';
+        $sh_heading = 'Search: '.'"'.$_SESSION["search_query"].'"';
+        $sh_iconpath = 'assets/search.png';
+    ?>
+
+    <!-- Subpage Header -->
+    <?php
+        render_subpage_header(
+            $sh_bgimg,
+            $sh_gradientclass,
+            $sh_heading,
+            $sh_iconpath
+        ); 
+    ?>
+
     <!-- Display Results -->
     <h1>Search Results</h1>
     <ol>
