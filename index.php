@@ -77,7 +77,7 @@
     ?>
 
     <header>
-        <div class="header-bg" style="background: <?=$header_style?>, url(<?php echo $visual_url; ?>);">
+        <div class="header-bg" style="background-image: <?=$header_style?>, url(<?php echo $visual_url; ?>);">
         <a href="<?php echo $article_url; ?>" target="_blank" style="text-decoration:none">
         <div class="container py-5 px-2">
             <div class="row">    
