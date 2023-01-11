@@ -43,15 +43,40 @@
     <!-- Display Articles -->
     <section class="subpage-articles">
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-2">
-                <!-- Fetch articles -->
-                <?php
-                    $articles = $subset_articles;
-                    $ac_class = 'sp-ac-search';
-                ?>
-                <!-- Render cards for each article -->
-                <?php render_subpage_article_cards($articles, $ac_class); ?>
-            </div>
+            <!-- Render cards for each article -->
+            <?php 
+                // Fetch articles
+                $articles = $subset_articles;
+                $ac_class = 'sp-ac-search';
+                
+                // Check if there are results
+                if (count($articles) > 0) {
+                    echo '<div class="row row-cols-1 row-cols-md-2">';
+                    render_subpage_article_cards($articles, $ac_class); 
+                    echo '</div>';
+                } else { // Display message if there are no results and offer to search again
+                    echo '';
+                    echo <<<NO_RESULTS
+                        <div class="container d-flex flex-column align-items-center">
+                            <h4 class="text-center mb-5" style="max-width: 40rem;">
+                                We could not find any results for your search. You can give it another try through the search form below.
+                            </h4>
+                            <!-- Search Form -->
+                            <form action="search-results.php" method="post">
+                                <div class="sm-wrapper">
+                                    <!-- Search Box -->
+                                    <input class="sm-textinput" type="text" name="search-query">
+                                    <!-- Submit Button -->
+                                    <button class="sm-submitbtn" type="submit">
+                                        <span class="material-icons text-white">search</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    NO_RESULTS;
+                }
+            ?>
+           
             <!-- Pagination Links -->
             <!-- Note: $total_pages not $page_count for this. Check pagination-search-results -->
             <?php render_page_links($total_pages, basename(__FILE__)); ?> 
