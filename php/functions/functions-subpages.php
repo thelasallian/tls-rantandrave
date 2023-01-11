@@ -20,7 +20,7 @@ function render_subpage_header(
     $sh_iconpath
 ) {
     echo <<<SUBPAGE_HEADER
-    <header class="subpage-header {$sh_gradientclass}" style="background-image: url({$sh_bgimg}});">
+    <header class="subpage-header {$sh_gradientclass}" style="background-image: url({$sh_bgimg});">
         <img class="sh-icon" src="{$sh_iconpath}" alt="Movie Icon">
         <h1 class="sh-heading">{$sh_heading}</h1>
     </header>
