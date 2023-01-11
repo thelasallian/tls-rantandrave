@@ -24,13 +24,13 @@
                 <p class="footer-description my-auto">
                     <strong>The LaSallian</strong> is the official student publication of De La Salle University.
                     It is of the students, by the students, and for the students. Our student writers, photographers,
-                    videographers, and web managers are committed to the 61-year tradition of journalistic excellence
+                    videographers, and web managers are committed to the 62-year tradition of journalistic excellence
                     and issue-oriented critical thinking.
                 </p>
                 <!-- Link to Main Website -->
                 <p class="footer-link-main-site my-auto"><a href="https://thelasallian.com"><strong>Go to Main Website →</strong></a></p>
                 <!-- Website Developers -->
-                <p class="footer-developers my-auto">Copyright 2022 © <strong>The LaSallian</strong><br>
+                <p class="footer-developers my-auto">Copyright 2023 © <strong>The LaSallian</strong><br>
                 Website developed by <a href="https://github.com/angelocguerra" target="_blank">Angelo Guerra</a> and <a href="https://github.com/ronnparcia" target="_blank">Ronn Parcia,</a>
                 <br> designed with Alyssa Wee and Addie Holgado, and conceptualized by Emmanuelle Castañeda</p>
             </div>
