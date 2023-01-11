@@ -121,7 +121,7 @@ h6 {
 footer
 {
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     color: white;
     padding-top: 5rem;
     padding-bottom: 5rem;
