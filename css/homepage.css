@@ -5,10 +5,15 @@ header {
 }
 
 header div.header-bg {
-    background-size: cover;
     background-position: center;
     display: block;
-    transition: all 0.5s ease;
+    background-size: 100%;
+    transition: all 0.8s;
+}
+
+header div.header-bg:hover {
+    background-size: 120%;
+
 }
 
 header p.article-rating {
