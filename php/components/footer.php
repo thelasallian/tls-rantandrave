@@ -1,4 +1,4 @@
-<footer style="background: linear-gradient(rgba(20, 20,20,0.87), rgba(20,20,20,0.87)), url(<?php echo $footer_bg; ?>);">
+<footer style="background-image: linear-gradient(rgba(20, 20,20,0.87), rgba(20,20,20,0.87)), url(<?php echo $footer_bg; ?>);">
     <div class="container">
         <div class="row">
             <!-- Left Side: TLS and Site Name -->
