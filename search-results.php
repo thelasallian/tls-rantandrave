@@ -40,31 +40,23 @@
         ); 
     ?>
 
-    <!-- Display Results -->
-    <h1>Search Results</h1>
-    <ol>
-        <?php
-        foreach ($subset_articles as $article) {
-            // Initialize article information:
-            init_article_info_searchsubpage(
-                $article,
-                $visual_url,
-                $title,
-                $date,
-                $authors,
-                $article_url,
-                $content
-            );
-
-            echo <<<ARTICLE
-                <li><a href="{$article_url}">{$title}</a></li>
-            ARTICLE;
-        }
-        ?>
-    </ol>
-
-    <!-- Pagination Links -->
-    <?php render_page_links($total_pages, basename(__FILE__)); ?>
+    <!-- Display Articles -->
+    <section class="subpage-articles">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2">
+                <!-- Fetch articles -->
+                <?php
+                    $articles = $subset_articles;
+                    $ac_class = 'sp-ac-search';
+                ?>
+                <!-- Render cards for each article -->
+                <?php render_subpage_article_cards($articles, $ac_class); ?>
+            </div>
+            <!-- Pagination Links -->
+            <!-- Note: $total_pages not $page_count for this. Check pagination-search-results -->
+            <?php render_page_links($total_pages, basename(__FILE__)); ?> 
+        </div>
+    </section>
 
     <!-- Footer -->
     <?php require_once 'php/components/footer.php'; ?>
