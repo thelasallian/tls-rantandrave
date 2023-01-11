@@ -68,10 +68,11 @@
         }
         else // No tag
         {
-            $header_style = 'style="background: linear-gradient(rgba(15,151,191,0.20), rgba(28,30,35,0.9)), url();"';
-            $rating_style = 'style="background-color:rgba(15,151,191,1);"';
-            $title_style = 'style="color:#94E0F6;"';
-            $excerpt_style = 'style="color:white; background-color:rgba(15,151,191,.15);"';
+            $header_style = 'linear-gradient(180deg, rgba(255, 128, 83, 0.5) 0%, rgba(0, 0, 0, 0) 74.48%), linear-gradient(0deg, rgba(57, 57, 57, 0.9), rgba(57, 57, 57, 0.9))';
+            $rating_style = 'style="background-color:#DF734D"';
+            $title_style = 'style="color:#F2AE95;"';
+            $excerpt_style = 'background: rgba(250, 138, 98, 0.15);';
+            $visual_style = 'border: 1px solid #735247; filter: drop-shadow(0px 4px 4px rgba(117, 90, 68, 0.85));';
         }
     ?>
 
