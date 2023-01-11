@@ -35,3 +35,64 @@ h5,
 h6 {
     font-family: 'Raleway', sans-serif;
 }
+
+/* Footer */
+footer
+{
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer-link-main-site
+{
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    font-size: 1em;
+}
+
+footer a
+{
+    color: white !important;
+    text-decoration: none !important;
+}
+
+footer a:hover
+{
+    text-decoration: underline !important;
+}
+
+@media screen and (min-width: 1200px) /* md going to lg */
+{
+    .footer-description {
+        font-size: 1em !important;
+    }
+    
+    .footer-developers {
+        font-size: 0.8em !important;
+    }
+}
+
+@media screen and (max-width: 1200px) /* md going below until xs */
+{
+    .footer-description {
+        font-size: 0.8em !important;
+        padding-top: 0.5rem;
+    }
+    
+    .footer-link-main-site {
+        font-size: 0.8em !important;
+    }
+
+    .footer-developers {
+        font-size: 0.7em !important;
+        padding-top: 0.5rem;
+    }
+}
+
+.footer-title {
+    border-radius: 0.75rem;
+    background: rgba(98,98,98,0.5);
+}
