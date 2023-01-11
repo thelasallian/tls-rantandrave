@@ -51,6 +51,22 @@ footer
     padding-top: 1.25em;
     padding-bottom: 1.25em;
     font-size: 1em;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+}
+
+.material-icons {
+    transition: 0.3s;
+}
+
+.footer-link-main-site:hover
+{
+    opacity: 0.75; /* reduce opacity */
+}
+
+.footer-link-main-site:hover + .material-icons
+{
+    transform: translateX(.3rem); /* slide right slight */
 }
 
 footer a
