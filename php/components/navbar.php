@@ -1,21 +1,21 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="<?php echo $nav_bg_class; ?> navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
     <div class="container d-flex justify-content-between">
         <!-- Logo -->
         <a class="navbar-brand" href="https://thelasallian.com/" target="_blank">
-            <img src="assets/tls-logo-star-white.png" style="width: 4rem; " alt="">
+            <img class="nav-logo" id="nav-logo" src="assets/tls-logo-star-white.png" alt="The LaSallian logo">
         </a>
 
         <div class="d-flex flex-grow-1 justify-content-end justify-content-md-center">
             <!-- Menu Button for Mobile Devices -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler p-0 border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="material-icons">menu</span>
             </button>
 
             <!-- Links -->
-            <div class="offcanvas offcanvas-end flex-grow-0 text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-end flex-grow-0" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <!-- Offcanvas Header  -->
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Rant and Rave</h5>
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Categories</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
@@ -23,18 +23,23 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
+                            <span class="material-icons" id="nav-link-icon-home">home</span>
                             <a class="nav-link active text-reset" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
+                            <span class="material-icons" id="nav-link-icon-movie">movie</span>
                             <a class="nav-link text-reset" href="movie.php">Movie</a>
                         </li>
                         <li class="nav-item">
+                            <span class="material-icons" id="nav-link-icon-tv">tv</span>
                             <a class="nav-link text-reset" href="television.php">Television</a>
                         </li>
                         <li class="nav-item">
+                            <span class="material-icons" id="nav-link-icon-music">music_note</span>
                             <a class="nav-link text-reset" href="music.php">Music</a>
                         </li>
                         <li class="nav-item">
+                            <span class="material-icons" id="nav-link-icon-misc">more_horiz</span>
                             <a class="nav-link text-reset" href="miscellaneous.php">Miscellaneous</a>
                         </li>
                     </ul>
@@ -51,32 +56,6 @@
                 <span class="material-icons text-white">search</span>
             </button>
 
-            <!-- Search Modal -->
-            <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true" data-bs-theme="dark">
-                <div class="modal-dialog search-modal-dialog">
-                    <div class="modal-content">
-                        <!-- Modal Header -->
-                        <div class="modal-header border-0 pb-0">
-                            <h5 class="modal-title" id="searchModalLabel">Search Rant and Rave articles</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <!-- Modal Body -->
-                        <div class="modal-body">
-                            <!-- Search Form -->
-                            <form action="search-results.php" method="post">
-                                <div class="sm-wrapper">
-                                    <!-- Search Box -->
-                                    <input class="sm-textinput" type="text" name="search-query">
-                                    <!-- Submit Button -->
-                                    <button class="sm-submitbtn" type="submit">
-                                        <span class="material-icons text-white">search</span>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>

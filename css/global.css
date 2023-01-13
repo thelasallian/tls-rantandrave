@@ -46,6 +46,12 @@ h6 {
     font-family: 'Raleway', sans-serif;
 }
 
+/* Increase the horizontal padding for the container */
+.container {
+    padding-left: calc(var(--bs-gutter-x) * .9);
+    padding-right: calc(var(--bs-gutter-x) * .9);
+}
+
 /* Custom Utility Classes */
 .fs-7 { font-size: 0.875em; }
 
@@ -66,10 +72,107 @@ h6 {
 }
 
 /**
+ * NAVBAR
+*/
+nav.navbar {
+    width: 100%;
+    height: 5.75rem;
+    transition: 0.2s ease-in;
+}
+
+nav.nav-darkbg {
+    background-color: rgba(20, 20, 20, 0.9);
+}
+
+nav.nav-hollowbg {
+    /* Styles for subpage header */
+    background-color: none;
+}
+
+nav.nav-hollowbg > .container {
+    /* Styles for subpage header */
+    border-bottom: 0.05rem solid rgba(255, 255, 255, 0.75);
+}
+
+img.nav-logo {
+    /* TLS logo at navbar */
+    width: 3rem;
+    transition: 0.2s ease-in;
+}
+
+li.nav-item {
+    margin: 0 0.35rem 0;
+    color: white;
+}
+
+li.nav-item > span.material-icons {
+    display: none;
+}
+
+a.nav-link {
+    /* Links inside the li.nav-item */
+    padding: 0.25rem 1.25rem !important;
+    font-weight: 600;
+    font-size: 0.85em;
+    border-radius: 50rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.2s;
+}
+
+a.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav .offcanvas {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 2rem;
+    color: white !important;
+}
+
+@media only screen and (max-width: 767px) {
+    nav.navbar {
+        height: 4rem !important;
+    }
+
+    nav.navbar .container {
+        padding-bottom: .5rem;
+    }
+    
+    img.nav-logo {
+        width: 2.5rem !important;
+    }
+    
+    li.nav-item {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    li.nav-item > span.material-icons {
+        display: block;
+        margin-right: 2rem;
+    }
+
+    a.nav-link {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    span#nav-link-icon-home { color: #FF8053; }
+    span#nav-link-icon-movie { color: var(--movie-bg-85); }
+    span#nav-link-icon-tv { color: var(--tv-bg-85); }
+    span#nav-link-icon-music { color: var(--music-bg-85); }
+    span#nav-link-icon-misc { color: var(--misc-bg-85); }
+}
+
+/**
  * SEARCH MODAL
 */
 .search-modal-dialog {
     box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.05);
+}
+
+.search-modal-dialog .modal-content {
+    background-color: rgba(31, 31, 31, 0.95);
 }
 
 .sm-wrapper {

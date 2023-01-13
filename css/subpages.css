@@ -13,10 +13,16 @@ header.subpage-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 0 4rem;
+    padding: calc(4rem + 5.75rem) 0 4rem; /* 5.75 is navbar height */
     background-size: cover;
     background-position: center 25%;
     background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 767px) {
+    header.subpage-header {
+        padding: calc(4rem + 4rem) 0 4rem; /* 4 is navbar height */
+    }
 }
 
 header.subpage-header::before {

@@ -15,7 +15,10 @@
 
 <body>
     <!-- Navbar -->
-    <?php require_once 'php/components/navbar.php' ?>
+    <?php 
+        $nav_bg_class = 'nav-darkbg';
+        require_once 'php/components/navbar.php'
+    ?>
 
     <!-- Header -->
     <?php
@@ -80,7 +83,7 @@
     <header>
         <div class="header-bg" style="background-image: <?=$header_style?>, url(<?php echo $visual_url; ?>);">
         <a href="<?php echo $article_url; ?>" target="_blank" style="text-decoration:none">
-        <div class="container py-5 px-2">
+        <div class="container py-5">
             <div class="row">    
                 <!-- Header Article Text -->
                 <div class="header-article pb-6 px-auto mx-auto col-md-12 col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-lg-start text-center">
@@ -101,7 +104,7 @@
 
                 <!-- Header Article Image -->
                 <div class="header-article-image mx-auto col-md-12 col-lg-5 d-flex justify-content-center align-items-center align-items-lg-start">
-                    <img class="card-img w-100 h-100 rounded overflow-hidden" style="object-fit:cover; border-radius: 1.1em; <?=$visual_style?>" src="<?php echo $visual_url; ?>" alt="">
+                    <img class="card-img w-100 h-100 rounded overflow-hidden border-0" style="object-fit:cover; border-radius: 1.1em; <?=$visual_style?>" src="<?php echo $visual_url; ?>" alt="">
                 </div>
             </div>
         </div></a></div>
@@ -147,6 +150,8 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Navbar Scripts -->
+    <script src="js/navbar-home.js"></script>
 </body>
 
 </html>
