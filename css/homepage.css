@@ -16,7 +16,7 @@ header div.header-bg {
     background-position: center;
     display: block;
     background-size: 100%;
-    transition: all 0.8s;
+    transition: background-size 0.35s;
     padding-top: 5.75rem; /* Equal to navbar height */
 }
 
@@ -27,8 +27,13 @@ header div.header-bg {
 }
 
 header div.header-bg:hover {
+    background-size: 110%;
+}
+
+header div.header-bg:hover header img.card-img  {
     background-size: 120%;
 }
+
 
 header p.article-rating {
     font-size: 1em;
@@ -56,11 +61,11 @@ header p.article-excerpt {
 }
 
 header img.card-img {
-    transition: 0.8s;
+    transition: 0.3s;
 }
 
 header img.card-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.025);
     box-shadow: 0 25px 50px -12px rgba(255,255,255, 0.25) !important;
 }
 
