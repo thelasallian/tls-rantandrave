@@ -1,9 +1,14 @@
+/**
+ * This stylesheet contains CSS that are used across any page
+*/
+
 :root {
     /* 85% Opacity */
-    --movie-bg-85: rgba(15, 151, 191, 0.85);
-    --tv-bg-85: rgba(201, 89, 163, 0.85);
-    --music-bg-85: rgba(145, 176, 47, 0.85);
-    --misc-bg-85: rgba(254, 175, 48, 0.85);
+    /* Note some of these aren't actually 85% Basta */
+    --movie-bg-85: rgba(15, 151, 191, 0.75);
+    --tv-bg-85: rgba(201, 89, 163, 0.75);
+    --music-bg-85: rgba(145, 176, 47, 0.75);
+    --misc-bg-85: rgba(254, 175, 48, 0.65);
     
     /* 85% Opacity, Darker for Quick Ratings */
     --movie-bg-85-darker: rgba(25, 107, 131, 0.85);
@@ -12,10 +17,10 @@
     --misc-bg-85-darker: rgba(173, 112, 14, 0.85);
 
     /* 15% Opacity */
-    --movie-bg-15: rgba(15, 151, 191, 0.15);
-    --tv-bg-15: rgba(201, 89, 163, 0.15);
-    --music-bg-15: rgba(145, 176, 47, 0.15);
-    --misc-bg-15: rgba(254, 175, 48, 0.15);
+    --movie-bg-15: rgba(15, 151, 191, 0.1);
+    --tv-bg-15: rgba(201, 89, 163, 0.1);
+    --music-bg-15: rgba(145, 176, 47, 0.1);
+    --misc-bg-15: rgba(254, 175, 48, 0.1);
 
     /* Other */
     --white-bg-10: rgba(255, 255, 255, 0.1);
@@ -26,6 +31,9 @@
 body {
     font-family: 'Work Sans', sans-serif;
     background-color: var(--body-bg);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     color: white;
 }
 
@@ -36,4 +44,152 @@ h4,
 h5,
 h6 {
     font-family: 'Raleway', sans-serif;
+}
+
+/* Custom Utility Classes */
+.fs-7 { font-size: 0.875em; }
+
+.movie-bg-15 { background-color: var(--movie-bg-15); }
+.tv-bg-15 { background-color: var(--tv-bg-15); }
+.music-bg-15 { background-color: var(--music-bg-15);  }
+.misc-bg-15 { background-color: var(--misc-bg-15);  }
+
+.movie-bg-85 { background-color: var(--movie-bg-85); }
+.tv-bg-85 { background-color: var(--tv-bg-85); }
+.music-bg-85 { background-color: var(--music-bg-85); }
+.misc-bg-85 { background-color: var(--misc-bg-85); }
+
+/* Tags (Movie, Television, Music, Miscellaneous) */
+.tag-section-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+/**
+ * SEARCH MODAL
+*/
+.search-modal-dialog {
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.05);
+}
+
+.sm-wrapper {
+    /* Wrapper of the search box and icon */
+    display: flex;
+    align-items: center;
+}
+
+.sm-textinput {
+    /* Search box */
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 5rem;
+    border: none;
+    font-size: 1.25em;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.2s;
+}
+
+.sm-textinput:focus {
+    outline: none;
+    /* box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175); */
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sm-submitbtn {
+    /* Search icon submit button */
+    border: none;
+    background: none;
+    height: 2em;
+    transition: .2s;
+    opacity: .5;
+}
+
+.sm-submitbtn > span.material-icons {
+    /* Search icon INSIDE submit button */
+    font-size: 2em;
+}
+
+.sm-submitbtn:hover {
+    transform: rotate(15deg);
+    opacity: 1;
+}
+
+/**
+ * FOOTER
+*/
+footer
+{
+    background-size: cover;
+    background-position: center bottom;
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer-link-main-site
+{
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    font-size: 1em;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+}
+
+.material-icons {
+    transition: 0.3s;
+}
+
+.footer-link-main-site:hover
+{
+    opacity: 0.75; /* reduce opacity */
+}
+
+.footer-link-main-site:hover + .material-icons
+{
+    transform: translateX(.3rem); /* slide right slight */
+}
+
+footer a
+{
+    color: white !important;
+    text-decoration: none !important;
+}
+
+footer a:hover
+{
+    text-decoration: underline !important;
+}
+
+@media screen and (min-width: 1200px) /* md going to lg */
+{
+    .footer-description {
+        font-size: 1em !important;
+    }
+    
+    .footer-developers {
+        font-size: 0.8em !important;
+    }
+}
+
+@media screen and (max-width: 1200px) /* md going below until xs */
+{
+    .footer-description {
+        font-size: 0.8em !important;
+        padding-top: 0.5rem;
+    }
+    
+    .footer-link-main-site {
+        font-size: 0.8em !important;
+    }
+
+    .footer-developers {
+        font-size: 0.7em !important;
+        padding-top: 0.5rem;
+    }
+}
+
+.footer-title {
+    border-radius: 0.75rem;
+    background: rgba(98,98,98,0.5);
 }
