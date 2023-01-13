@@ -20,6 +20,12 @@ header div.header-bg {
     padding-top: 6.5rem; /* Equal to navbar height */
 }
 
+@media only screen and (max-width: 767px) {
+    header div.header-bg {
+        padding-top: 4rem;
+    }
+}
+
 header div.header-bg:hover {
     background-size: 120%;
 }

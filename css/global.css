@@ -80,7 +80,7 @@ nav.navbar {
 }
 
 nav.nav-darkbg {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(20, 20, 20, 0.8);
 }
 
 img.nav-logo {
@@ -106,12 +106,20 @@ a.nav-link {
 }
 
 nav .offcanvas {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(31, 31, 31, 0.75);
     padding: 2rem;
     color: white !important;
 }
 
 @media only screen and (max-width: 767px) {
+    nav.navbar {
+        height: 4rem;
+    }
+    
+    img.nav-logo {
+        width: 2.5rem;
+    }
+    
     li.nav-item {
         display: flex;
         align-items: center;
