@@ -2,7 +2,7 @@
     <div class="container d-flex justify-content-between">
         <!-- Logo -->
         <a class="navbar-brand" href="https://thelasallian.com/" target="_blank">
-            <img src="assets/tls-logo-star-white.png" style="width: 4rem; " alt="">
+            <img class="nav-logo" src="assets/tls-logo-star-white.png" alt="">
         </a>
 
         <div class="d-flex flex-grow-1 justify-content-end justify-content-md-center">

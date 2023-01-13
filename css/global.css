@@ -66,6 +66,14 @@ h6 {
 }
 
 /**
+ * NAVBAR
+*/
+img.nav-logo {
+    /* TLS logo at navbar */
+    width: 3.5rem;
+}
+
+/**
  * SEARCH MODAL
 */
 .search-modal-dialog {
