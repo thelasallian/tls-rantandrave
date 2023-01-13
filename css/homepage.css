@@ -96,9 +96,10 @@ div.article-card:hover img.ac-visual {
     box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
 }
 
-span.ac-rating {
+.ac-rating {
     /* Article card rating */
-    padding: 0.25rem 1rem;
+    /* Also applies to header rating */
+    padding: 0.25rem 1rem; 
     font-weight: 500;
 }
 

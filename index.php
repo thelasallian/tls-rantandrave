@@ -86,7 +86,7 @@
                 <div class="header-article pb-6 px-auto mx-auto col-md-12 col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-lg-start text-center">
                 
                     <!-- Rating -->
-                    <p class="article-rating px-2 mb-3 d-inline-block rounded-pill" <?=$rating_style?> ><strong><?php echo $rating; ?></strong></p>
+                    <p class="article-rating ac-rating mb-3 d-inline-block rounded-pill" <?=$rating_style?> ><strong><?php echo $rating; ?></strong></p>
                     
                     <!-- Title -->
                     <h4 class="article-title mb-3" <?=$title_style?> > <strong><?php echo $title; ?></strong></h4>
