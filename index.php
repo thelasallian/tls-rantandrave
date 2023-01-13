@@ -80,7 +80,7 @@
     <header>
         <div class="header-bg" style="background-image: <?=$header_style?>, url(<?php echo $visual_url; ?>);">
         <a href="<?php echo $article_url; ?>" target="_blank" style="text-decoration:none">
-        <div class="container py-5 px-2">
+        <div class="container py-5">
             <div class="row">    
                 <!-- Header Article Text -->
                 <div class="header-article pb-6 px-auto mx-auto col-md-12 col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-lg-start text-center">
