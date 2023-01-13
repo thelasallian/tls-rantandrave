@@ -17,7 +17,7 @@ header div.header-bg {
     display: block;
     background-size: 100%;
     transition: all 0.8s;
-    padding-top: 6.5rem; /* Equal to navbar height */
+    padding-top: 5.75rem; /* Equal to navbar height */
 }
 
 @media only screen and (max-width: 767px) {
