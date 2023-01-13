@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="nav-darkbg navbar navbar-expand-md navbar-dark">
     <div class="container d-flex justify-content-between">
         <!-- Logo -->
         <a class="navbar-brand" href="https://thelasallian.com/" target="_blank">

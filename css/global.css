@@ -68,6 +68,17 @@ h6 {
 /**
  * NAVBAR
 */
+nav.navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 6rem;
+}
+
+nav.nav-darkbg {
+    background-color: rgba(0, 0, 0, 0.8);;
+}
+
 img.nav-logo {
     /* TLS logo at navbar */
     width: 3.5rem;
