@@ -11,6 +11,58 @@
     padding-right: calc(var(--bs-gutter-x) * .9);
 }
 
+/**
+ * HEADER
+*/
+header {
+    overflow: hidden;
+}
+
+header div.header-bg {
+    background-position: center;
+    display: block;
+    background-size: 100%;
+    transition: all 0.8s;
+}
+
+header div.header-bg:hover {
+    background-size: 120%;
+}
+
+header p.article-rating {
+    font-size: 1em;
+    color: white;
+}
+
+header h4.article-title {
+    font-size: 2.15em;
+}
+
+header p.article-date {
+    font-size: 0.9em;
+    color: white;
+}
+
+header p.article-author {
+    font-size: 0.9em;
+    color: white;
+}
+
+header p.article-excerpt {
+    font-size: 0.85em;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header img.card-img {
+    transition: 0.8s;
+}
+
+header img.card-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 25px 50px -12px rgba(255,255,255, 0.25) !important;
+}
+
 
 /**
  * CATEGORY SECTIONS
