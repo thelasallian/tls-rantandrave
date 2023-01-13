@@ -82,7 +82,7 @@
         <div class="container py-5 px-2">
             <div class="row">    
                 <!-- Header Article Text -->
-                <div class="header-article pb-6 px-auto mx-auto col-sm-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-lg-start text-center">
+                <div class="header-article pb-6 px-auto mx-auto col-md-12 col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-lg-start text-center">
                 
                     <!-- Rating -->
                     <p class="article-rating px-2 mb-3 d-inline-block rounded-pill" <?=$rating_style?> ><strong><?php echo $rating; ?></strong></p>
@@ -99,7 +99,7 @@
                 </div>
 
                 <!-- Header Article Image -->
-                <div class="header-article-image mx-auto col-sm-12 col-md-5 col-lg-5 d-flex justify-content-center align-items-center align-items-lg-start">
+                <div class="header-article-image mx-auto col-md-12 col-lg-5 d-flex justify-content-center align-items-center align-items-lg-start">
                     <img class="card-img w-100 h-100 rounded overflow-hidden" style="object-fit:cover; border-radius: 1.1em; <?=$visual_style?>" src="<?php echo $visual_url; ?>" alt="">
                 </div>
             </div>
