@@ -1,8 +1,8 @@
-<nav class="nav-darkbg navbar navbar-expand-md navbar-dark fixed-top">
+<nav class="nav-darkbg navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
     <div class="container d-flex justify-content-between">
         <!-- Logo -->
         <a class="navbar-brand" href="https://thelasallian.com/" target="_blank">
-            <img class="nav-logo" src="assets/tls-logo-star-white.png" alt="The LaSallian logo">
+            <img class="nav-logo" id="nav-logo" src="assets/tls-logo-star-white.png" alt="The LaSallian logo">
         </a>
 
         <div class="d-flex flex-grow-1 justify-content-end justify-content-md-center">
@@ -60,3 +60,18 @@
 
     </div>
 </nav>
+
+<!-- Script to Make Navbar Shrink on Scroll -->
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("navbar").style.height = "4rem";
+        document.getElementById("nav-logo").style.width = "2.5rem";
+    } else {
+        document.getElementById("navbar").style.height = "5.75rem";
+        document.getElementById("nav-logo").style.width = "3rem";
+    }
+    }
+</script>
