@@ -167,6 +167,10 @@ nav .offcanvas {
     box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.05);
 }
 
+.search-modal-dialog .modal-content {
+    background-color: rgba(31, 31, 31, 0.95);
+}
+
 .sm-wrapper {
     /* Wrapper of the search box and icon */
     display: flex;
