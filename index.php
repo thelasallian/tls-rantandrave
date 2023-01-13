@@ -15,7 +15,10 @@
 
 <body>
     <!-- Navbar -->
-    <?php require_once 'php/components/navbar.php' ?>
+    <?php 
+        $nav_bg_class = 'nav-darkbg';
+        require_once 'php/components/navbar.php'
+    ?>
 
     <!-- Header -->
     <?php
