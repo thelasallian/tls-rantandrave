@@ -133,6 +133,10 @@ nav .offcanvas {
     nav.navbar {
         height: 4rem !important;
     }
+
+    nav.navbar .container {
+        padding-bottom: .5rem;
+    }
     
     img.nav-logo {
         width: 2.5rem !important;
