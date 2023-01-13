@@ -124,7 +124,7 @@ a.nav-link:hover {
 }
 
 nav .offcanvas {
-    background-color: rgba(31, 31, 31, 0.75);
+    background-color: rgba(26, 26, 26, 0.9);
     padding: 2rem;
     color: white !important;
 }
