@@ -84,6 +84,16 @@ nav.nav-darkbg {
     background-color: rgba(20, 20, 20, 0.9);
 }
 
+nav.nav-hollowbg {
+    /* Styles for subpage header */
+    background-color: none;
+}
+
+nav.nav-hollowbg > .container {
+    /* Styles for subpage header */
+    border-bottom: 0.05rem solid rgba(255, 255, 255, 0.75);
+}
+
 img.nav-logo {
     /* TLS logo at navbar */
     width: 3rem;

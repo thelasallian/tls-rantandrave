@@ -1,4 +1,4 @@
-<nav class="nav-darkbg navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
+<nav class="<?php echo $nav_bg_class; ?> navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
     <div class="container d-flex justify-content-between">
         <!-- Logo -->
         <a class="navbar-brand" href="https://thelasallian.com/" target="_blank">

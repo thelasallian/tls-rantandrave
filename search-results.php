@@ -17,7 +17,10 @@
 
 <body>
     <!-- Navbar -->
-    <?php require_once 'php/components/navbar.php'; ?>
+    <?php 
+        $nav_bg_class = 'nav-hollowbg';
+        require_once 'php/components/navbar.php'
+    ?>
 
     <!-- Search Query Processing -->
     <?php require_once 'php/search-processing.php'; ?>

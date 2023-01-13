@@ -18,7 +18,10 @@
 
 <body>
     <!-- Navbar -->
-    <?php require_once 'php/components/navbar.php'; ?>
+    <?php 
+        $nav_bg_class = 'nav-hollowbg';
+        require_once 'php/components/navbar.php'
+    ?>
 
     <!-- Subpage Header Styles -->
     <?php
