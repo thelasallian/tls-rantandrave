@@ -7,8 +7,8 @@
 
         <div class="d-flex flex-grow-1 justify-content-end justify-content-md-center">
             <!-- Menu Button for Mobile Devices -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler p-0 border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="material-icons">menu</span>
             </button>
 
             <!-- Links -->
