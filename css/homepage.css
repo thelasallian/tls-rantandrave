@@ -5,12 +5,6 @@
 
 @import "global.css";
 
-/* Increase the horizontal padding for the container */
-.container {
-    padding-left: calc(var(--bs-gutter-x) * .9);
-    padding-right: calc(var(--bs-gutter-x) * .9);
-}
-
 /**
  * HEADER
 */

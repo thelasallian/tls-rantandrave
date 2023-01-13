@@ -46,6 +46,12 @@ h6 {
     font-family: 'Raleway', sans-serif;
 }
 
+/* Increase the horizontal padding for the container */
+.container {
+    padding-left: calc(var(--bs-gutter-x) * .9);
+    padding-right: calc(var(--bs-gutter-x) * .9);
+}
+
 /* Custom Utility Classes */
 .fs-7 { font-size: 0.875em; }
 
