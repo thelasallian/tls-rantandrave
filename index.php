@@ -104,7 +104,7 @@
 
                 <!-- Header Article Image -->
                 <div class="header-article-image mx-auto col-md-12 col-lg-5 d-flex justify-content-center align-items-center align-items-lg-start">
-                    <img class="card-img w-100 h-100 rounded overflow-hidden" style="object-fit:cover; border-radius: 1.1em; <?=$visual_style?>" src="<?php echo $visual_url; ?>" alt="">
+                    <img class="card-img w-100 h-100 rounded overflow-hidden border-0" style="object-fit:cover; border-radius: 1.1em; <?=$visual_style?>" src="<?php echo $visual_url; ?>" alt="">
                 </div>
             </div>
         </div></a></div>
