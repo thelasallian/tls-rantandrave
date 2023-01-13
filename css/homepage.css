@@ -23,6 +23,7 @@ header div.header-bg {
     display: block;
     background-size: 100%;
     transition: all 0.8s;
+    padding-top: 6rem; /* Equal to navbar height */
 }
 
 header div.header-bg:hover {
