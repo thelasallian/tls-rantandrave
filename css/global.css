@@ -84,6 +84,11 @@ img.nav-logo {
 
 li.nav-item {
     margin: 0 0.35rem 0;
+    color: white;
+}
+
+li.nav-item > span.material-icons {
+    display: none;
 }
 
 a.nav-link {
@@ -92,6 +97,35 @@ a.nav-link {
     font-weight: 600;
     border-radius: 50rem;
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav .offcanvas {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2rem;
+    color: white !important;
+}
+
+@media only screen and (max-width: 767px) {
+    li.nav-item {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    li.nav-item > span.material-icons {
+        display: block;
+        margin-right: 2rem;
+    }
+
+    a.nav-link {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    span#nav-link-icon-home { color: #FF8053; }
+    span#nav-link-icon-movie { color: var(--movie-bg-85); }
+    span#nav-link-icon-tv { color: var(--tv-bg-85); }
+    span#nav-link-icon-music { color: var(--music-bg-85); }
+    span#nav-link-icon-misc { color: var(--misc-bg-85); }
 }
 
 /**
