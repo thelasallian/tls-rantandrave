@@ -112,7 +112,7 @@ li.nav-item > span.material-icons {
 a.nav-link {
     /* Links inside the li.nav-item */
     padding: 0.25rem 1.25rem !important;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.85em;
     border-radius: 50rem;
     background-color: rgba(255, 255, 255, 0.1);

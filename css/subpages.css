@@ -72,6 +72,10 @@ img.sh-icon, h1.sh-heading {
     z-index: 1;
 }
 
+h1.sh-heading {
+    font-weight: bold;
+}
+
 /**
  * ARTICLE CARDS
 */
