@@ -69,6 +69,100 @@ header img.card-img:hover {
     box-shadow: 0 25px 50px -12px rgba(255,255,255, 0.25) !important;
 }
 
+/**
+  * QUICK RATINGS
+**/
+div.movie-card
+{
+    border: 0.05rem solid #1C3056;
+    border-radius: 0.75rem;
+    background-size: cover;
+}
+
+div.music-card
+{
+    border: 0.05rem solid #465710;
+    border-radius: 0.75rem;
+    background-size: cover;
+}
+
+div.tv-card
+{
+    border: 0.05rem solid #572144;
+    border-radius: 0.75rem;
+    background-size: cover;
+}
+
+div.misc-card
+{
+    border: 0.05rem solid #573807;
+    border-radius: 0.75rem;
+    background-size: cover;
+}
+
+a.qr-url
+{
+    text-decoration: none !important;
+}
+
+p.qr-title
+{
+    font-size: 1em;
+    color: white;
+    margin-bottom: 2.25rem;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4rem;
+}
+
+div.movie-card > p.qr-title {
+    text-shadow: 0px 4px 4px rgba(0, 83, 107, 0.83);
+}
+
+div.music-card > p.qr-title {
+    text-shadow: 0px 4px 4px rgba(145, 176, 47, 0.74);
+}
+
+div.tv-card > p.qr-title {
+    text-shadow: 0px 4px 4px rgba(201, 89, 163, 0.75);
+}
+
+div.misc-card > p.qr-title {
+    text-shadow: 0px 4px 4px rgba(254, 175, 48, 0.7);
+}
+
+p.qr-rating
+{
+    font-size: 1.5em;
+    color: white;
+}
+
+img.qr-icon
+{
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+section.quick-ratings .row:hover div.col
+{
+    /*  Make the entire category section
+        transparent except the hovered article */
+        opacity: 0.45; 
+}
+
+div.col:hover
+{
+    /* On hover, zoom the card slight and reveal the shadow */
+    transform: scale(1.1);
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
+    opacity: 1 !important;
+}
+
+div.col
+{
+    transition: 0.3s; /* For smooth animation of zoom on hover */
+}
 
 /**
  * CATEGORY SECTIONS
@@ -83,11 +177,10 @@ div.article-card:hover {
     opacity: 1 !important;
 }
 
-section.category-section  * { 
+section.category-section  * {
     /*  Add a transition to all elements in a category section */
     transition: .3s; 
 }
-
 
 /**
  * ARTICLE CARDS
