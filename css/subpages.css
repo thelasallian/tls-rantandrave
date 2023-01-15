@@ -135,12 +135,16 @@ h2.sp-ac-title {
 p.sp-ac-date,
 p.sp-ac-authors {
     /* Article date and authors */
-    margin-bottom: 0;
     font-size: 0.75em;
 }
 
 p.sp-ac-date {
+    margin-bottom: 0.1rem;
     font-weight: 600;
+}
+
+p.sp-ac-authors {
+    margin-bottom: 0;
 }
 
 @media only screen and (max-width: 992px) {
@@ -155,6 +159,7 @@ p.sp-ac-date {
 
     p.sp-ac-date {
         font-weight: 400;
+        margin-bottom: 0;
     }
 }
 
