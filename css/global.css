@@ -129,6 +129,10 @@ nav .offcanvas {
     color: white !important;
 }
 
+nav h5.offcanvas-title {
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 767px) {
     nav.navbar {
         height: 4rem !important;
@@ -150,11 +154,14 @@ nav .offcanvas {
 
     li.nav-item > span.material-icons {
         display: block;
-        margin-right: 2rem;
+        margin-right: 1.5rem;
+        font-size: 2em;
     }
 
     a.nav-link {
         background-color: rgba(255, 255, 255, 0);
+        font-size: 1.2em;
+        font-weight: 400;
     }
 
     span#nav-link-icon-home { color: #FF8053; }
