@@ -65,7 +65,7 @@ function init_article_info_subpage(
     &$article_url
 ) {
     if ($article["jetpack_featured_media_url"] == "") { // If there's no article, use default visual
-        $visual_url = 'assets/default-visual.jpg';
+        $visual_url = 'assets/rnr-default-dark.jpg';
     } else {
         $visual_url = $article["jetpack_featured_media_url"];
     }
