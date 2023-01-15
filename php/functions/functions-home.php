@@ -69,7 +69,11 @@ function initialize_article_info(
     &$rating,
     &$article_url
 ) {
-    $visual_url = $article["jetpack_featured_media_url"];
+    if ($article["jetpack_featured_media_url"] == "") { // If there's no article, use default visual
+        $visual_url = 'assets/rnr-default-dark.jpg';
+    } else {
+        $visual_url = $article["jetpack_featured_media_url"];
+    }
     $title = del_kicker($article["title"]["rendered"]);
     $date = date('F j, Y', strtotime($article["date"]));
     $authors = get_authors($article["authors"]);
