@@ -10,7 +10,7 @@
                     </a>
                     <!-- Logo Heading -->
                     <p class="footer-heading fs-4">Menagerie</p>
-                    <p class="footer-title rounded d-inline-block px-3 fs-1">Rant & Rave</p>
+                    <p class="footer-title rounded d-inline-block px-3 fs-1">Rant and Rave</p>
                 </div>
             </div>
             <!-- Description -->
@@ -29,8 +29,8 @@
                 </div>
                 <!-- Website Developers -->
                 <p class="footer-developers my-auto">Copyright 2023 © <strong>The LaSallian</strong><br>
-                Website developed by <a href="https://github.com/angelocguerra" target="_blank">Angelo Guerra</a> and <a href="https://github.com/ronnparcia" target="_blank">Ronn Parcia,</a>
-                <br> designed with Alyssa Wee and Addie Holgado, and conceptualized by Emmanuelle Castañeda</p>
+                Website developed by <a href="https://github.com/ronnparcia" target="_blank">Ronn Parcia</a> and <a href="https://github.com/angelocguerra" target="_blank">Angelo Guerra</a>,
+                and designed with Alyssa Casandra Wee. <br/>Icons by Addie Holgado and Google Material Design.</p>
             </div>
         </div>
     </div>    
