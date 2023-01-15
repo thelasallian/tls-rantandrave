@@ -15,3 +15,8 @@
 <link rel="icon" href="https://thelasallian.com/wp-content/uploads/2020/06/LOGO.png" sizes="32x32" />
 <link rel="icon" href="https://thelasallian.com/wp-content/uploads/2020/06/LOGO.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="https://thelasallian.com/wp-content/uploads/2020/06/LOGO.png" />
+
+<!-- Metadata -->
+<meta property="og:image" content="assets/rnr-default.jpg">
+<meta property="og:image:type" content="image/jpg">
+<meta name="description" content="Rant and Rave rates the latest hits from the media industry—from movies and shows to music both local and international.">
