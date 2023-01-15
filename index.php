@@ -22,7 +22,7 @@
 
     <!-- Header -->
     <?php
-        # Fetch Artile Info
+        # Fetch Article Info
         $first_article = $_SESSION["ARTICLE_INFO_ALL"][0];
         initialize_article_info(
             $first_article,
@@ -111,8 +111,63 @@
     </header>
 
     <!-- Quick Ratings (2nd-5th Most Recent Articles) -->
-    <section>
-        <h1>Quick Ratings (2nd-5th Most Recent Articles)</h1>
+    <?php
+        $movie_card_style = 'linear-gradient(0deg, rgba(25, 107, 131, 0.85), rgba(25, 107, 131, 0.85))';
+        $music_card_style = 'linear-gradient(0deg, rgba(97, 121, 21, 0.85), rgba(97, 121, 21, 0.85))';
+        $tv_card_style = 'linear-gradient(0deg, rgba(150, 57, 118, 0.85), rgba(150, 57, 118, 0.85))';
+        $misc_card_style = 'linear-gradient(0deg, rgba(173, 112, 14, 0.85), rgba(173, 112, 14, 0.85))';
+    ?>
+    <section class="quick-ratings">
+        <div class="container">
+            <!-- Article Cards -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 my-5 g-3">
+                <?php ?>
+                <!-- Movie -->
+                <a href="<?php echo $article_url; ?>" class="qr-url my-0" target="_blank">
+                    <div class="col movie-card border-0 my-2 p-3" style="background-image: <?=$movie_card_style?>, url(<?php echo $visual_url; ?>);">
+                        <p class="qr-title"><strong><?php echo $title; ?></strong></p>
+                        <div class="qr-subtitle d-flex align-items-center">
+                            <img class="qr-icon me-2" src="/assets/movie-white.png" alt=""></img>
+                            <p class="qr-rating my-auto ms-2"><strong><?php echo $rating; ?></strong></p>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Music -->
+                <a href="<?php echo $article_url; ?>" class="qr-url my-0" target="_blank">
+                    <div class="col music-card border-0 my-2 p-3" style="background-image: <?=$music_card_style?>, url(<?php echo $visual_url; ?>);">
+                        <p class="qr-title"><strong><?php echo $title; ?></strong></p>
+                        <div class="qr-subtitle d-flex align-items-center">
+                            <img class="qr-icon me-2" src="/assets/music-white.png" alt=""></img>
+                            <p class="qr-rating my-auto ms-2"><strong><?php echo $rating; ?></strong></p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Television -->
+                <a href="<?php echo $article_url; ?>" class="qr-url my-0" target="_blank">
+                    <div class="col tv-card border-0 my-2 p-3" style="background-image: <?=$tv_card_style?>, url(<?php echo $visual_url; ?>);">
+                        <p class="qr-title"><strong><?php echo $title; ?></strong></p>
+                        <div class="qr-subtitle d-flex align-items-center">
+                            <img class="qr-icon me-2" src="/assets/tv-white.png" alt=""></img>
+                            <p class="qr-rating my-auto ms-2"><strong><?php echo $rating; ?></strong></p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Miscellaneous -->
+                <a href="<?php echo $article_url; ?>" class="qr-url my-0" target="_blank">
+                    <div class="col misc-card border-0 my-2 p-3" style="background-image: <?=$misc_card_style?>, url(<?php echo $visual_url; ?>);">
+                        <p class="qr-title"><strong><?php echo $title; ?></strong></p>
+                        <div class="qr-subtitle d-flex align-items-center">
+                            <img class="qr-icon me-2" src="/assets/misc-white.png" alt=""></img>
+                            <p class="qr-rating my-auto ms-2"><strong><?php echo $rating; ?></strong></p>
+                        </div> 
+                    </div>
+                </a>
+
+            </div>
+        </div>
     </section>
 
     <!-- Tags (Movie, Television, Music, Miscellaneous) -->
