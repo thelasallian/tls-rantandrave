@@ -170,6 +170,12 @@ p.sp-ac-authors {
     }
 }
 
+@media only screen and (max-width: 575px) {
+    section.subpage-articles {
+        padding: 1rem 0;
+    }
+}
+
 @media only screen and (max-width: 400px) {
     div.sp-article-card {
         margin: .35rem 0;
