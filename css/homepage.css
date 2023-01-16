@@ -108,7 +108,7 @@ div.qr-card::before {
 div.qr-card:hover
 {
     /* On hover, zoom the card slight and reveal the shadow */
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
     opacity: 1 !important;
 }
@@ -171,14 +171,14 @@ div.misc-card > p.qr-title {
 
 p.qr-rating
 {
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: white;
 }
 
 img.qr-icon
 {
-    width: 1.75rem;
-    height: 1.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
     z-index: 9;
 }
 
