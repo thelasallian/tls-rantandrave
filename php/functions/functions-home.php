@@ -81,6 +81,58 @@ function initialize_article_info(
     $article_url = $article["link"];
 }
 
+// TODO: Add documentation
+function initialize_article_info_quickratings(
+    $article,
+    &$visual_url,
+    &$title,
+    &$date,
+    &$tags,
+    &$rating,
+    &$article_url
+) {
+    if ($article["jetpack_featured_media_url"] == "") { // If there's no article, use default visual
+        $visual_url = 'assets/rnr-default-dark.jpg';
+    } else {
+        $visual_url = $article["jetpack_featured_media_url"];
+    }
+    $title = del_kicker($article["title"]["rendered"]);
+    $date = date('M j, Y', strtotime($article["date"]));
+    $tags = $article["tags"];
+    $rating = get_rating($article["content"]["rendered"]);
+    $article_url = $article["link"];
+}
+
+// TODO: Add documentation
+function get_qr_bg_class($tags) {
+    if (in_array(2147, $tags)) {// Movie
+        return "movie-qr-card";
+    } else if(in_array(2107, $tags)) {// Music
+        return "music-qr-card";
+    } else if(in_array(2225, $tags)) {// Television
+        return "tv-qr-card";
+    } else if(in_array(2226, $tags)) { // Miscellaneous
+        return "misc-qr-card";
+    } else { // No tag
+        return "default-qr-card";
+    }
+}
+
+// TODO: Add documentation
+function get_qr_icon($tags) {
+    if (in_array(2147, $tags)) {// Movie
+        return "assets/movie-white.png";
+    } else if(in_array(2107, $tags)) {// Music
+        return "assets/music-white.png";
+    } else if(in_array(2225, $tags)) {// Television
+        return "assets/tv-white.png";
+    } else if(in_array(2226, $tags)) { // Miscellaneous
+        return "assets/misc-white.png";
+    } else { // No tag
+        return "assets/tls-logo-star-white.png";
+    }
+}
+
 /**
  * This function renders the HTML for each article card
  * under a specific category (Movie, Music, etc.)
@@ -108,13 +160,13 @@ function render_article_cards(
         echo <<<ARTICLE
             <div class="article-card position-relative">
                 <!-- Article Visual -->
-                <img class="ac-visual rounded-3 mb-3" style="object-fit: cover;" src="{$visual_url}">
+                <img class="ac-visual mb-3" style="object-fit: cover;" src="{$visual_url}">
 
                 <!-- Rating -->
                 <span class="ac-rating d-inline-block rounded-5 mb-3 {$article_rating_class}">{$rating}</span>
                 
                 <!-- Article Title and Date -->
-                <div class="ac-title-date d-block rounded-3 mb-3 {$article_title_class}">
+                <div class="ac-title-date d-block mb-3 {$article_title_class}">
                     <h2 class="ac-title mb-2">{$title}</h2>
                     <span class="ac-date fs-7">{$date}</span>
                 </div>

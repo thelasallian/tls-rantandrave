@@ -69,6 +69,127 @@ header img.card-img:hover {
     box-shadow: 0 25px 50px -12px rgba(255,255,255, 0.25) !important;
 }
 
+/**
+  * QUICK RATINGS
+**/
+section.quick-ratings {
+    margin: 5rem 0;
+}
+
+div.qr-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.2rem 1rem 1rem;
+    position: relative;
+    background-size: cover;
+    border-radius: .5rem;
+    transition: 0.3s; /* For smooth animation of zoom on hover */
+    overflow: hidden;
+    height: 100%;
+    color: white;
+}
+
+div.qr-card > * {
+    position: relative;
+    z-index: 1; /* Place all items above overlay background */
+}
+
+div.qr-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+
+div.qr-card:hover
+{
+    /* On hover, zoom the card slight and reveal the shadow */
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
+    opacity: 1 !important;
+}
+
+div.movie-qr-card::before {
+    background-color: rgba(25, 107, 131, 0.85);
+}
+
+div.music-qr-card::before {
+    background-color: rgba(97, 121, 21, 0.85);
+}
+
+div.tv-qr-card::before {
+    background-color: rgba(150, 57, 118, 0.85);
+}
+
+div.misc-qr-card::before {
+    background-color: rgba(173, 112, 14, 0.85);
+}
+
+div.default-qr-card::before {
+    background-color: rgba(188, 88, 51, 0.85);
+}
+
+a.qr-url
+{
+    text-decoration: none !important;
+}
+
+p.qr-title
+{
+    font-size: 1em;
+    margin-bottom: .3rem;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4rem;
+}
+
+p.qr-date {
+    font-size: .75em;
+    margin-bottom: 1.35rem;
+}
+
+div.movie-card > p.qr-title {
+    text-shadow: 0px 4px 4px rgba(0, 83, 107, 0.83);
+}
+
+div.music-card > p.qr-title {
+    text-shadow: 0px 4px 4px rgba(145, 176, 47, 0.74);
+}
+
+div.tv-card > p.qr-title {
+    text-shadow: 0px 4px 4px rgba(201, 89, 163, 0.75);
+}
+
+div.misc-card > p.qr-title {
+    text-shadow: 0px 4px 4px rgba(254, 175, 48, 0.7);
+}
+
+p.qr-rating
+{
+    font-size: 1.25em;
+    color: white;
+}
+
+img.qr-icon
+{
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 9;
+}
+
+section.quick-ratings .row:hover .qr-card
+{
+    /*  Make the entire category section
+        transparent except the hovered article */
+        opacity: 0.45; 
+}
+
+
 
 /**
  * CATEGORY SECTIONS
@@ -83,11 +204,10 @@ div.article-card:hover {
     opacity: 1 !important;
 }
 
-section.category-section  * { 
+section.category-section  * {
     /*  Add a transition to all elements in a category section */
     transition: .3s; 
 }
-
 
 /**
  * ARTICLE CARDS
@@ -118,6 +238,7 @@ img.ac-visual {
     /* Article card visual */
     width: 100%;
     aspect-ratio: 3 / 2;
+    border-radius: .5rem;
 }
 
 h2.ac-title { 
@@ -128,6 +249,7 @@ h2.ac-title {
 div.ac-title-date { 
     /*  Wrapper of the article card title and date */
     padding: 1rem;
+    border-radius: .5rem;
 }
 
 @media only screen and (max-width: 450px), (min-width: 991px) {
