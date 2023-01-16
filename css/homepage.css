@@ -77,9 +77,26 @@ section.quick-ratings {
 }
 
 div.qr-card {
+    position: relative;
     background-size: cover;
     border-radius: .5rem;
     transition: 0.3s; /* For smooth animation of zoom on hover */
+    overflow: hidden;
+}
+
+div.qr-card > * {
+    position: relative;
+    z-index: 1; /* Place all items above overlay background */
+}
+
+div.qr-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
 }
 
 div.qr-card:hover
@@ -90,32 +107,24 @@ div.qr-card:hover
     opacity: 1 !important;
 }
 
-div.movie-card
-{
-    border: 0.05rem solid #1C3056;
-    border-radius: 0.75rem;
-    background-size: cover;
+div.movie-qr-card::before {
+    background-color: rgba(25, 107, 131, 0.85);
 }
 
-div.music-card
-{
-    border: 0.05rem solid #465710;
-    border-radius: 0.75rem;
-    background-size: cover;
+div.music-qr-card::before {
+    background-color: rgba(97, 121, 21, 0.85);
 }
 
-div.tv-card
-{
-    border: 0.05rem solid #572144;
-    border-radius: 0.75rem;
-    background-size: cover;
+div.tv-qr-card::before {
+    background-color: rgba(150, 57, 118, 0.85);
 }
 
-div.misc-card
-{
-    border: 0.05rem solid #573807;
-    border-radius: 0.75rem;
-    background-size: cover;
+div.misc-qr-card::before {
+    background-color: rgba(173, 112, 14, 0.85);
+}
+
+div.default-qr-card::before {
+    background-color: rgba(188, 88, 51, 0.85);
 }
 
 a.qr-url
@@ -160,6 +169,7 @@ img.qr-icon
 {
     width: 1.75rem;
     height: 1.75rem;
+    z-index: 9;
 }
 
 section.quick-ratings .row:hover div.col
