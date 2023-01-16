@@ -223,7 +223,7 @@
                         <div class="col qr-card p-3 <?php echo get_qr_bg_class($tags); ?>" style="background-image: url(<?php echo $visual_url; ?>);">
                             <p class="qr-title"><strong><?php echo $title; ?></strong></p>
                             <div class="qr-subtitle d-flex align-items-center">
-                                <img class="qr-icon me-2" src="/assets/misc-white.png" alt=""></img>
+                                <img class="qr-icon me-2" src="<?php echo get_qr_icon($tags); ?>" alt=""></img>
                                 <p class="qr-rating my-auto ms-2"><strong><?php echo $rating; ?></strong></p>
                             </div> 
                         </div>

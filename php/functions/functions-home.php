@@ -118,6 +118,21 @@ function get_qr_bg_class($tags) {
     }
 }
 
+// TODO: Add documentation
+function get_qr_icon($tags) {
+    if (in_array(2147, $tags)) {// Movie
+        return "assets/movie-white.png";
+    } else if(in_array(2107, $tags)) {// Music
+        return "assets/music-white.png";
+    } else if(in_array(2225, $tags)) {// Television
+        return "assets/tv-white.png";
+    } else if(in_array(2226, $tags)) { // Miscellaneous
+        return "assets/misc-white.png";
+    } else { // No tag
+        return "assets/tls-logo-star-white.png";
+    }
+}
+
 /**
  * This function renders the HTML for each article card
  * under a specific category (Movie, Music, etc.)
