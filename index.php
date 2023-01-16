@@ -198,6 +198,41 @@
         </div>
     </section>
 
+    <!-- Quick Ratings (2nd to 5th Most Recent Artiles) -->
+    <section class="quick-ratings">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <!-- Fetch articles -->
+                <?php $all_articles = $_SESSION["ARTICLE_INFO_ALL"]; ?>
+                <!-- Fetch info and render cards per article beginning from 2nd article (index 1) -->
+                <?php for ($i = 1; $i <= 4; $i++): ?>
+                    <!-- Fetch Info -->
+                    <?php
+                        initialize_article_info_quickratings(
+                            $all_articles[$i],
+                            $visual_url,
+                            $title,
+                            $date,
+                            $tags,
+                            $rating,
+                            $article_url
+                        );
+                    ?>
+                    <!-- Render card -->
+                    <a href="<?php echo $article_url; ?>" class="qr-url my-0" target="_blank">
+                        <div class="col qr-card p-3" style="background-image: <?=$misc_card_style?>, url(<?php echo $visual_url; ?>);">
+                            <p class="qr-title"><strong><?php echo $title; ?></strong></p>
+                            <div class="qr-subtitle d-flex align-items-center">
+                                <img class="qr-icon me-2" src="/assets/misc-white.png" alt=""></img>
+                                <p class="qr-rating my-auto ms-2"><strong><?php echo $rating; ?></strong></p>
+                            </div> 
+                        </div>
+                    </a>
+                <?php endfor; ?>
+            </div>
+        </div>
+    </section>
+
     <!-- Tags (Movie, Television, Music, Miscellaneous) -->
     <?php initialize_sections($sections); // Initialize list of RNR tags and their respective articles ?>
     <?php foreach ($sections as $section): // Create a section for each RNR tag ?>
