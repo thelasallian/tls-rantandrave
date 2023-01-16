@@ -220,7 +220,7 @@
                     ?>
                     <!-- Render card -->
                     <a href="<?php echo $article_url; ?>" class="qr-url my-0" target="_blank">
-                        <div class="col qr-card p-3" style="background-image: <?=$misc_card_style?>, url(<?php echo $visual_url; ?>);">
+                        <div class="col qr-card p-3 <?php echo get_qr_bg_class($tags); ?>" style="background-image: url(<?php echo $visual_url; ?>);">
                             <p class="qr-title"><strong><?php echo $title; ?></strong></p>
                             <div class="qr-subtitle d-flex align-items-center">
                                 <img class="qr-icon me-2" src="/assets/misc-white.png" alt=""></img>

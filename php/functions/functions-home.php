@@ -103,6 +103,21 @@ function initialize_article_info_quickratings(
     $article_url = $article["link"];
 }
 
+// TODO: Add documentation
+function get_qr_bg_class($tags) {
+    if(in_array(2147, $tags)) {// Movie
+        return "movie-qr-card";
+    } else if(in_array(2107, $tags)) {// Music
+        return "music-qr-card";
+    } else if(in_array(2225, $tags)) {// Television
+        return "tv-qr-card";
+    } else if(in_array(2226, $tags)) { // Miscellaneous
+        return "misc-qr-card";
+    } else { // No tag
+        return "default-qr-card";
+    }
+}
+
 /**
  * This function renders the HTML for each article card
  * under a specific category (Movie, Music, etc.)
