@@ -16,7 +16,7 @@ header div.header-bg {
     background-position: center;
     display: block;
     background-size: 100%;
-    transition: background-size 0.35s;
+    transition: background-size 0.25s;
     padding-top: 5.75rem; /* Equal to navbar height */
 }
 
@@ -61,7 +61,7 @@ header p.article-excerpt {
 }
 
 header img.card-img {
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 header img.card-img:hover {
