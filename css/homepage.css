@@ -73,7 +73,7 @@ header img.card-img:hover {
   * QUICK RATINGS
 **/
 section.quick-ratings {
-    padding: 3rem 0;
+    margin: 5rem 0;
 }
 
 div.qr-card {
