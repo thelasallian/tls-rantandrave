@@ -86,7 +86,7 @@ div.qr-card {
     border-radius: .5rem;
     transition: 0.3s; /* For smooth animation of zoom on hover */
     overflow: hidden;
-    min-height: 10.5rem;
+    height: 100%;
     color: white;
 }
 

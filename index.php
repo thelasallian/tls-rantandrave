@@ -219,18 +219,22 @@
                         );
                     ?>
                     <!-- Render card -->
-                    <a href="<?php echo $article_url; ?>" class="qr-url my-0" target="_blank">
-                        <div class="col qr-card p-3 <?php echo get_qr_bg_class($tags); ?>" style="background-image: url(<?php echo $visual_url; ?>);">
-                            <div>
-                                <p class="qr-title"><strong><?php echo $title; ?></strong></p>
-                                <p class="qr-date"><?php echo $date; ?></p>
-                            </div>
-                            <div class="qr-subtitle d-flex align-items-center">
-                                <img class="qr-icon me-2" src="<?php echo get_qr_icon($tags); ?>" alt=""></img>
-                                <p class="qr-rating my-auto ms-2"><strong><?php echo $rating; ?></strong></p>
-                            </div> 
+                    
+                        <div class="col">
+                            <a href="<?php echo $article_url; ?>" class="qr-url my-0" target="_blank">
+                                <div class="qr-card <?php echo get_qr_bg_class($tags); ?>" style="background-image: url(<?php echo $visual_url; ?>);">
+                                    <div>
+                                        <p class="qr-title"><strong><?php echo $title; ?></strong></p>
+                                        <p class="qr-date"><?php echo $date; ?></p>
+                                    </div>
+                                    <div class="qr-subtitle d-flex align-items-center">
+                                        <img class="qr-icon me-2" src="<?php echo get_qr_icon($tags); ?>" alt=""></img>
+                                        <p class="qr-rating my-auto ms-2"><strong><?php echo $rating; ?></strong></p>
+                                    </div> 
+                                </div>
+                            </a>
                         </div>
-                    </a>
+                    
                 <?php endfor; ?>
             </div>
         </div>
