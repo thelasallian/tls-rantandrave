@@ -150,6 +150,7 @@ p.qr-title
 
 p.qr-date {
     font-size: .75em;
+    margin-bottom: 1.35rem;
 }
 
 div.movie-card > p.qr-title {
