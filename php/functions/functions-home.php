@@ -81,6 +81,28 @@ function initialize_article_info(
     $article_url = $article["link"];
 }
 
+// TODO: Add documentation
+function initialize_article_info_quickratings(
+    $article,
+    &$visual_url,
+    &$title,
+    &$date,
+    &$tags,
+    &$rating,
+    &$article_url
+) {
+    if ($article["jetpack_featured_media_url"] == "") { // If there's no article, use default visual
+        $visual_url = 'assets/rnr-default-dark.jpg';
+    } else {
+        $visual_url = $article["jetpack_featured_media_url"];
+    }
+    $title = del_kicker($article["title"]["rendered"]);
+    $date = date('F j, Y', strtotime($article["date"]));
+    $tags = $article["tags"];
+    $rating = get_rating($article["content"]["rendered"]);
+    $article_url = $article["link"];
+}
+
 /**
  * This function renders the HTML for each article card
  * under a specific category (Movie, Music, etc.)
