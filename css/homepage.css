@@ -72,6 +72,20 @@ header img.card-img:hover {
 /**
   * QUICK RATINGS
 **/
+div.qr-card {
+    background-size: cover;
+    border-radius: .5rem;
+    transition: 0.3s; /* For smooth animation of zoom on hover */
+}
+
+div.qr-card:hover
+{
+    /* On hover, zoom the card slight and reveal the shadow */
+    transform: scale(1.1);
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
+    opacity: 1 !important;
+}
+
 div.movie-card
 {
     border: 0.05rem solid #1C3056;
@@ -151,18 +165,7 @@ section.quick-ratings .row:hover div.col
         opacity: 0.45; 
 }
 
-div.col:hover
-{
-    /* On hover, zoom the card slight and reveal the shadow */
-    transform: scale(1.1);
-    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
-    opacity: 1 !important;
-}
 
-div.col
-{
-    transition: 0.3s; /* For smooth animation of zoom on hover */
-}
 
 /**
  * CATEGORY SECTIONS
