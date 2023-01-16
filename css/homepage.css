@@ -82,6 +82,8 @@ div.qr-card {
     border-radius: .5rem;
     transition: 0.3s; /* For smooth animation of zoom on hover */
     overflow: hidden;
+    min-height: 10.5rem;
+    color: white;
 }
 
 div.qr-card > * {
@@ -135,12 +137,15 @@ a.qr-url
 p.qr-title
 {
     font-size: 1em;
-    color: white;
-    margin-bottom: 2.25rem;
+    margin-bottom: .3rem;
     font-family: Raleway;
     font-style: normal;
     font-weight: 700;
     line-height: 1.4rem;
+}
+
+p.qr-date {
+    font-size: .75em;
 }
 
 div.movie-card > p.qr-title {
