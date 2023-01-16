@@ -97,7 +97,7 @@ function initialize_article_info_quickratings(
         $visual_url = $article["jetpack_featured_media_url"];
     }
     $title = del_kicker($article["title"]["rendered"]);
-    $date = date('F j, Y', strtotime($article["date"]));
+    $date = date('M j, Y', strtotime($article["date"]));
     $tags = $article["tags"];
     $rating = get_rating($article["content"]["rendered"]);
     $article_url = $article["link"];
