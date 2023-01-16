@@ -114,7 +114,7 @@ div.sp-ac-misc:hover { background-color: rgba(180, 146, 91, 0.25); }
 div.sp-ac-search:hover { background-color: rgba(225, 118, 79, 0.25); }
 
 div.sp-article-card:hover {
-    transform: translateY(-.5rem);
+    transform: scale(1.025);
 }
 
 img.sp-ac-visual {

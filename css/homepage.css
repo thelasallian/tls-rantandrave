@@ -221,8 +221,8 @@ div.article-card {
 }
 
 div.article-card:hover img.ac-visual {
-    /* On hover, move the visual up and reveal the shadow */
-    transform: translateY(-.75rem);
+    /* On hover, scale the visual up and reveal the shadow */
+    transform: scale(1.05);
     box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.175);
 }
 
