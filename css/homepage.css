@@ -16,7 +16,7 @@ header div.header-bg {
     background-position: center;
     display: block;
     background-size: 100%;
-    transition: background-size 0.25s;
+    transition: background-size 0.25s ease-out;
     padding-top: 5.75rem; /* Equal to navbar height */
 }
 
@@ -27,7 +27,7 @@ header div.header-bg {
 }
 
 header div.header-bg:hover {
-    background-size: 110%;
+    background-size: 115%;
 }
 
 header div.header-bg:hover header img.card-img  {
