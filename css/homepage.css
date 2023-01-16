@@ -211,6 +211,7 @@ img.ac-visual {
     /* Article card visual */
     width: 100%;
     aspect-ratio: 3 / 2;
+    border-radius: .5rem;
 }
 
 h2.ac-title { 
@@ -221,6 +222,7 @@ h2.ac-title {
 div.ac-title-date { 
     /*  Wrapper of the article card title and date */
     padding: 1rem;
+    border-radius: .5rem;
 }
 
 @media only screen and (max-width: 450px), (min-width: 991px) {

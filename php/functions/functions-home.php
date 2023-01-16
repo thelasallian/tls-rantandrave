@@ -130,13 +130,13 @@ function render_article_cards(
         echo <<<ARTICLE
             <div class="article-card position-relative">
                 <!-- Article Visual -->
-                <img class="ac-visual rounded-3 mb-3" style="object-fit: cover;" src="{$visual_url}">
+                <img class="ac-visual mb-3" style="object-fit: cover;" src="{$visual_url}">
 
                 <!-- Rating -->
                 <span class="ac-rating d-inline-block rounded-5 mb-3 {$article_rating_class}">{$rating}</span>
                 
                 <!-- Article Title and Date -->
-                <div class="ac-title-date d-block rounded-3 mb-3 {$article_title_class}">
+                <div class="ac-title-date d-block mb-3 {$article_title_class}">
                     <h2 class="ac-title mb-2">{$title}</h2>
                     <span class="ac-date fs-7">{$date}</span>
                 </div>
