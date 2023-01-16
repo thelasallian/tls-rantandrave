@@ -182,7 +182,7 @@ img.qr-icon
     z-index: 9;
 }
 
-section.quick-ratings .row:hover div.col
+section.quick-ratings .row:hover .qr-card
 {
     /*  Make the entire category section
         transparent except the hovered article */
