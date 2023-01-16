@@ -1,4 +1,6 @@
-<!-- 
+<?php
+
+/*
     This file contains the pagination code for the search results page.
     Unlike the pagination for category subpages (Movie, Music, etc.), all
     search results are fetched all-at-once, rather than per page. The array
@@ -14,9 +16,7 @@
 
     But if you have another solution please do tell me because nakakaloka this is the
     first time I've done this.
- -->
-
-<?php
+*/
 
 // The page to display (Usually is received in a url parameter)
 if (isset($_GET['page'])) { // If there is a page parameter in the URL
