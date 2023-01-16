@@ -105,7 +105,7 @@ function initialize_article_info_quickratings(
 
 // TODO: Add documentation
 function get_qr_bg_class($tags) {
-    if(in_array(2147, $tags)) {// Movie
+    if (in_array(2147, $tags)) {// Movie
         return "movie-qr-card";
     } else if(in_array(2107, $tags)) {// Music
         return "music-qr-card";
