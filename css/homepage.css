@@ -76,6 +76,10 @@ section.quick-ratings {
     margin: 5rem 0;
 }
 
+section.quick-ratings .col {
+    margin-bottom: 1.75rem !important;
+}
+
 div.qr-card {
     display: flex;
     flex-direction: column;

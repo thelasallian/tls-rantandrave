@@ -113,7 +113,7 @@
     <!-- Quick Ratings (2nd-5th Most Recent Articles) -->
     <section class="quick-ratings">
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                 <!-- Fetch articles -->
                 <?php $all_articles = $_SESSION["ARTICLE_INFO_ALL"]; ?>
                 <!-- Fetch info and render cards per article beginning from 2nd article (index 1) -->
