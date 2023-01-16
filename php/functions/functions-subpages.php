@@ -1,9 +1,8 @@
-<!-- 
-    This files contains functions that are used in all subpages,
-    namely movie.php, television.php, music.php, miscellaneous.php, AND search-results.php
- -->
-
  <?php
+ /*
+     This files contains functions that are used in all subpages,
+     namely movie.php, television.php, music.php, miscellaneous.php, AND search-results.php
+ */
  
  /**
   * Renders the subpage header based on parameters

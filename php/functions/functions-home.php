@@ -1,7 +1,6 @@
-<!-- 
-    This files contains functions that are used only in the homepage or index.php
- -->
 <?php
+
+// This files contains functions that are used only in the homepage or index.php
 
 /**
  * This function initializes the information for each category section

@@ -1,8 +1,6 @@
-<!-- 
-    This files contains functions that are used only in the search results subpage (search-results.php).
- -->
-
 <?php
+
+// This files contains functions that are used only in the search results subpage (search-results.php).
 
 /**
  * This function assigns the article information to individual variables

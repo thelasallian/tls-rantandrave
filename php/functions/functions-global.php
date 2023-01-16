@@ -1,8 +1,8 @@
-<!-- 
-    This files contains functions that are used globally across several pages, regardless of kind.
- -->
-
 <?php
+
+/*
+    This files contains functions that are used globally across several pages, regardless of kind.
+*/
 
 /**
  * fetch_info() gets the requested articles and their
