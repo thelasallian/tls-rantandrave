@@ -24,7 +24,7 @@
                 </p>
                 <!-- Link to Main Website -->
                 <div class="d-flex align-items-center position-relative">
-                    <a class="footer-link-main-site my-auto align-middle" href="https://thelasallian.com"><strong>Go to Main Website</strong></a>
+                    <a class="footer-link-main-site my-auto align-middle" href="https://thelasallian.com"><strong>Go to main website</strong></a>
                     <span class="material-icons my-auto">chevron_right</span>
                 </div>
                 <!-- Website Developers -->
