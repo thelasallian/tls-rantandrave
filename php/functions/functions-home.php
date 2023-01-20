@@ -19,7 +19,7 @@ function initialize_sections(&$sections)
             "icon_url" => "assets/movie.png",
             "article_rating_class" => "movie-bg-85",
             "article_title_class" => "movie-bg-15",
-            "view_all_url" => "movie.php"
+            "view_all_url" => "films.php"
         ),
         array(
             "tag_name" => "shows",

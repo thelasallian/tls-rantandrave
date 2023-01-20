@@ -2,7 +2,7 @@
 
 /*
     This file fetches the RNR articles for specific categories (Movie, Music, etc.).
-    This is used in movie.php, music.php, etc.
+    This is used in films.php, music.php, etc.
 */
 
 /* Code by Rafael Gabriel Arceo */

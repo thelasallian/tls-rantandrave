@@ -28,7 +28,7 @@
                         </li>
                         <li class="nav-item">
                             <span class="material-icons" id="nav-link-icon-movie">movie</span>
-                            <a class="nav-link text-reset" href="movie.php">Films</a>
+                            <a class="nav-link text-reset" href="films.php">Films</a>
                         </li>
                         <li class="nav-item">
                             <span class="material-icons" id="nav-link-icon-tv">tv</span>

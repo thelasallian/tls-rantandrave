@@ -1,7 +1,7 @@
  <?php
  /*
      This files contains functions that are used in all subpages,
-     namely movie.php, television.php, music.php, miscellaneous.php, AND search-results.php
+     namely films.php, television.php, music.php, miscellaneous.php, AND search-results.php
  */
  
  /**
