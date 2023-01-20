@@ -24,7 +24,7 @@
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
                             <span class="material-icons" id="nav-link-icon-home">home</span>
-                            <a class="nav-link active text-reset" aria-current="page" href="index.php">Home</a>
+                            <a class="nav-link active text-reset" aria-current="page" href="https://rnr.thelasallian.com/">Home</a>
                         </li>
                         <li class="nav-item">
                             <span class="material-icons" id="nav-link-icon-movie">movie</span>
