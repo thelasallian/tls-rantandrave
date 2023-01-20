@@ -1,7 +1,7 @@
 <nav class="<?php echo $nav_bg_class; ?> navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
     <div class="container d-flex justify-content-between">
         <!-- Logo -->
-        <a class="navbar-brand" href="https://thelasallian.com/">
+        <a class="navbar-brand" href="https://rnr.thelasallian.com/">
             <img class="nav-logo" id="nav-logo" src="assets/tls-logo-star-white.png" alt="The LaSallian logo">
         </a>
 
