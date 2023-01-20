@@ -43,7 +43,7 @@ function initialize_sections(&$sections)
             "icon_url" => "assets/misc.png",
             "article_rating_class" => "misc-bg-85",
             "article_title_class" => "misc-bg-15",
-            "view_all_url" => "miscellaneous.php"
+            "view_all_url" => "others.php"
         )
     );
 }
