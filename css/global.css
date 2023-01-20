@@ -169,6 +169,11 @@ nav h5.offcanvas-title {
     span#nav-link-icon-tv { color: var(--tv-bg-85); }
     span#nav-link-icon-music { color: var(--music-bg-85); }
     span#nav-link-icon-misc { color: var(--misc-bg-85); }
+
+    button.navbar-toggler {
+        display: inline-flex;
+        align-items: center;
+    }
 }
 
 /**

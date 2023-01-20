@@ -52,7 +52,7 @@
         <!-- Search Icons -->
         <div class="d-flex flex-grow-1 flex-md-grow-0 justify-content-end order-2 order-md-3" style="width: 4rem;">
             <!-- Button trigger Search modal -->
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <button type="button" class="btn d-inline-flex align-items-center" data-bs-toggle="modal" data-bs-target="#searchModal">
                 <span class="material-icons text-white">search</span>
             </button>
 
