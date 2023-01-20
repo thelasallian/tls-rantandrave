@@ -37,8 +37,19 @@ function render_page_links($page_count, $current_url) {
     echo '<ul class="pagination">';
     for ($i = 1; $i <= $page_count; $i++) {
         $page_url = $current_url."?page=".$i;
+        
+        // Specific style for current page
+        $page_css = "";
+        if (isset($_GET['page'])) {
+            if ($i == intval($_GET['page'])) {
+                $page_css = "fw-bold bg-body-secondary text-light";
+            }
+        } else if (!isset($_GET['page']) && $i == 1) {
+            $page_css = "fw-bold bg-body-secondary text-light";
+        }
+
         echo <<<PAGE_LINK
-            <li class="page-item"><a class="page-link border-0" href="{$page_url}">{$i}</a></li>
+            <li class="page-item"><a class="page-link border-0 {$page_css}" href="{$page_url}">{$i}</a></li>
         PAGE_LINK;
     }
     echo '</ul>';
