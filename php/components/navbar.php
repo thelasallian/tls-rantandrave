@@ -32,7 +32,7 @@
                         </li>
                         <li class="nav-item">
                             <span class="material-icons" id="nav-link-icon-tv">tv</span>
-                            <a class="nav-link text-reset" href="television.php">Shows</a>
+                            <a class="nav-link text-reset" href="shows.php">Shows</a>
                         </li>
                         <li class="nav-item">
                             <span class="material-icons" id="nav-link-icon-music">music_note</span>

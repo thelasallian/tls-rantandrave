@@ -27,7 +27,7 @@ function initialize_sections(&$sections)
             "icon_url" => "assets/tv.png",
             "article_rating_class" => "tv-bg-85",
             "article_title_class" => "tv-bg-15",
-            "view_all_url" => "television.php"
+            "view_all_url" => "shows.php"
         ),
         array(
             "tag_name" => "music",
