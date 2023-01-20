@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/subpages.css">
 
     <!-- Title -->
-    <title>The LaSallian: Rant and Rave - Movie</title>
+    <title>The LaSallian: Rant and Rave - Films</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         $most_recent_article = fetch_info('https://thelasallian.com/wp-json/wp/v2/posts?_fields=jetpack_featured_media_url&tags=2147&per_page=1&page=1');
         $sh_bgimg = $most_recent_article[0]["jetpack_featured_media_url"];
         $sh_gradientclass = 'sh-movie';
-        $sh_heading = 'Movie';
+        $sh_heading = 'Films';
         $sh_iconpath = 'assets/movie.png';
     ?>
 

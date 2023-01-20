@@ -14,7 +14,7 @@ function initialize_sections(&$sections)
 {
     $sections = array(
         array(
-            "tag_name" => "movie",
+            "tag_name" => "films",
             "articles" => $_SESSION["ARTICLE_INFO_MOVIE"],
             "icon_url" => "assets/movie.png",
             "article_rating_class" => "movie-bg-85",
