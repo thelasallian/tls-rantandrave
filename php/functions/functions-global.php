@@ -35,6 +35,29 @@ function fetch_info($url, $httpReq = 'GET')
 }
 
 /**
+ * has_rating() checks if article has a rating like "1.0/4.0"
+ * 
+ * @param string $content The article's content or body. 
+ * @return string true if there is a rating, otherwise, false.
+ */
+function has_rating($content) {
+    if (
+        strpos($content, '0.0/4.0') !== false ||
+        strpos($content, '1.0/4.0') !== false ||
+        strpos($content, '1.5/4.0') !== false ||
+        strpos($content, '2.0/4.0') !== false ||
+        strpos($content, '2.5/4.0') !== false ||
+        strpos($content, '3.0/4.0') !== false ||
+        strpos($content, '3.5/4.0') !== false ||
+        strpos($content, '4.0/4.0') !== false
+    ) {
+        return true;
+    }
+
+    return false;
+}
+
+/**
  * get_rating() finds and returns the rating within an article.
  * 
  * @param string $content The article's content or body. 
@@ -42,19 +65,27 @@ function fetch_info($url, $httpReq = 'GET')
  */
 function get_rating($content)
 {
-    // // Find the H5 heading and assign it to $rating
-    $rating = strstr($content, "<h5>");
-    $rating = strstr($rating, "</h5>", true);
+    if (strpos($content, '<h5>') !== false) { // If there's an H5
+        // Find the H5 heading and assign it to $rating
+        $rating = strstr($content, "<h5>");
+        $rating = strstr($rating, "</h5>", true);
 
-    // Remove the surrounding <h5> and <strong> tags
-    $rating = str_replace("<h5>", "", $rating);
-    $rating = str_replace("</h5>", "", $rating);
-    $rating = str_replace("<strong>", "", $rating);
-    $rating = str_replace("</strong>", "", $rating);
+        // Remove the surrounding <h5> and <strong> tags
+        $rating = str_replace("<h5>", "", $rating);
+        $rating = str_replace("</h5>", "", $rating);
+        $rating = str_replace("<strong>", "", $rating);
+        $rating = str_replace("</strong>", "", $rating);
 
-    // Remove the 'Rating: ' prefix
-    $rating = str_replace("Rating: ", "", $rating);
-    $rating = str_replace("RATING: ", "", $rating); // Fallback if author used all caps
+        // Remove the 'Rating: ' prefix
+        $rating = str_replace("Rating: ", "", $rating);
+        $rating = str_replace("RATING: ", "", $rating); // Fallback if author used all caps
+    } else if (has_rating($content)) { // Fallback, but actually this might have been a simpler solution. I don't know why I didn't think of it
+        $rating = strstr($content, "/4.0", true);  // Find /4.0 in content and return anything before it
+        $rating = substr($rating, -3); // Take only 3 characters from the end
+        $rating .= '/4.0'; // Concatenate /4.0 since it was removed by strstr()
+    } else {
+        $rating = 'n/n';
+    }
     
     return $rating;
 }
