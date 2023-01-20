@@ -1,11 +1,11 @@
 <nav class="<?php echo $nav_bg_class; ?> navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
     <div class="container d-flex justify-content-between">
         <!-- Logo -->
-        <a class="navbar-brand" href="https://rnr.thelasallian.com/">
+        <a class="navbar-brand order-1" href="https://rnr.thelasallian.com/">
             <img class="nav-logo" id="nav-logo" src="assets/tls-logo-star-white.png" alt="The LaSallian logo">
         </a>
 
-        <div class="d-flex flex-grow-1 justify-content-end justify-content-md-center">
+        <div class="d-flex justify-content-end justify-content-md-center order-3 order-md-2">
             <!-- Menu Button for Mobile Devices -->
             <button class="navbar-toggler p-0 border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="material-icons">menu</span>
@@ -50,7 +50,7 @@
         </div>
 
         <!-- Search Icons -->
-        <div class="d-flex justify-content-end" style="width: 4rem;">
+        <div class="d-flex flex-grow-1 flex-md-grow-0 justify-content-end order-2 order-md-3" style="width: 4rem;">
             <!-- Button trigger Search modal -->
             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#searchModal">
                 <span class="material-icons text-white">search</span>
