@@ -40,7 +40,7 @@
                         </li>
                         <li class="nav-item">
                             <span class="material-icons" id="nav-link-icon-misc">more_horiz</span>
-                            <a class="nav-link text-reset" href="miscellaneous.php">Miscellaneous</a>
+                            <a class="nav-link text-reset" href="miscellaneous.php">Others</a>
                         </li>
                     </ul>
                 </div>

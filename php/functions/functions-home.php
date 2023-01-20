@@ -38,7 +38,7 @@ function initialize_sections(&$sections)
             "view_all_url" => "music.php"
         ),
         array(
-            "tag_name" => "miscellaneous",
+            "tag_name" => "others",
             "articles" => $_SESSION["ARTICLE_INFO_MISC"],
             "icon_url" => "assets/misc.png",
             "article_rating_class" => "misc-bg-85",

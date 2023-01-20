@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/subpages.css">
 
     <!-- Title -->
-    <title>The LaSallian: Rant and Rave - Miscellaneous</title>
+    <title>The LaSallian: Rant and Rave - Others</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         $most_recent_article = fetch_info('https://thelasallian.com/wp-json/wp/v2/posts?_fields=jetpack_featured_media_url&tags=2226&per_page=1&page=1');
         $sh_bgimg = $most_recent_article[0]["jetpack_featured_media_url"];
         $sh_gradientclass = 'sh-misc';
-        $sh_heading = 'Miscellaneous';
+        $sh_heading = 'Others';
         $sh_iconpath = 'assets/misc.png';
     ?>
 
