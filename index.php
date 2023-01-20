@@ -82,7 +82,7 @@
 
     <header>
         <div class="header-bg" style="background-image: <?=$header_style?>, url(<?php echo $visual_url; ?>);">
-        <a href="<?php echo $article_url; ?>" target="_blank" style="text-decoration:none">
+        <a href="<?php echo $article_url; ?>" style="text-decoration:none">
         <div class="container py-5">
             <div class="row">    
                 <!-- Header Article Text -->
@@ -133,7 +133,7 @@
                     <!-- Render card -->
                     
                         <div class="col">
-                            <a href="<?php echo $article_url; ?>" class="qr-url my-0" target="_blank">
+                            <a href="<?php echo $article_url; ?>" class="qr-url my-0">
                                 <div class="qr-card <?php echo get_qr_bg_class($tags); ?>" style="background-image: url(<?php echo $visual_url; ?>);">
                                     <div>
                                         <p class="qr-title"><strong><?php echo $title; ?></strong></p>

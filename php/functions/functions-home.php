@@ -171,7 +171,7 @@ function render_article_cards(
                 </div>
 
                 <!-- Stretched Link -->
-                <a class="stretched-link" href="{$article_url}" target="_blank"></a>
+                <a class="stretched-link" href="{$article_url}"></a>
             </div>
         ARTICLE;
     }

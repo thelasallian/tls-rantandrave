@@ -101,7 +101,7 @@ function render_subpage_article_cards($articles, $ac_class) {
                         <p class="sp-ac-date">{$date}</p>
                         <p class="sp-ac-authors">{$authors}</p>
                     </div>
-                    <a class="stretched-link" href="{$article_url}" target="_blank"></a>
+                    <a class="stretched-link" href="{$article_url}"></a>
                 </div>
             </div>
         ARTICLE_CARD;
