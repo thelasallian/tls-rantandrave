@@ -92,7 +92,7 @@
                     <p class="article-rating ac-rating mb-3 d-inline-block rounded-pill" <?=$rating_style?> ><strong><?php echo $rating; ?></strong></p>
                     
                     <!-- Title -->
-                    <h4 class="article-title mb-3" <?=$title_style?> > <strong><?php echo $title; ?></strong></h4>
+                    <h4 class="article-title mb-3"> <strong><?php echo $title; ?></strong></h4>
                 
                     <!-- Article Date & Author/s -->
                     <p class="article-date mb-0"><strong><?php echo $date; ?></strong></p> 

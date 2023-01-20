@@ -18,6 +18,11 @@ header div.header-bg {
     background-size: 100%;
     transition: background-size 0.25s ease-out;
     padding-top: 5.75rem; /* Equal to navbar height */
+    color: white;
+}
+
+header div.header-bg a {
+    color: inherit;
 }
 
 @media only screen and (max-width: 767px) {
@@ -37,7 +42,6 @@ header div.header-bg:hover header img.card-img  {
 
 header p.article-rating {
     font-size: 1em;
-    color: white;
 }
 
 header h4.article-title {
@@ -46,17 +50,14 @@ header h4.article-title {
 
 header p.article-date {
     font-size: 0.9em;
-    color: white;
 }
 
 header p.article-author {
     font-size: 0.9em;
-    color: white;
 }
 
 header p.article-excerpt {
     font-size: 0.85em;
-    color: white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
