@@ -29,7 +29,7 @@
                 </div>
                 <!-- Website Developers -->
                 <p class="footer-developers my-auto">Copyright 2023 © <strong>The LaSallian</strong><br>
-                Website developed by <a href="https://github.com/ronnparcia" target="_blank">Ronn Parcia</a> and <a href="https://github.com/angelocguerra" target="_blank">Angelo Guerra</a>,
+                Website developed by <a href="https://github.com/ronnparcia" target="_blank">Ronn Parcia</a>, <a href="https://github.com/angelocguerra" target="_blank">Angelo Guerra</a>,
                 and designed with Alyssa Casandra Wee. <br/>Icons by Addie Holgado and Google Material Design.</p>
             </div>
         </div>
