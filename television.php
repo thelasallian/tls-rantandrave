@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/subpages.css">
 
     <!-- Title -->
-    <title>The LaSallian: Rant and Rave - Music</title>
+    <title>The LaSallian: Rant and Rave - Shows</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         $most_recent_article = fetch_info('https://thelasallian.com/wp-json/wp/v2/posts?_fields=jetpack_featured_media_url&tags=2225&per_page=1&page=1');
         $sh_bgimg = $most_recent_article[0]["jetpack_featured_media_url"];
         $sh_gradientclass = 'sh-tv';
-        $sh_heading = 'Television';
+        $sh_heading = 'Shows';
         $sh_iconpath = 'assets/tv.png';
     ?>
 

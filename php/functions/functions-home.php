@@ -22,7 +22,7 @@ function initialize_sections(&$sections)
             "view_all_url" => "movie.php"
         ),
         array(
-            "tag_name" => "television",
+            "tag_name" => "shows",
             "articles" => $_SESSION["ARTICLE_INFO_TV"],
             "icon_url" => "assets/tv.png",
             "article_rating_class" => "tv-bg-85",
