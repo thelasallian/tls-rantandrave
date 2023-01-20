@@ -100,6 +100,11 @@ img.nav-logo {
     transition: 0.2s ease-in;
 }
 
+img.nav-logo:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
 li.nav-item {
     margin: 0 0.35rem 0;
     color: white;
@@ -131,6 +136,15 @@ nav .offcanvas {
 
 nav h5.offcanvas-title {
     font-weight: bold;
+}
+
+span.nav-search-icon {
+    transition: 0.2s ease-in;
+}
+
+span.nav-search-icon:hover {
+    opacity: 0.85;
+    transform: rotate(15deg);
 }
 
 @media only screen and (max-width: 767px) {
