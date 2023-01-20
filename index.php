@@ -155,10 +155,10 @@
     <!-- Tags (Movie, Television, Music, Miscellaneous) -->
     <?php initialize_sections($sections); // Initialize list of RNR tags and their respective articles ?>
     <?php foreach ($sections as $section): // Create a section for each RNR tag ?>
-        <section id="<?php echo $section["tag_name"]; ?>" class="category-section mb-5">
+        <section id="<?php echo $section["tag_name"]; ?>" class="category-section mb-4">
             <div class="container">
                 <!-- Heading -->
-                <div class="d-flex justify-content-between mb-5">
+                <div class="d-flex justify-content-between mb-4">
                     <!-- Tag Name and Icon -->
                     <div class="tag-section-heading d-flex align-items-center">
                         <img class="tag-section-icon me-4" src="<?php echo $section["icon_url"] ?>" alt="" />
