@@ -38,10 +38,10 @@
 
 <!-- Search Modal -->
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true" data-bs-theme="dark">
-    <div class="modal-dialog search-modal-dialog">
+    <div class="modal-dialog modal-dialog-centered search-modal-dialog">
         <div class="modal-content border-0">
             <!-- Modal Header -->
-            <div class="modal-header border-0 pb-0">
+            <div class="modal-header border-0 pb-1">
                 <h5 class="modal-title" id="searchModalLabel">Search Rant and Rave articles</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>

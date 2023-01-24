@@ -193,11 +193,12 @@ span.nav-search-icon:hover {
 /**
  * SEARCH MODAL
 */
-.search-modal-dialog {
-    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.05);
+.modal {
+    background-color: rgba(4, 4, 4, 0.65);
 }
 
 .search-modal-dialog .modal-content {
+    padding: 1rem;
     background-color: rgba(31, 31, 31, 0.95);
 }
 
