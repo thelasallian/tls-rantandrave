@@ -65,13 +65,41 @@ function has_rating($content) {
  */
 function get_rating($content)
 {
-    if (strpos($content, '<h5>') !== false) { // If there's an H5
+    if (strpos($content, "<h5 style=\"display: none;\">") !== false) { // Hidden H5{
+        // Find the H5 heading and assign it to $rating
+        $rating = strstr($content, "<h5 style=\"display: none;\">");
+        $rating = strstr($rating, "</h5>", true);
+
+        // Remove the surrounding <h5> and <strong> tags
+        $rating = str_replace("<h5 style=\"display: none;\">", "", $rating);
+        $rating = str_replace("</h5>", "", $rating);
+        $rating = str_replace("<strong>", "", $rating);
+        $rating = str_replace("</strong>", "", $rating);
+
+        // Remove the 'Rating: ' prefix
+        $rating = str_replace("Rating: ", "", $rating);
+        $rating = str_replace("RATING: ", "", $rating); // Fallback if author used all caps
+    } else if (strpos($content, '<h5>') !== false) { // If there's an H5
         // Find the H5 heading and assign it to $rating
         $rating = strstr($content, "<h5>");
         $rating = strstr($rating, "</h5>", true);
 
         // Remove the surrounding <h5> and <strong> tags
         $rating = str_replace("<h5>", "", $rating);
+        $rating = str_replace("</h5>", "", $rating);
+        $rating = str_replace("<strong>", "", $rating);
+        $rating = str_replace("</strong>", "", $rating);
+
+        // Remove the 'Rating: ' prefix
+        $rating = str_replace("Rating: ", "", $rating);
+        $rating = str_replace("RATING: ", "", $rating); // Fallback if author used all caps
+    } else if (strpos($content, "<h5 style=\"display: none;\">") !== false) { // Hidden H5
+        // Find the H5 heading and assign it to $rating
+        $rating = strstr($content, "<h5 style=\"display: none;\">");
+        $rating = strstr($rating, "</h5>", true);
+
+        // Remove the surrounding <h5> and <strong> tags
+        $rating = str_replace("<h5 style=\"display: none;\">", "", $rating);
         $rating = str_replace("</h5>", "", $rating);
         $rating = str_replace("<strong>", "", $rating);
         $rating = str_replace("</strong>", "", $rating);
