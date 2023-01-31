@@ -39,6 +39,16 @@ header div.header-bg:hover header img.card-img  {
     background-size: 120%;
 }
 
+@media only screen and (max-width: 1185px) {
+    header div.header-bg {
+        background-size: cover;
+    }
+
+    header div.header-bg:hover {
+        background-size: cover;
+    }
+}
+
 
 header p.article-rating {
     font-size: 1em;
