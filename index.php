@@ -35,6 +35,7 @@
         );
         $excerpt = $first_article["excerpt"]["rendered"];
         $excerpt = str_replace("<p>", "", $excerpt);
+        $excerpt = str_replace("Variety", "", $excerpt);
         $article_tag = $first_article["tags"];
 
         # Conditional Header Styles
