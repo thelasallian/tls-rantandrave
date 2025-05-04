@@ -23,7 +23,8 @@ if (!isset($_GET['page'])) { // If first time loading the search results
     
     // Get the total number of pages of the list of articles
     $headers = get_headers($wp_url, true);
-    $page_count = $headers["X-WP-TotalPages"]; 
+    $headers = array_change_key_case($headers, CASE_LOWER); // Normalize header keys to lowercase
+    $page_count = $headers["x-wp-totalpages"]; // Access the key in lowercase
     
     // Create array that will store all search results
     $_SESSION["all_articles"] = array();
