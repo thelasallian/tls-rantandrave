@@ -13,7 +13,8 @@ $wp_url .= "&per_page=24";
 
 // Get number of pages
 $headers = get_headers($wp_url, true);
-$page_count = $headers["X-WP-TotalPages"];
+$headers = array_change_key_case($headers, CASE_LOWER); // Normalize header keys to lowercase
+$page_count = $headers["x-wp-totalpages"]; // Access the key in lowercase
 
 // Get current page number of current URL
 if (isset($_GET['page'])) { // If there is a page parameter in the URL
